@@ -54,6 +54,38 @@
 .treeContent {
   flex: 1;
   overflow: hidden;
+  min-height: 0;
+}
+
+.viewTabs {
+  display: flex;
+  gap: 0;
+  padding: 8px 12px 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.viewTab {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-bottom: -1px;
+}
+
+.viewTab:hover {
+  color: var(--color-text);
+  background: #f9fafb;
+}
+
+.viewTabActive {
+  color: var(--color-text);
+  background: var(--color-bg);
+  border-color: var(--color-border);
 }
 
 .cardPanel {

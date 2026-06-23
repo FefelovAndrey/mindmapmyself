@@ -17,11 +17,13 @@ import {
 } from '@/hooks/useTree';
 import { useKeyboard } from '@/hooks/useKeyboard';
 import TreeOutline from '@/components/TreeOutline/TreeOutline';
+import MapView from '@/components/MapView/MapView';
 import NodeCard from '@/components/NodeCard/NodeCard';
 import FilterBar from '@/components/FilterBar/FilterBar';
 import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
+type ViewMode = 'outline' | 'map';
 
 export default function HomePage() {
   const [doc, setDoc] = useState<MindMapDocument | null>(null);
@@ -31,6 +33,7 @@ export default function HomePage() {
   const [editingOriginal, setEditingOriginal] = useState('');
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
   const [filters, setFilters] = useState<FilterState>({ responsible: null, status: null });
+  const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -107,7 +110,7 @@ export default function HomePage() {
   }
 
   // Горячие клавиши
-  useKeyboard(editingId === null, {
+  useKeyboard(editingId === null && viewMode === 'outline', {
     onEnter: () => {
       if (!selectedId || !doc) return;
       if (selectedId === doc.root.id) {
@@ -233,6 +236,22 @@ export default function HomePage() {
 
       <div className={styles.body}>
         <div className={styles.treePanel}>
+          <div className={styles.viewTabs}>
+            <button
+              type="button"
+              className={`${styles.viewTab} ${viewMode === 'outline' ? styles.viewTabActive : ''}`}
+              onClick={() => setViewMode('outline')}
+            >
+              Outline
+            </button>
+            <button
+              type="button"
+              className={`${styles.viewTab} ${viewMode === 'map' ? styles.viewTabActive : ''}`}
+              onClick={() => setViewMode('map')}
+            >
+              Карта
+            </button>
+          </div>
           <FilterBar
             responsibles={responsibles}
             filters={filters}
@@ -243,7 +262,7 @@ export default function HomePage() {
           <div className={styles.treeContent}>
             {hasActiveFilter && matchCount === 0 ? (
               <div className={styles.noResults}>Нет результатов</div>
-            ) : (
+            ) : viewMode === 'outline' ? (
               <TreeOutline
                 root={doc.root}
                 selectedId={selectedId}
@@ -264,6 +283,14 @@ export default function HomePage() {
                 onEditChange={setEditingValue}
                 onEditCommit={commitEdit}
                 onEditCancel={cancelEdit}
+              />
+            ) : (
+              <MapView
+                root={doc.root}
+                selectedId={selectedId}
+                collapsed={collapsed}
+                filterMap={filterMap}
+                onSelect={setSelectedId}
               />
             )}
           </div>
