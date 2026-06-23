@@ -1,0 +1,64 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+  background: #f9fafb;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.label {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.select {
+  padding: 4px 6px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: white;
+  font-size: 12px;
+  color: var(--color-text);
+  outline: none;
+  cursor: pointer;
+  max-width: 140px;
+}
+
+.select:focus {
+  border-color: var(--color-primary);
+}
+
+.select.active {
+  border-color: var(--color-primary);
+  background: var(--color-selected);
+  color: var(--color-primary);
+}
+
+.resetBtn {
+  padding: 4px 8px;
+  font-size: 11px;
+  color: var(--color-danger);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-sm);
+  background: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.resetBtn:hover {
+  background: #fee2e2;
+}
+
+.resultCount {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-left: auto;
+}
