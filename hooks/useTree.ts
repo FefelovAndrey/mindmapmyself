@@ -173,6 +173,15 @@ export function flatIds(node: MindNode, collapsed: Set<string>): string[] {
   return result;
 }
 
+/** Считает всех потомков узла (без самого узла) */
+export function countDescendants(node: MindNode): number {
+  let total = 0;
+  for (const child of node.children) {
+    total += 1 + countDescendants(child);
+  }
+  return total;
+}
+
 /** Собирает все уникальные значения Ответственного */
 export function collectResponsibles(node: MindNode): string[] {
   const set = new Set<string>();
