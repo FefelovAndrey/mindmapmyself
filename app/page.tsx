@@ -40,9 +40,16 @@ export default function HomePage() {
   // Загрузка данных при старте
   useEffect(() => {
     fetch('/api/nodes')
-      .then((r) => r.json())
-      .then((data: MindMapDocument) => {
-        setDoc(data);
+      .then(async (r) => {
+        const data = await r.json();
+        // #region agent log
+        fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:fetch',message:'GET /api/nodes response',data:{ok:r.ok,status:r.status,hasRoot:Boolean(data?.root),keys:Object.keys(data??{}),runId:'post-fix'},timestamp:Date.now(),hypothesisId:'A-B'})}).catch(()=>{});
+        // #endregion
+        if (!r.ok || !data?.root?.id) {
+          setSaveStatus('error');
+          return;
+        }
+        setDoc(data as MindMapDocument);
         setSelectedId(data.root.id);
       })
       .catch(() => setSaveStatus('error'));
@@ -77,6 +84,10 @@ export default function HomePage() {
   // Навигация по плоскому списку
   const flatList = useMemo(() => {
     if (!doc) return [];
+    // #region agent log
+    fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:flatList',message:'flatList compute',data:{hasDoc:Boolean(doc),hasRoot:Boolean(doc?.root),rootId:doc?.root?.id??null,runId:'post-fix'},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
+    if (!doc.root) return [];
     return flatIds(doc.root, collapsed);
   }, [doc, collapsed]);
 
@@ -291,6 +302,14 @@ export default function HomePage() {
                 collapsed={collapsed}
                 filterMap={filterMap}
                 onSelect={setSelectedId}
+                onToggleCollapse={(id) => {
+                  setCollapsed((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(id)) next.delete(id);
+                    else next.add(id);
+                    return next;
+                  });
+                }}
               />
             )}
           </div>

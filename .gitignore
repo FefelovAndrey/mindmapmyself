@@ -18,12 +18,16 @@ out/
 *.swp
 .idea/
 .vscode/
+.cursor/
 
 # logs
 npm-debug.log*
 
 # local plans (not in repo)
 plans/
+
+# локальные инструкции
+InstructionsGIT.md
 
 # рабочие данные редактора (снимки — в ветке data/snapshots)
 data/mindmap.json
