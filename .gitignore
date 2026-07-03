@@ -18,7 +18,8 @@ out/
 *.swp
 .idea/
 .vscode/
-.cursor/
+.cursor/*
+!.cursor/environment.json
 
 # logs
 npm-debug.log*
