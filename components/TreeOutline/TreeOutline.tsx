@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 import type { MindNode } from '@/types/node';
-import { calcNumbers, type NumberedNode } from '@/hooks/useTree';
+import { calcNumbers, isNodeVisibleInFilter, type NumberedNode } from '@/hooks/useTree';
 import styles from './TreeOutline.module.css';
 
 interface TreeOutlineProps {
@@ -92,14 +92,7 @@ function NodeRow({
   const isSelected = selectedId === node.id;
   const isEditing = editingId === node.id;
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const filterInfo = filterMap?.get(node.id);
-  const isDimmed = filterMap !== null && filterInfo !== undefined
-    ? !filterInfo.matched && !filterInfo.hasMatchingDescendant
-    : false;
-  const isParentContext = filterMap !== null && filterInfo !== undefined
-    ? !filterInfo.matched && filterInfo.hasMatchingDescendant
-    : false;
+  const isVisible = isNodeVisibleInFilter(filterMap, node.id);
 
   useEffect(() => {
     if (isEditing && inputRef.current) {
@@ -107,6 +100,10 @@ function NodeRow({
       inputRef.current.select();
     }
   }, [isEditing]);
+
+  if (!isVisible) {
+    return null;
+  }
 
   const statusClass = node.status === 'New'
     ? styles.statusNew
@@ -119,7 +116,6 @@ function NodeRow({
   const rowClass = [
     styles.node,
     isSelected ? styles.selected : '',
-    (isDimmed && !isParentContext) ? styles.dimmed : '',
     node.status === 'Done' ? styles.done : '',
     node.status === 'Cancelled' ? styles.cancelled : '',
   ].filter(Boolean).join(' ');
@@ -129,8 +125,8 @@ function NodeRow({
       <div
         className={rowClass}
         style={{ paddingLeft: `${depth * 20 + 8}px` }}
-        onClick={() => !isDimmed && onSelect(node.id)}
-        onDoubleClick={() => !isDimmed && onEditStart(node.id, node.name)}
+        onClick={() => onSelect(node.id)}
+        onDoubleClick={() => onEditStart(node.id, node.name)}
         data-node-id={node.id}
       >
         {/* Кнопка сворачивания */}
@@ -164,12 +160,7 @@ function NodeRow({
               onClick={(e) => e.stopPropagation()}
             />
           ) : (
-            <span
-              className={styles.name}
-              style={{ opacity: isParentContext ? 0.5 : 1 }}
-            >
-              {node.name}
-            </span>
+            <span className={styles.name}>{node.name}</span>
           )}
 
           <div className={styles.badges}>
@@ -188,7 +179,9 @@ function NodeRow({
         </div>
       </div>
 
-      {!isCollapsed && (node.children as NumberedNode[]).map((child) => (
+      {!isCollapsed && (node.children as NumberedNode[])
+        .filter((child) => isNodeVisibleInFilter(filterMap, child.id))
+        .map((child) => (
         <NodeRow
           key={child.id}
           node={child}

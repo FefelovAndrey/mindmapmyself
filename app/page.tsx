@@ -13,6 +13,8 @@ import {
   filterTree,
   calcNumbers,
   findNode,
+  EMPTY_FILTERS,
+  hasActiveFilters,
   type FilterState,
 } from '@/hooks/useTree';
 import { useKeyboard } from '@/hooks/useKeyboard';
@@ -32,7 +34,7 @@ export default function HomePage() {
   const [editingValue, setEditingValue] = useState('');
   const [editingOriginal, setEditingOriginal] = useState('');
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
-  const [filters, setFilters] = useState<FilterState>({ responsible: null, status: null });
+  const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
   const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -185,7 +187,7 @@ export default function HomePage() {
   });
 
   // Фильтрация
-  const hasActiveFilter = filters.responsible !== null || filters.status !== null;
+  const hasActiveFilter = hasActiveFilters(filters);
   const filterMap = useMemo(() => {
     if (!doc || !hasActiveFilter) return null;
     return filterTree(doc.root, filters);
@@ -268,7 +270,7 @@ export default function HomePage() {
             filters={filters}
             matchCount={matchCount}
             onChange={setFilters}
-            onReset={() => setFilters({ responsible: null, status: null })}
+            onReset={() => setFilters(EMPTY_FILTERS)}
           />
           <div className={styles.treeContent}>
             {hasActiveFilter && matchCount === 0 ? (
