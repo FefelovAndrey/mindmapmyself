@@ -15,7 +15,7 @@ function createDefaultDocument(): MindMapDocument {
       name: 'задачи RULI',
       description: null,
       responsible: null,
-      status: null,
+      status: 'New',
       deadline: null,
       children: [],
     },

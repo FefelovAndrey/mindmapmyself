@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "import": "npx tsx scripts/import-mmap.ts",
+    "migrate-status": "npx tsx scripts/migrate-status.ts",
     "test": "jest"
   },
   "dependencies": {

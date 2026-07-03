@@ -1,7 +1,7 @@
 import dagre from '@dagrejs/dagre';
 import type { Edge, Node } from '@xyflow/react';
 import type { MindNode, Status } from '@/types/node';
-import { calcNumbers, countDescendants, type NumberedNode } from '@/hooks/useTree';
+import { calcNumbers, countDescendants, isNodeVisibleInFilter, type NumberedNode } from '@/hooks/useTree';
 
 export const MAP_NODE_WIDTH = 220;
 export const COLLAPSE_HANDLE_SIZE = 28;
@@ -39,18 +39,6 @@ function estimateNodeHeight(node: NumberedNode): number {
   return Math.max(height, 80);
 }
 
-function getFilterFlags(
-  nodeId: string,
-  filterMap: Map<string, FilterEntry> | null
-): { dimmed: boolean; parentContext: boolean } {
-  if (!filterMap) return { dimmed: false, parentContext: false };
-  const info = filterMap.get(nodeId);
-  if (!info) return { dimmed: false, parentContext: false };
-  const dimmed = !info.matched && !info.hasMatchingDescendant;
-  const parentContext = !info.matched && info.hasMatchingDescendant;
-  return { dimmed, parentContext };
-}
-
 function walkVisibleTree(
   node: NumberedNode,
   collapsed: Set<string>,
@@ -58,7 +46,9 @@ function walkVisibleTree(
   flowNodes: Node<MapFlowNodeData>[],
   flowEdges: Edge[]
 ): void {
-  const { dimmed, parentContext } = getFilterFlags(node.id, filterMap);
+  if (!isNodeVisibleInFilter(filterMap, node.id)) {
+    return;
+  }
 
   flowNodes.push({
     id: node.id,
@@ -70,10 +60,10 @@ function walkVisibleTree(
       name: node.name,
       responsible: node.responsible,
       status: node.status,
-      dimmed,
-      parentContext,
+      dimmed: false,
+      parentContext: false,
     },
-    selectable: !dimmed,
+    selectable: true,
   });
 
   if (node.children.length === 0) return;
@@ -107,6 +97,9 @@ function walkVisibleTree(
   }
 
   for (const child of node.children as NumberedNode[]) {
+    if (!isNodeVisibleInFilter(filterMap, child.id)) {
+      continue;
+    }
     flowEdges.push({
       id: `${node.id}-${child.id}`,
       source: node.id,

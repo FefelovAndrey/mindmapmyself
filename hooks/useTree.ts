@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import type { MindNode } from '@/types/node';
+import type { MindNode, Status } from '@/types/node';
 
 export interface NumberedNode extends MindNode {
   number: string;
@@ -25,7 +25,7 @@ function newNode(name = 'Новый узел'): MindNode {
     name,
     description: null,
     responsible: null,
-    status: null,
+    status: 'New',
     deadline: null,
     children: [],
   };
@@ -194,9 +194,15 @@ export function collectResponsibles(node: MindNode): string[] {
 }
 
 export type FilterState = {
-  responsible: string | null;
-  status: string | null;
+  responsibles: string[];
+  statuses: Status[];
 };
+
+export const EMPTY_FILTERS: FilterState = { responsibles: [], statuses: [] };
+
+export function hasActiveFilters(filters: FilterState): boolean {
+  return filters.responsibles.length > 0 || filters.statuses.length > 0;
+}
 
 export type FilteredNode = MindNode & {
   matched: boolean;
@@ -211,9 +217,13 @@ export function filterTree(
   const map = new Map<string, { matched: boolean; hasMatchingDescendant: boolean }>();
 
   function traverse(n: MindNode): boolean {
-    const selfMatch =
-      (filters.responsible === null || n.responsible === filters.responsible) &&
-      (filters.status === null || n.status === filters.status);
+    const responsibleMatch =
+      filters.responsibles.length === 0 ||
+      (n.responsible !== null && filters.responsibles.includes(n.responsible));
+    const statusMatch =
+      filters.statuses.length === 0 ||
+      (n.status !== null && filters.statuses.includes(n.status));
+    const selfMatch = responsibleMatch && statusMatch;
 
     // Используем forEach чтобы обойти ВСЕХ детей (some прерывается досрочно)
     let hasMatchingDescendant = false;
@@ -227,4 +237,15 @@ export function filterTree(
 
   traverse(node);
   return map;
+}
+
+/** Узел виден при активном фильтре, если сам совпадает или ведёт к совпадению ниже по дереву */
+export function isNodeVisibleInFilter(
+  filterMap: Map<string, { matched: boolean; hasMatchingDescendant: boolean }> | null,
+  nodeId: string
+): boolean {
+  if (!filterMap) return true;
+  const info = filterMap.get(nodeId);
+  if (!info) return true;
+  return info.matched || info.hasMatchingDescendant;
 }
