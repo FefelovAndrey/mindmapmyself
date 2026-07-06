@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-06-24T04:21:52.572Z",
+  "updatedAt": "2026-07-06T05:51:11.289Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -30,7 +30,7 @@
                 "name": "Поиск отмененных после упаковки",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Cancelled",
                 "deadline": null,
                 "children": [
                   {
@@ -38,7 +38,7 @@
                     "name": "Бизнес-анализ готов",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -49,7 +49,7 @@
                 "name": "PIM",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Cancelled",
                 "deadline": null,
                 "children": [
                   {
@@ -57,7 +57,7 @@
                     "name": "На Матвее - ждем и ничего не делаем",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   }
@@ -68,7 +68,7 @@
                 "name": "[ozon] Соблюдение МРЦ \"целевая\" схема",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Cancelled",
                 "deadline": null,
                 "children": [
                   {
@@ -76,7 +76,7 @@
                     "name": "Я/В свободное время прорабатывать",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   },
@@ -85,7 +85,7 @@
                     "name": "Я/Встреча с ребятами на 27.04 по целевой схеме",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   }
@@ -105,7 +105,7 @@
                 "name": "Вскрытие при упаковке",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Cancelled",
                 "deadline": null,
                 "children": [
                   {
@@ -113,7 +113,7 @@
                     "name": "Роман/Скинуть данные по стоимости упаковки",
                     "description": null,
                     "responsible": "Роман",
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   },
@@ -122,7 +122,7 @@
                     "name": "Я/Посчитать данные по экономике вскрытия и экономической целесообразности",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   }
@@ -179,7 +179,7 @@
                     "name": "Я/Провести анализ и подготовить требованния",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -188,7 +188,7 @@
                     "name": "Передать требования команде разрабоотки",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": [
                       {
@@ -196,7 +196,7 @@
                         "name": "Я/Назначить встречу",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": []
                       }
@@ -207,7 +207,7 @@
                     "name": "Заполнение данных в Календаре",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -216,7 +216,7 @@
                     "name": "Я/Обсудить с Максимом что я емуу передаю",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -235,6 +235,15 @@
                     "name": "Я/Назначить встречу с Денисом и Сергеем и обстучать еще варианты",
                     "description": null,
                     "responsible": null,
+                    "status": "Done",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "91e07579-4896-4168-adb9-cb1b5d938841",
+                    "name": "Я/Назначить встречу с Денисом еще раз переговорить по репрайсеру",
+                    "description": null,
+                    "responsible": null,
                     "status": null,
                     "deadline": null,
                     "children": []
@@ -246,7 +255,7 @@
                 "name": "От Николая Иванова обработать (22.06)",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Cancelled",
                 "deadline": null,
                 "children": [
                   {
@@ -254,7 +263,7 @@
                     "name": "Кучка задач требует информации или какого-то решения.",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   },
@@ -382,13 +391,22 @@
                     "name": "Роман/Должен поставить встречу с Юлей по проектированию схлапывания логистики",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
                   {
                     "id": "0d59513e-f4cb-4dc0-8b03-cec10caa38ce",
                     "name": "Я/Посмотреть что скинул Сергей по расчету экономики схлапывания логистики",
+                    "description": null,
+                    "responsible": null,
+                    "status": "Done",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "00c0ac28-9c99-4c90-a9c4-17b4e2934fa2",
+                    "name": "Роман тестирует в свободное время",
                     "description": null,
                     "responsible": null,
                     "status": null,
@@ -402,7 +420,7 @@
                 "name": "Приложение для курьера по возвратам",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Done",
                 "deadline": null,
                 "children": [
                   {
@@ -410,7 +428,7 @@
                     "name": "Роман/В тестировании",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -448,7 +466,7 @@
                     "name": "Я/Обработать результаты встречи по процессам вместе с автозаказом и сделать какое то резюме",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -457,7 +475,7 @@
                     "name": "Я/Провести аналитику по автозаказам, чтобы можно было брать в работу",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -474,7 +492,7 @@
                         "name": "Парсинг УПД и превращение в ПТУ",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": [
                           {
@@ -482,7 +500,7 @@
                             "name": "Вопрос - как сопоставить УПД с соглашением. С учетом того, что УПД может <> заказу поставщика",
                             "description": null,
                             "responsible": null,
-                            "status": null,
+                            "status": "Done",
                             "deadline": null,
                             "children": [
                               {
@@ -490,7 +508,7 @@
                                 "name": "Максим/Предоставить xml по разным кейсам",
                                 "description": null,
                                 "responsible": null,
-                                "status": null,
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               },
@@ -499,7 +517,7 @@
                                 "name": "Если не получается, то как вариант делать логику соглашение на виртуальный склад, который доступен для всех складов",
                                 "description": null,
                                 "responsible": null,
-                                "status": null,
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               }
@@ -512,7 +530,7 @@
                         "name": "Сопоставление товара в ПТУ и в Заказе поставщика",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": [
                           {
@@ -520,7 +538,7 @@
                             "name": "Я/Продумать статусную модель что может быть с позицией в Заказе поставщика с учетом цикла товара (с недовозом например)",
                             "description": null,
                             "responsible": null,
-                            "status": null,
+                            "status": "Done",
                             "deadline": null,
                             "children": []
                           },
@@ -529,7 +547,7 @@
                             "name": "Контроль цены при сопостовлении товара",
                             "description": null,
                             "responsible": null,
-                            "status": null,
+                            "status": "Done",
                             "deadline": null,
                             "children": [
                               {
@@ -548,7 +566,7 @@
                             "name": "Контроль количества при сопоставлении товаров",
                             "description": null,
                             "responsible": null,
-                            "status": null,
+                            "status": "Done",
                             "deadline": null,
                             "children": [
                               {
@@ -556,7 +574,7 @@
                                 "name": "Я/С Юрием проговорить сценарий - что делать, если заказали 10 штук, а пришло 12  - то тогда что? Меняем в заказе поставщика или создаем отдельный заказ поставщику или как",
                                 "description": null,
                                 "responsible": null,
-                                "status": null,
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               }
@@ -573,7 +591,7 @@
                 "name": "Календарь отгрузок",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -589,7 +607,7 @@
                         "name": "ссылка на",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": []
                       },
@@ -598,7 +616,26 @@
                         "name": "Я/Переговорить с Денисом и понять как сроки по ОЗОН считаются и должны считаться",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
+                        "deadline": null,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "a739902d-529a-435f-a4eb-1748278d9c6c",
+                    "name": "Встреча с Максимом - проверить логику",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": [
+                      {
+                        "id": "21ccccba-4a46-4a01-b042-3cb4a5b85b30",
+                        "name": "Я/Поставить всттречу с Максимом",
+                        "description": null,
+                        "responsible": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": []
                       }
@@ -611,7 +648,7 @@
                 "name": "Автоматизация приоритетов складов",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -619,7 +656,7 @@
                     "name": "15.04 на дейлике Python смотрим что с этой задачей- расходятся показания",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -628,7 +665,7 @@
                     "name": "Должен что то подумать Лоскутов",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -641,7 +678,7 @@
             "name": "Дима",
             "description": null,
             "responsible": null,
-            "status": null,
+            "status": "New",
             "deadline": null,
             "children": [
               {
@@ -649,7 +686,7 @@
                 "name": "Возвраты с МП (кроме нарезки)",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -666,7 +703,7 @@
                     "name": "Тестирование",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": [
                       {
@@ -674,7 +711,7 @@
                         "name": "Аня/Провести тестирование на проде",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": [
                           {
@@ -682,7 +719,7 @@
                             "name": "Аня/Контроль исправления замечаний",
                             "description": null,
                             "responsible": null,
-                            "status": null,
+                            "status": "Done",
                             "deadline": null,
                             "children": []
                           }
@@ -697,7 +734,7 @@
                 "name": "Обработка статистики по быстрым поставщикам",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -705,7 +742,7 @@
                     "name": "Я/С Ивановым обсудить про заполнение 999",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   },
@@ -714,7 +751,7 @@
                     "name": "Я/Продумать что нужно для запуска",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
                     "deadline": null,
                     "children": []
                   }
@@ -725,7 +762,7 @@
                 "name": "Авторизация и нарезка видео",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -733,7 +770,7 @@
                     "name": "QR коды",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -752,7 +789,7 @@
                     "name": "Я/Отдать Диме анализ после отпуска",
                     "description": null,
                     "responsible": "Дима",
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -763,7 +800,7 @@
                 "name": "Честный знак",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -780,7 +817,7 @@
                     "name": "Аня/Проектирование логики УПД-ПТУ-Приход",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -789,7 +826,7 @@
                     "name": "TrueAPI",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "New",
                     "deadline": null,
                     "children": [
                       {
@@ -797,7 +834,7 @@
                         "name": "Я/Проработать вопрос с флешкой",
                         "description": null,
                         "responsible": null,
-                        "status": null,
+                        "status": "Done",
                         "deadline": null,
                         "children": []
                       }
@@ -808,7 +845,25 @@
                     "name": "Я/Коля Иванова и Иван Григоров просят поправить вехи по Честному знаку",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "29c408d8-4709-4d3b-affe-1bb52bf1c2b8",
+                    "name": "Дима/С Ваней сделать МЧД",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "d9589117-41a6-47d8-adcb-a93e10bb450e",
+                    "name": "Аня,Дима/Новые требования ОЗОН по указанию маркировки в инфообмене",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
                     "deadline": null,
                     "children": []
                   }
@@ -821,7 +876,7 @@
             "name": "Аня",
             "description": null,
             "responsible": null,
-            "status": null,
+            "status": "New",
             "deadline": null,
             "children": [
               {
@@ -855,7 +910,16 @@
                     "name": "Аня/Разобраться что нужно делать",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Cancelled",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "63edd9d2-bf50-4b43-8914-f3f7703f9940",
+                    "name": "Аня/Сделать алгоритм работы",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
                     "deadline": null,
                     "children": []
                   }
@@ -913,7 +977,7 @@
                 "name": "Я/Проверить и перевести заведенные задачи в очередь инициаттив",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": []
               }
@@ -924,7 +988,7 @@
             "name": "Управление проектами",
             "description": null,
             "responsible": null,
-            "status": null,
+            "status": "New",
             "deadline": null,
             "children": [
               {
@@ -941,7 +1005,7 @@
                 "name": "Калькулятор нагрузки",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Done",
                 "deadline": null,
                 "children": [
                   {
@@ -949,7 +1013,7 @@
                     "name": "Я/Подгтовит калькулятор для планирования на комитете",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -958,7 +1022,7 @@
                     "name": "Коля/Дать аналитику по капасити",
                     "description": null,
                     "responsible": "коля",
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   }
@@ -977,7 +1041,7 @@
                     "name": "Я/Сделать схему ресурсного планирования - зафиксировать о чем договорились",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -986,7 +1050,16 @@
                     "name": "Я/С Димой и Максимом обсудить на чем мы остановились по планированию Ганта - и попробовать это сделать сразу в Трекере",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "5b60ccbc-812d-4f11-82e5-32e358258be8",
+                    "name": "Я/Продумать и поставить ребятам регулярки в том числе и по Ганту",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
                     "deadline": null,
                     "children": []
                   }
