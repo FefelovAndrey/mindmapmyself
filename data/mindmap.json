@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-07-06T05:51:11.289Z",
+  "updatedAt": "2026-07-07T04:39:54.012Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -627,7 +627,7 @@
                     "name": "Встреча с Максимом - проверить логику",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Done",
                     "deadline": null,
                     "children": [
                       {
@@ -648,7 +648,7 @@
                 "name": "Автоматизация приоритетов складов",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Cancelled",
                 "deadline": null,
                 "children": [
                   {
@@ -670,6 +670,15 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "dd9e7530-5f6a-4401-85df-f2635c8f8071",
+                "name": "В документах на возврат указывать адрес склада поставщика CKA-1430",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
               }
             ]
           },
@@ -862,12 +871,21 @@
                     "id": "d9589117-41a6-47d8-adcb-a93e10bb450e",
                     "name": "Аня,Дима/Новые требования ОЗОН по указанию маркировки в инфообмене",
                     "description": null,
-                    "responsible": null,
+                    "responsible": "Дима",
                     "status": "New",
                     "deadline": null,
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "ec5a0e76-defd-4e72-890a-caf3b24a9702",
+                "name": "[wb] Настройка передачи остатков по складам DEVEL-2772",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
               }
             ]
           },
@@ -918,7 +936,7 @@
                     "id": "63edd9d2-bf50-4b43-8914-f3f7703f9940",
                     "name": "Аня/Сделать алгоритм работы",
                     "description": null,
-                    "responsible": null,
+                    "responsible": "Аня",
                     "status": "New",
                     "deadline": null,
                     "children": []
@@ -977,6 +995,15 @@
                 "name": "Я/Проверить и перевести заведенные задачи в очередь инициаттив",
                 "description": null,
                 "responsible": null,
+                "status": "Done",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "eff9b9b2-9f9a-458f-b356-96f26899640c",
+                "name": "Я/Завести проекты по инициативам",
+                "description": null,
+                "responsible": "Андрей",
                 "status": "New",
                 "deadline": null,
                 "children": []
@@ -1066,6 +1093,15 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "087a9737-df22-4e57-806c-3f02016ef833",
+            "name": "Онбординг Дмитрий",
+            "description": null,
+            "responsible": null,
+            "status": "New",
+            "deadline": null,
+            "children": []
           }
         ]
       }
