@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-07-08T04:52:22.608Z",
+  "updatedAt": "2026-07-21T08:31:14.905Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -882,6 +882,15 @@
                 "id": "ec5a0e76-defd-4e72-890a-caf3b24a9702",
                 "name": "[wb] Настройка передачи остатков по складам DEVEL-2772",
                 "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "6a318655-c76d-4777-929c-b926202d6175",
+                "name": "Дубль кабинета ОЗОН",
+                "description": "https://tracker.yandex.ru/pages/projects/709/comments",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
