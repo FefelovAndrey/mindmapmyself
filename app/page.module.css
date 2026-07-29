@@ -36,6 +36,12 @@
   color: var(--color-danger);
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .body {
   display: flex;
   flex: 1;
@@ -79,7 +85,7 @@
 
 .viewTab:hover {
   color: var(--color-text);
-  background: #f9fafb;
+  background: var(--color-surface-muted);
 }
 
 .viewTabActive {

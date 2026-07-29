@@ -15,5 +15,13 @@
 }
 
 .wrapper :global(.react-flow__controls-button:hover) {
-  background: #f3f4f6;
+  background: var(--color-hover);
+}
+
+.wrapper :global(.react-flow__edge-path) {
+  stroke: var(--color-edge);
+}
+
+.wrapper :global(.react-flow__attribution) {
+  background: transparent;
 }
