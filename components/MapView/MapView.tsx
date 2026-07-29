@@ -17,12 +17,18 @@ import type { MindNode } from '@/types/node';
 import { buildMapGraph, type MapFlowNodeData } from './mapLayout';
 import MapNode from './MapNode';
 import CollapseHandle from './CollapseHandle';
+import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
 import styles from './MapView.module.css';
 
 const nodeTypes = {
   mapNode: MapNode,
   collapseHandle: CollapseHandle,
 };
+
+const MAP_DOTS = {
+  light: '#d1d5db',
+  dark: '#374151',
+} as const;
 
 interface MapViewProps {
   root: MindNode;
@@ -41,6 +47,7 @@ export default function MapView({
   onSelect,
   onToggleCollapse,
 }: MapViewProps) {
+  const { theme } = useTheme();
   const { nodes: layoutNodes, edges: layoutEdges } = useMemo(
     () => buildMapGraph(root, collapsed, filterMap),
     [root, collapsed, filterMap]
@@ -90,7 +97,7 @@ export default function MapView({
         proOptions={{ hideAttribution: true }}
       >
         <Controls showInteractive={false} />
-        <Background variant={BackgroundVariant.Dots} gap={16} size={1} color="#d1d5db" />
+        <Background variant={BackgroundVariant.Dots} gap={16} size={1} color={MAP_DOTS[theme]} />
       </ReactFlow>
     </div>
   );

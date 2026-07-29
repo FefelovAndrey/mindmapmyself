@@ -22,6 +22,7 @@ import TreeOutline from '@/components/TreeOutline/TreeOutline';
 import MapView from '@/components/MapView/MapView';
 import NodeCard from '@/components/NodeCard/NodeCard';
 import FilterBar from '@/components/FilterBar/FilterBar';
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
@@ -244,7 +245,10 @@ export default function HomePage() {
     <div className={styles.layout}>
       <header className={styles.header}>
         <span className={styles.title}>Mind Map Editor — задачи RULI</span>
-        <span className={saveLabelClass}>{saveLabel}</span>
+        <div className={styles.headerActions}>
+          <span className={saveLabelClass}>{saveLabel}</span>
+          <ThemeToggle />
+        </div>
       </header>
 
       <div className={styles.body}>
