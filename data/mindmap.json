@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-07-21T08:31:14.905Z",
+  "updatedAt": "2026-07-29T04:11:40.222Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -862,7 +862,7 @@
                     "id": "29c408d8-4709-4d3b-affe-1bb52bf1c2b8",
                     "name": "Дима/С Ваней сделать МЧД",
                     "description": null,
-                    "responsible": null,
+                    "responsible": "Дима",
                     "status": "New",
                     "deadline": null,
                     "children": []
@@ -870,7 +870,7 @@
                   {
                     "id": "d9589117-41a6-47d8-adcb-a93e10bb450e",
                     "name": "Аня,Дима/Новые требования ОЗОН по указанию маркировки в инфообмене",
-                    "description": null,
+                    "description": "https://tracker.yandex.ru/DEVEL-2771",
                     "responsible": "Дима",
                     "status": "New",
                     "deadline": null,
@@ -881,8 +881,8 @@
               {
                 "id": "ec5a0e76-defd-4e72-890a-caf3b24a9702",
                 "name": "[wb] Настройка передачи остатков по складам DEVEL-2772",
-                "description": null,
-                "responsible": null,
+                "description": "https://tracker.yandex.ru/DEVEL-2772",
+                "responsible": "Дима",
                 "status": "New",
                 "deadline": null,
                 "children": []
@@ -891,6 +891,60 @@
                 "id": "6a318655-c76d-4777-929c-b926202d6175",
                 "name": "Дубль кабинета ОЗОН",
                 "description": "https://tracker.yandex.ru/pages/projects/709/comments",
+                "responsible": "Дима",
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "e558466e-8207-4c06-bcd1-19e6d7322a9f",
+                "name": "Проект УПД ЭДО",
+                "description": null,
+                "responsible": "Дима",
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "1149e24d-d563-4fe4-97d1-c150dbd4a353",
+                "name": "DEVEL-2786: [ozon] корректировка коррекции по PI",
+                "description": "https://tracker.yandex.ru/DEVEL-2786",
+                "responsible": "Дима",
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "93c572b2-35d4-4cf1-a0ff-99536fb80d37",
+                "name": "DEVEL-2787: [ozon] Связка вариантов через количство.",
+                "description": "https://tracker.yandex.ru/DEVEL-2787\nВыдал перед отпуском в работу",
+                "responsible": "Дима",
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "4e204470-e94f-4c26-9a9e-550b0fb4378e",
+                "name": "DEVEL-2788: Формирование CSV-файла товаров-аналогов для SearchBooster",
+                "description": "https://tracker.yandex.ru/DEVEL-2788\nвыдал перед отпуском",
+                "responsible": "Дима",
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "41b18662-7213-4f8b-8077-68a07155f6c7",
+                "name": "DEVEL-2789: Цена авито",
+                "description": "https://tracker.yandex.ru/DEVEL-2789",
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "e6e8606f-2464-4ae3-a1f2-017c44e768f8",
+                "name": "DEVEL-2690: [Exist] Доработка способа доставки и источника продаж",
+                "description": "https://tracker.yandex.ru/DEVEL-2789",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
@@ -1013,6 +1067,15 @@
                 "name": "Я/Завести проекты по инициативам",
                 "description": null,
                 "responsible": "Андрей",
+                "status": "Done",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "2a174f37-8be6-42c2-9d3e-874af1ecddbc",
+                "name": "Инициативы 3 августа 2026г",
+                "description": null,
+                "responsible": null,
                 "status": "New",
                 "deadline": null,
                 "children": []
@@ -1102,19 +1165,47 @@
                 ]
               },
               {
-                "id": "7d3f4897-4c3f-483c-a364-6bde1741ae74",
-                "name": "Встреча 1-1 07июля2026",
-                "description": "1. Посмотреть и закрыть проекты 4 кв.2025; 1,2 кв.2026\n2. Сделать саммари по выполненным проектам за 1-ое полугодие 2026 года (отдать ребятам)\n3. По Максиму - отдаем ему проекты 100 и 070. Они должны попадать в спринты и их надо прогрумить",
+                "id": "9511e8d6-22b1-48a4-8fa4-da03bcccac59",
+                "name": "Встречи 1-1",
+                "description": null,
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
-                "children": []
+                "children": [
+                  {
+                    "id": "a7f5ef96-72c3-4b54-bd6b-3d83f71b17c9",
+                    "name": "Встреча 1-1 28июля2026",
+                    "description": "1. На досуге посмотреть баги - что там к нам залетает\n2. Добить аналитику по 1,2 кварталу - распределить нераспределенное\n3. На следующей неделе готовим инициативы",
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": []
+                  },
+                  {
+                    "id": "7d3f4897-4c3f-483c-a364-6bde1741ae74",
+                    "name": "Встреча 1-1 07июля2026",
+                    "description": "1. Посмотреть и закрыть проекты 4 кв.2025; 1,2 кв.2026\n2. Сделать саммари по выполненным проектам за 1-ое полугодие 2026 года (отдать ребятам)\n3. По Максиму - отдаем ему проекты 100 и 070. Они должны попадать в спринты и их надо прогрумить",
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
           {
             "id": "087a9737-df22-4e57-806c-3f02016ef833",
             "name": "Онбординг Дмитрий",
+            "description": null,
+            "responsible": null,
+            "status": "Done",
+            "deadline": null,
+            "children": []
+          },
+          {
+            "id": "100e7cd3-996a-487c-8123-e49e893fcc4f",
+            "name": "Развитие агентского анализа",
             "description": null,
             "responsible": null,
             "status": "New",
