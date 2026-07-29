@@ -42,7 +42,7 @@ function buildNode(topic: XmlTopic): MindNode {
     name,
     description: null,
     responsible: null,
-    status: null,
+    status: 'New',
     deadline: null,
     children,
   };

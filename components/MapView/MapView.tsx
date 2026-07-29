@@ -14,11 +14,21 @@ import {
 import '@xyflow/react/dist/style.css';
 
 import type { MindNode } from '@/types/node';
-import { buildMapGraph, type MapNodeData } from './mapLayout';
+import { buildMapGraph, type MapFlowNodeData } from './mapLayout';
 import MapNode from './MapNode';
+import CollapseHandle from './CollapseHandle';
+import { useTheme } from '@/components/ThemeProvider/ThemeProvider';
 import styles from './MapView.module.css';
 
-const nodeTypes = { mapNode: MapNode };
+const nodeTypes = {
+  mapNode: MapNode,
+  collapseHandle: CollapseHandle,
+};
+
+const MAP_DOTS = {
+  light: '#d1d5db',
+  dark: '#374151',
+} as const;
 
 interface MapViewProps {
   root: MindNode;
@@ -26,6 +36,7 @@ interface MapViewProps {
   collapsed: Set<string>;
   filterMap: Map<string, { matched: boolean; hasMatchingDescendant: boolean }> | null;
   onSelect: (id: string) => void;
+  onToggleCollapse: (id: string) => void;
 }
 
 export default function MapView({
@@ -34,31 +45,37 @@ export default function MapView({
   collapsed,
   filterMap,
   onSelect,
+  onToggleCollapse,
 }: MapViewProps) {
+  const { theme } = useTheme();
   const { nodes: layoutNodes, edges: layoutEdges } = useMemo(
     () => buildMapGraph(root, collapsed, filterMap),
     [root, collapsed, filterMap]
   );
 
-  const [nodes, setNodes, onNodesChange] = useNodesState<Node<MapNodeData>>([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<Node<MapFlowNodeData>>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
 
   useEffect(() => {
     setNodes(
       layoutNodes.map((node) => ({
         ...node,
-        selected: node.id === selectedId,
+        selected: node.type === 'mapNode' && node.id === selectedId,
       }))
     );
     setEdges(layoutEdges);
   }, [layoutNodes, layoutEdges, selectedId, setNodes, setEdges]);
 
   const onNodeClick = useCallback(
-    (_: React.MouseEvent, node: Node<MapNodeData>) => {
-      if (node.data.dimmed) return;
+    (_: React.MouseEvent, node: Node<MapFlowNodeData>) => {
+      if (node.type === 'collapseHandle' && node.data.kind === 'collapseHandle') {
+        onToggleCollapse(node.data.parentId);
+        return;
+      }
+      if (node.data.kind !== 'mapNode' || node.data.dimmed) return;
       onSelect(node.id);
     },
-    [onSelect]
+    [onSelect, onToggleCollapse]
   );
 
   return (
@@ -77,12 +94,10 @@ export default function MapView({
         zoomOnScroll
         minZoom={0.15}
         maxZoom={2}
-        fitView
-        fitViewOptions={{ padding: 0.2 }}
         proOptions={{ hideAttribution: true }}
       >
         <Controls showInteractive={false} />
-        <Background variant={BackgroundVariant.Dots} gap={16} size={1} color="#d1d5db" />
+        <Background variant={BackgroundVariant.Dots} gap={16} size={1} color={MAP_DOTS[theme]} />
       </ReactFlow>
     </div>
   );

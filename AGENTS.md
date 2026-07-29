@@ -2,28 +2,38 @@
 
 ## Cursor Cloud specific instructions
 
-This repo is a single Next.js 15 / React 19 app (TypeScript) — a mind map / outline
-editor ("Mind Map Editor — задачи RULI"). There is no database, backend service,
-external API, or secret; all state is persisted to a local JSON file.
+Single-app repo: a **Next.js 15 / React 19 / TypeScript** mind-map editor (`mindmap-editor`).
+Package manager is **npm** (`package-lock.json`). Node 22 is available. No database,
+containers, or external services — data is persisted to a local JSON file at
+`data/mindmap.json`.
 
-Standard commands live in `package.json` scripts:
-- Dev server: `npm run dev` (Next.js on http://localhost:3000).
-- Tests: `npm test` (Jest + ts-jest, 23 tests in `__tests__/`).
-- Type check: `npx tsc --noEmit`.
-- Import a `.mmap` file into data: `npm run import` (see `scripts/import-mmap.ts`).
+### Services
 
-There is no lint script and no ESLint config in this repo, so "lint" is a no-op here.
+- **Next.js app (UI + API)** — the entire product. Dev: `npm run dev` (port 3000).
+  Serves the UI (`app/page.tsx`) and the single API route `app/api/nodes/route.ts`
+  (`GET`/`POST` reading/writing `data/mindmap.json`). `data/mindmap.json` is
+  git-ignored and auto-created with a default document on the first `GET /api/nodes`,
+  so no seeding is required to boot. `launch.sh` is a convenience wrapper around
+  `npm run dev` that also opens a browser.
 
-Non-obvious notes:
-- Running the tests requires `ts-node` (Jest loads `jest.config.ts`). It is a
-  devDependency and is installed by the update script (`npm ci`).
-- Data is served/persisted through `app/api/nodes/route.ts` from
-  `data/mindmap.json`. That file is listed in `.gitignore` but is intentionally
-  committed on the `data/snapshots` branch (the working data snapshot). If you
-  edit the map in the UI, `data/mindmap.json` changes on disk — run
-  `git checkout -- data/mindmap.json` to discard test edits before committing.
-- In the right-hand node card (`components/NodeCard/NodeCard.tsx`), the
-  "Ответственный" and "Описание" fields commit their value on blur / Enter, not on
-  every keystroke. When testing auto-save, type the value and then click away
-  (e.g. on a tree node) to trigger the save; only then does the header show
-  "Сохраняется..." → "Сохранено".
+### Commands (see `package.json` scripts)
+
+- Run (dev): `npm run dev` → http://localhost:3000
+- Build: `npm run build` (also type-checks); prod start: `npm run start`
+- Test: `npm test` (Jest + ts-jest, tests in `__tests__/`)
+- Seed real data (optional): `npm run import` parses `TasksRULI_23062026.mmap` into
+  `data/mindmap.json`. Migrate: `npm run migrate-status`.
+
+### Non-obvious caveats
+
+- **Tests need `ts-node`.** `jest.config.ts` is written in TypeScript, and Jest
+  requires `ts-node` (in addition to `ts-jest`) just to parse that config file.
+  `ts-node` is now a dev dependency, so `npm install` covers it. Without it,
+  `npm test` fails with "'ts-node' is required for the TypeScript configuration files".
+- **No linter is configured.** There is no ESLint config or `lint` script; running
+  `npx next lint` triggers an interactive setup prompt (do not run it non-interactively).
+  Type safety is enforced via `npm run build` / `tsc` instead.
+- **UI editing is keyboard-driven.** In Outline view, select a node then: `Tab`
+  adds a child, `Enter` adds a sibling (or edits the root), `F2` renames,
+  `Delete` removes. Edits autosave (500 ms debounce) via `POST /api/nodes`;
+  the header shows `Сохраняется…` → `Сохранено`.

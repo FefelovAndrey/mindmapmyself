@@ -13,6 +13,8 @@ import {
   filterTree,
   calcNumbers,
   findNode,
+  EMPTY_FILTERS,
+  hasActiveFilters,
   type FilterState,
 } from '@/hooks/useTree';
 import { useKeyboard } from '@/hooks/useKeyboard';
@@ -20,6 +22,7 @@ import TreeOutline from '@/components/TreeOutline/TreeOutline';
 import MapView from '@/components/MapView/MapView';
 import NodeCard from '@/components/NodeCard/NodeCard';
 import FilterBar from '@/components/FilterBar/FilterBar';
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
@@ -32,7 +35,7 @@ export default function HomePage() {
   const [editingValue, setEditingValue] = useState('');
   const [editingOriginal, setEditingOriginal] = useState('');
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
-  const [filters, setFilters] = useState<FilterState>({ responsible: null, status: null });
+  const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
   const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -40,9 +43,16 @@ export default function HomePage() {
   // Загрузка данных при старте
   useEffect(() => {
     fetch('/api/nodes')
-      .then((r) => r.json())
-      .then((data: MindMapDocument) => {
-        setDoc(data);
+      .then(async (r) => {
+        const data = await r.json();
+        // #region agent log
+        fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:fetch',message:'GET /api/nodes response',data:{ok:r.ok,status:r.status,hasRoot:Boolean(data?.root),keys:Object.keys(data??{}),runId:'post-fix'},timestamp:Date.now(),hypothesisId:'A-B'})}).catch(()=>{});
+        // #endregion
+        if (!r.ok || !data?.root?.id) {
+          setSaveStatus('error');
+          return;
+        }
+        setDoc(data as MindMapDocument);
         setSelectedId(data.root.id);
       })
       .catch(() => setSaveStatus('error'));
@@ -77,6 +87,10 @@ export default function HomePage() {
   // Навигация по плоскому списку
   const flatList = useMemo(() => {
     if (!doc) return [];
+    // #region agent log
+    fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:flatList',message:'flatList compute',data:{hasDoc:Boolean(doc),hasRoot:Boolean(doc?.root),rootId:doc?.root?.id??null,runId:'post-fix'},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
+    if (!doc.root) return [];
     return flatIds(doc.root, collapsed);
   }, [doc, collapsed]);
 
@@ -174,7 +188,7 @@ export default function HomePage() {
   });
 
   // Фильтрация
-  const hasActiveFilter = filters.responsible !== null || filters.status !== null;
+  const hasActiveFilter = hasActiveFilters(filters);
   const filterMap = useMemo(() => {
     if (!doc || !hasActiveFilter) return null;
     return filterTree(doc.root, filters);
@@ -231,7 +245,10 @@ export default function HomePage() {
     <div className={styles.layout}>
       <header className={styles.header}>
         <span className={styles.title}>Mind Map Editor — задачи RULI</span>
-        <span className={saveLabelClass}>{saveLabel}</span>
+        <div className={styles.headerActions}>
+          <span className={saveLabelClass}>{saveLabel}</span>
+          <ThemeToggle />
+        </div>
       </header>
 
       <div className={styles.body}>
@@ -257,7 +274,7 @@ export default function HomePage() {
             filters={filters}
             matchCount={matchCount}
             onChange={setFilters}
-            onReset={() => setFilters({ responsible: null, status: null })}
+            onReset={() => setFilters(EMPTY_FILTERS)}
           />
           <div className={styles.treeContent}>
             {hasActiveFilter && matchCount === 0 ? (
@@ -291,6 +308,14 @@ export default function HomePage() {
                 collapsed={collapsed}
                 filterMap={filterMap}
                 onSelect={setSelectedId}
+                onToggleCollapse={(id) => {
+                  setCollapsed((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(id)) next.delete(id);
+                    else next.add(id);
+                    return next;
+                  });
+                }}
               />
             )}
           </div>

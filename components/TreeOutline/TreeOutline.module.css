@@ -15,7 +15,7 @@
 }
 
 .node:hover {
-  background: #f3f4f6;
+  background: var(--color-hover);
 }
 
 .node.selected {
@@ -35,7 +35,7 @@
 
 .node.done .number,
 .node.cancelled .number {
-  color: #c4c9d0;
+  color: var(--color-dimmed);
 }
 
 .indent {
@@ -58,7 +58,7 @@
 }
 
 .toggleBtn:hover {
-  background: #e5e7eb;
+  background: var(--color-hover-strong);
   color: var(--color-text);
 }
 
@@ -103,7 +103,7 @@
   padding: 1px 4px;
   outline: none;
   font-size: 13px;
-  background: white;
+  background: var(--color-input-bg);
 }
 
 .badges {
@@ -121,17 +121,17 @@
 }
 
 .statusNew {
-  background: #dbeafe;
+  background: var(--color-status-new-bg);
   color: var(--color-status-new);
 }
 
 .statusDone {
-  background: #dcfce7;
+  background: var(--color-status-done-bg);
   color: var(--color-status-done);
 }
 
 .statusCancelled {
-  background: #fee2e2;
+  background: var(--color-status-cancelled-bg);
   color: var(--color-status-cancelled);
 }
 
