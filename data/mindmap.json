@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-07-30T06:23:37.470Z",
+  "updatedAt": "2026-07-30T06:59:14.482Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1098,6 +1098,71 @@
                           {
                             "id": "441c8074-a424-4647-856d-d241bbc66ca1",
                             "name": "Я/Отдать Коле Иванову на оценку ГуглКапчу",
+                            "description": null,
+                            "responsible": null,
+                            "status": "Done",
+                            "deadline": null,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "5eeec285-bfd0-4c5d-8d49-feb3d5c8c0c5",
+                        "name": "Я/Поставить встречу по инициативам на четверг",
+                        "description": null,
+                        "responsible": null,
+                        "status": "Done",
+                        "deadline": null,
+                        "children": []
+                      },
+                      {
+                        "id": "d0506950-3a8b-4890-b885-5311571aae65",
+                        "name": "Собрать новый канвас",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "deadline": null,
+                        "children": [
+                          {
+                            "id": "c4ec3ea2-e4cc-4426-87eb-e9ee380389c1",
+                            "name": "Запросить у Коли Беспалова перенос остатков на состояние понедельника по WA и по PY",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "deadline": null,
+                            "children": []
+                          },
+                          {
+                            "id": "bf3819d7-3187-49bd-a706-2fc8c80168e2",
+                            "name": "Подготовить данные и собрать канвас",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "deadline": null,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "bde6d474-e0e8-4cec-bda8-133599a393d7",
+                        "name": "Отчетность за месяц",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "deadline": null,
+                        "children": [
+                          {
+                            "id": "5da1b839-ce9d-44eb-b4d6-746b7b596c13",
+                            "name": "Я/Подготовить отчетность по выполненным за месяц задачам и что взяли в работу и на какой стадии и сколько трудозатрат затратили и насколько попали в оценку недель",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "deadline": null,
+                            "children": []
+                          },
+                          {
+                            "id": "ab904669-a629-48ff-96a9-b117c37dacd1",
+                            "name": "Коля/Подготовить отчет за месяц - какая у нас была фактическая капасити команд",
                             "description": null,
                             "responsible": null,
                             "status": "New",
