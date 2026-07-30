@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-07-29T04:11:40.222Z",
+  "updatedAt": "2026-07-30T04:11:01.032Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -695,7 +695,7 @@
                 "name": "Возвраты с МП (кроме нарезки)",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": [
                   {
@@ -771,7 +771,7 @@
                 "name": "Авторизация и нарезка видео",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": [
                   {
@@ -835,7 +835,7 @@
                     "name": "TrueAPI",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Done",
                     "deadline": null,
                     "children": [
                       {
@@ -863,7 +863,7 @@
                     "name": "Дима/С Ваней сделать МЧД",
                     "description": null,
                     "responsible": "Дима",
-                    "status": "New",
+                    "status": "Done",
                     "deadline": null,
                     "children": []
                   },
@@ -928,7 +928,7 @@
                 "name": "DEVEL-2788: Формирование CSV-файла товаров-аналогов для SearchBooster",
                 "description": "https://tracker.yandex.ru/DEVEL-2788\nвыдал перед отпуском",
                 "responsible": "Дима",
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": []
               },
@@ -937,7 +937,7 @@
                 "name": "DEVEL-2789: Цена авито",
                 "description": "https://tracker.yandex.ru/DEVEL-2789",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": []
               },
@@ -946,7 +946,7 @@
                 "name": "DEVEL-2690: [Exist] Доработка способа доставки и источника продаж",
                 "description": "https://tracker.yandex.ru/DEVEL-2789",
                 "responsible": null,
-                "status": "New",
+                "status": "Cancelled",
                 "deadline": null,
                 "children": []
               }
@@ -1078,7 +1078,17 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
-                "children": []
+                "children": [
+                  {
+                    "id": "a79eec21-008a-41cb-ab42-07db2cf53936",
+                    "name": "Я/Сделать план подготовки к инициативам",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
