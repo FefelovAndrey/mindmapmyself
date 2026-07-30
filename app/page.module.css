@@ -64,16 +64,15 @@
   padding: 5px 12px;
   border: 1px solid var(--color-btn-border);
   border-radius: var(--radius-sm);
-  background: var(--color-btn-bg);
+  background-color: var(--color-btn-bg);
   color: var(--color-btn-fg);
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
 }
 
 .saveButton:hover:not(:disabled) {
-  background: var(--color-btn-bg-hover);
+  background-color: var(--color-btn-bg-hover);
   border-color: var(--color-btn-border-hover);
   color: var(--color-btn-fg-hover);
 }
