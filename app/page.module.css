@@ -26,13 +26,28 @@
 .saveIndicator {
   font-size: 12px;
   color: var(--color-text-muted);
+  max-width: 280px;
+  text-align: right;
 }
 
 .saveIndicatorSaving {
+  font-size: 12px;
+  max-width: 280px;
+  text-align: right;
   color: var(--color-primary);
 }
 
+.saveIndicatorSuccess {
+  font-size: 12px;
+  max-width: 280px;
+  text-align: right;
+  color: var(--color-status-done);
+}
+
 .saveIndicatorError {
+  font-size: 12px;
+  max-width: 280px;
+  text-align: right;
   color: var(--color-danger);
 }
 
@@ -40,6 +55,37 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.saveButton {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 5px 12px;
+  border: 1px solid var(--color-btn-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-fg);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: var(--color-btn-bg-hover);
+  border-color: var(--color-btn-border-hover);
+  color: var(--color-btn-fg-hover);
+}
+
+.saveButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  border-color: var(--color-primary);
+}
+
+.saveButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .body {

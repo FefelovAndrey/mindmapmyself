@@ -26,6 +26,7 @@ import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
+type SnapshotStatus = 'idle' | 'saving' | 'saved' | 'error';
 type ViewMode = 'outline' | 'map';
 
 export default function HomePage() {
@@ -38,7 +39,10 @@ export default function HomePage() {
   const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
   const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
+  const [snapshotStatus, setSnapshotStatus] = useState<SnapshotStatus>('idle');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const docRef = useRef<MindMapDocument | null>(null);
+  docRef.current = doc;
 
   // Загрузка данных при старте
   useEffect(() => {
@@ -58,24 +62,52 @@ export default function HomePage() {
       .catch(() => setSaveStatus('error'));
   }, []);
 
+  const saveDocument = useCallback(async (document: MindMapDocument) => {
+    setSaveStatus('saving');
+    try {
+      const res = await fetch('/api/nodes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(document),
+      });
+      if (!res.ok) throw new Error('Save failed');
+      setSaveStatus('saved');
+    } catch {
+      setSaveStatus('error');
+    }
+  }, []);
+
   // Автосохранение с дебаунсом 500мс
   const scheduleSave = useCallback((document: MindMapDocument) => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
     setSaveStatus('saving');
-    saveTimerRef.current = setTimeout(async () => {
-      try {
-        const res = await fetch('/api/nodes', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(document),
-        });
-        if (!res.ok) throw new Error('Save failed');
-        setSaveStatus('saved');
-      } catch {
-        setSaveStatus('error');
-      }
+    saveTimerRef.current = setTimeout(() => {
+      void saveDocument(document);
     }, 500);
-  }, []);
+  }, [saveDocument]);
+
+  const handleSaveClick = useCallback(async () => {
+    if (snapshotStatus === 'saving') return;
+
+    // Сначала сбрасываем отложенное автосохранение, чтобы снимок был актуальным
+    if (saveTimerRef.current) {
+      clearTimeout(saveTimerRef.current);
+      saveTimerRef.current = null;
+      const pending = docRef.current;
+      if (pending) {
+        await saveDocument(pending);
+      }
+    }
+
+    setSnapshotStatus('saving');
+    try {
+      const res = await fetch('/api/snapshot', { method: 'POST' });
+      if (!res.ok) throw new Error('Snapshot failed');
+      setSnapshotStatus('saved');
+    } catch {
+      setSnapshotStatus('error');
+    }
+  }, [snapshotStatus, saveDocument]);
 
   function updateTree(newRoot: MindNode) {
     if (!doc) return;
@@ -230,15 +262,27 @@ export default function HomePage() {
     return <div className={styles.loading}>Загрузка...</div>;
   }
 
-  const saveLabel =
+  const snapshotLabel =
+    snapshotStatus === 'saving' ? 'Сохранение...' :
+    snapshotStatus === 'saved' ? 'Сохранить удалось' :
+    snapshotStatus === 'error' ? 'Сохранить не удалось, попробуйте позже' :
+    '';
+
+  const autosaveLabel =
+    snapshotLabel ? '' :
     saveStatus === 'saving' ? 'Сохраняется...' :
     saveStatus === 'saved' ? 'Сохранено' :
     saveStatus === 'error' ? 'Ошибка сохранения' :
     '';
 
-  const saveLabelClass =
-    saveStatus === 'saving' ? styles.saveIndicatorSaving :
-    saveStatus === 'error' ? styles.saveIndicatorError :
+  const statusLabel = snapshotLabel || autosaveLabel;
+
+  const statusLabelClass =
+    snapshotStatus === 'saved' ? styles.saveIndicatorSuccess :
+    snapshotStatus === 'error' || (!snapshotLabel && saveStatus === 'error')
+      ? styles.saveIndicatorError :
+    snapshotStatus === 'saving' || (!snapshotLabel && saveStatus === 'saving')
+      ? styles.saveIndicatorSaving :
     styles.saveIndicator;
 
   return (
@@ -246,7 +290,18 @@ export default function HomePage() {
       <header className={styles.header}>
         <span className={styles.title}>Mind Map Editor — задачи RULI</span>
         <div className={styles.headerActions}>
-          <span className={saveLabelClass}>{saveLabel}</span>
+          <span className={statusLabelClass} role="status" aria-live="polite">
+            {statusLabel}
+          </span>
+          <button
+            type="button"
+            className={styles.saveButton}
+            onClick={() => void handleSaveClick()}
+            disabled={snapshotStatus === 'saving'}
+            title="Сохранить"
+          >
+            Сохранить
+          </button>
           <ThemeToggle />
         </div>
       </header>
