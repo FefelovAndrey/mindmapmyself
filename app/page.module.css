@@ -57,9 +57,8 @@
 }
 
 .saveButton:hover:not(:disabled) {
-  background: var(--color-primary-hover, var(--color-primary));
-  border-color: var(--color-primary-hover, var(--color-primary));
-  opacity: 0.92;
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
 }
 
 .saveButton:focus-visible {
