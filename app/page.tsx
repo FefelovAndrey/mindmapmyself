@@ -58,24 +58,38 @@ export default function HomePage() {
       .catch(() => setSaveStatus('error'));
   }, []);
 
+  const saveDocument = useCallback(async (document: MindMapDocument) => {
+    setSaveStatus('saving');
+    try {
+      const res = await fetch('/api/nodes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(document),
+      });
+      if (!res.ok) throw new Error('Save failed');
+      setSaveStatus('saved');
+    } catch {
+      setSaveStatus('error');
+    }
+  }, []);
+
   // Автосохранение с дебаунсом 500мс
   const scheduleSave = useCallback((document: MindMapDocument) => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
     setSaveStatus('saving');
-    saveTimerRef.current = setTimeout(async () => {
-      try {
-        const res = await fetch('/api/nodes', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(document),
-        });
-        if (!res.ok) throw new Error('Save failed');
-        setSaveStatus('saved');
-      } catch {
-        setSaveStatus('error');
-      }
+    saveTimerRef.current = setTimeout(() => {
+      void saveDocument(document);
     }, 500);
-  }, []);
+  }, [saveDocument]);
+
+  const handleSaveClick = useCallback(() => {
+    if (!doc || saveStatus === 'saving') return;
+    if (saveTimerRef.current) {
+      clearTimeout(saveTimerRef.current);
+      saveTimerRef.current = null;
+    }
+    void saveDocument(doc);
+  }, [doc, saveStatus, saveDocument]);
 
   function updateTree(newRoot: MindNode) {
     if (!doc) return;
@@ -247,6 +261,15 @@ export default function HomePage() {
         <span className={styles.title}>Mind Map Editor — задачи RULI</span>
         <div className={styles.headerActions}>
           <span className={saveLabelClass}>{saveLabel}</span>
+          <button
+            type="button"
+            className={styles.saveButton}
+            onClick={handleSaveClick}
+            disabled={saveStatus === 'saving'}
+            title="Сохранить карту"
+          >
+            Сохранить карту
+          </button>
           <ThemeToggle />
         </div>
       </header>
