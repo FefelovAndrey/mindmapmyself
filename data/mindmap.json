@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-05T04:13:14.218Z",
+  "updatedAt": "2026-08-05T08:21:23.179Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1125,12 +1125,67 @@
                         "children": [
                           {
                             "id": "c4ec3ea2-e4cc-4426-87eb-e9ee380389c1",
-                            "name": "Запросить у Коли Беспалова перенос остатков на состояние понедельника по WA и по PY",
+                            "name": "Прикинуть остатков по задачам (и те которые можно сдвинуть и те, которые сдвинуть нельзя)",
                             "description": null,
                             "responsible": null,
                             "status": "New",
                             "deadline": null,
-                            "children": []
+                            "children": [
+                              {
+                                "id": "a5c7d3b3-acdb-45c9-9c4c-382dbdad68ba",
+                                "name": "Ценообразование",
+                                "description": null,
+                                "responsible": null,
+                                "status": "New",
+                                "deadline": null,
+                                "children": []
+                              },
+                              {
+                                "id": "816589f3-b9d9-4cdf-9bf3-0d84a443bbb2",
+                                "name": "Дубли кабинетов",
+                                "description": "до 11.08 все должно быть готово (ставлю с запасом - следующую неделю тоже)",
+                                "responsible": null,
+                                "status": "New",
+                                "deadline": null,
+                                "children": []
+                              },
+                              {
+                                "id": "c1e9a0c3-ae95-4864-9e27-1a4d43c7184e",
+                                "name": "Автоматическое поддержание остатков",
+                                "description": null,
+                                "responsible": null,
+                                "status": "New",
+                                "deadline": null,
+                                "children": []
+                              },
+                              {
+                                "id": "a65f3e8a-f6ff-4684-b164-7e0972d86c1f",
+                                "name": "Честный знак (1С + WA)",
+                                "description": null,
+                                "responsible": null,
+                                "status": "New",
+                                "deadline": null,
+                                "children": []
+                              },
+                              {
+                                "id": "194e6c0c-34c4-4cb7-b761-f9a43fae087f",
+                                "name": "Автоматизация кратности",
+                                "description": null,
+                                "responsible": null,
+                                "status": "New",
+                                "deadline": null,
+                                "children": []
+                              },
+                              {
+                                "id": "28eec81b-88c5-4136-88c0-b0f02776c874",
+                                "name": "Автозаказы ТрейдСофт",
+                                "description": null,
+                                "responsible": null,
+                                "status": "New",
+                                "deadline": null,
+                                "children": []
+                              }
+                            ]
                           },
                           {
                             "id": "bf3819d7-3187-49bd-a706-2fc8c80168e2",
@@ -1138,6 +1193,24 @@
                             "description": null,
                             "responsible": null,
                             "status": "New",
+                            "deadline": null,
+                            "children": []
+                          },
+                          {
+                            "id": "1f40fc81-8714-4d52-b13a-1adfdc615a09",
+                            "name": "Выгрузить отчет по капасити 1С, чтобы скорректировать загрузку",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "deadline": null,
+                            "children": []
+                          },
+                          {
+                            "id": "cacb6495-6f65-4d8c-8f2f-e1c18fd9ccca",
+                            "name": "Пересмотреть инициативы, которые можно сдвинуть в разработку (скорректировать по ним трудозатраты)",
+                            "description": null,
+                            "responsible": null,
+                            "status": "Cancelled",
                             "deadline": null,
                             "children": []
                           }
@@ -1156,7 +1229,7 @@
                             "name": "Я/Подготовить отчетность по выполненным за месяц задачам и что взяли в работу и на какой стадии и сколько трудозатрат затратили и насколько попали в оценку недель",
                             "description": null,
                             "responsible": null,
-                            "status": "New",
+                            "status": "Done",
                             "deadline": null,
                             "children": []
                           },
