@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-05T08:21:23.179Z",
+  "updatedAt": "2026-08-13T03:23:33.867Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1007,6 +1007,35 @@
                 ]
               }
             ]
+          },
+          {
+            "id": "c8016494-803c-4601-a9d6-dda51fb6f945",
+            "name": "Дима Ли",
+            "description": null,
+            "responsible": null,
+            "status": "New",
+            "deadline": null,
+            "children": [
+              {
+                "id": "ebb14550-c67d-4629-8431-0e4130116266",
+                "name": "ЭТРН",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": [
+                  {
+                    "id": "d094b30a-cef5-4d3e-b19c-b9835e5e88ac",
+                    "name": "Новый узел",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -1076,7 +1105,7 @@
                 "name": "Инициативы 3 августа 2026г",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": [
                   {
@@ -1084,7 +1113,7 @@
                     "name": "Я/Сделать план подготовки к инициативам",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Done",
                     "deadline": null,
                     "children": [
                       {
@@ -1092,7 +1121,7 @@
                         "name": "Оценка инициатив",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "deadline": null,
                         "children": [
                           {
@@ -1120,7 +1149,7 @@
                         "name": "Собрать новый канвас",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "deadline": null,
                         "children": [
                           {
@@ -1128,7 +1157,7 @@
                             "name": "Прикинуть остатков по задачам (и те которые можно сдвинуть и те, которые сдвинуть нельзя)",
                             "description": null,
                             "responsible": null,
-                            "status": "New",
+                            "status": "Done",
                             "deadline": null,
                             "children": [
                               {
@@ -1136,7 +1165,7 @@
                                 "name": "Ценообразование",
                                 "description": null,
                                 "responsible": null,
-                                "status": "New",
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               },
@@ -1145,25 +1174,25 @@
                                 "name": "Дубли кабинетов",
                                 "description": "до 11.08 все должно быть готово (ставлю с запасом - следующую неделю тоже)",
                                 "responsible": null,
-                                "status": "New",
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               },
                               {
                                 "id": "c1e9a0c3-ae95-4864-9e27-1a4d43c7184e",
                                 "name": "Автоматическое поддержание остатков",
-                                "description": null,
+                                "description": "ставлю 2 недели работы Саши (30 часов)",
                                 "responsible": null,
-                                "status": "New",
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               },
                               {
                                 "id": "a65f3e8a-f6ff-4684-b164-7e0972d86c1f",
                                 "name": "Честный знак (1С + WA)",
-                                "description": null,
+                                "description": "Тут надо 1С, WA и тестирование заложить",
                                 "responsible": null,
-                                "status": "New",
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               },
@@ -1172,16 +1201,16 @@
                                 "name": "Автоматизация кратности",
                                 "description": null,
                                 "responsible": null,
-                                "status": "New",
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               },
                               {
                                 "id": "28eec81b-88c5-4136-88c0-b0f02776c874",
                                 "name": "Автозаказы ТрейдСофт",
-                                "description": null,
+                                "description": "Тут только ресурсы тестирования",
                                 "responsible": null,
-                                "status": "New",
+                                "status": "Done",
                                 "deadline": null,
                                 "children": []
                               }
@@ -1192,7 +1221,7 @@
                             "name": "Подготовить данные и собрать канвас",
                             "description": null,
                             "responsible": null,
-                            "status": "New",
+                            "status": "Done",
                             "deadline": null,
                             "children": []
                           },
@@ -1201,7 +1230,7 @@
                             "name": "Выгрузить отчет по капасити 1С, чтобы скорректировать загрузку",
                             "description": null,
                             "responsible": null,
-                            "status": "New",
+                            "status": "Done",
                             "deadline": null,
                             "children": []
                           },
@@ -1221,7 +1250,7 @@
                         "name": "Отчетность за месяц",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "deadline": null,
                         "children": [
                           {
@@ -1238,7 +1267,7 @@
                             "name": "Коля/Подготовить отчет за месяц - какая у нас была фактическая капасити команд",
                             "description": null,
                             "responsible": null,
-                            "status": "New",
+                            "status": "Done",
                             "deadline": null,
                             "children": []
                           }
