@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-13T03:23:33.867Z",
+  "updatedAt": "2026-08-17T09:15:38.085Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -22,7 +22,7 @@
             "name": "Андрей",
             "description": null,
             "responsible": null,
-            "status": null,
+            "status": "New",
             "deadline": null,
             "children": [
               {
@@ -367,6 +367,52 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "5ba67bd5-3663-4685-9309-aeed4f90f11f",
+                "name": "INI-27: Детализировать в BI причины отмен Озон по нашей вине",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": [
+                  {
+                    "id": "9e1ff348-1eaa-4889-9a03-a8b356a36422",
+                    "name": "Посмотреть что Вячеслав написал в задаче",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "faf1aa57-73a3-421c-99fb-e019303d554f",
+                "name": "INI-104: [ozon] Доля рекламы в заказе - через ИИ",
+                "description": "С Денисом провести встречу и далее прогнать через логику ИИ",
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "a487a74c-9feb-4235-850f-62e037bd2c4d",
+                "name": "DEVEL-2869: [wb] не верно считается комиссия в МП прибыли - через ИИ",
+                "description": "С Денисом обсудить и далее запустить через ИИшку",
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "00c4a4db-24cb-4bd2-9e4e-869093115c80",
+                "name": "INI-110: Признак сертификата в прайсах для поставщиков - аналитика готова - нужен Коля чтобы запускать разработку через ИИ",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
               }
             ]
           },
@@ -383,7 +429,7 @@
                 "name": "Схлапывание логистики",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -441,7 +487,7 @@
             "name": "Максим",
             "description": null,
             "responsible": null,
-            "status": null,
+            "status": "New",
             "deadline": null,
             "children": [
               {
@@ -449,7 +495,7 @@
                 "name": "PriceMaster",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Done",
                 "deadline": null,
                 "children": []
               },
@@ -458,7 +504,7 @@
                 "name": "Автозаказы поставщиков",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "New",
                 "deadline": null,
                 "children": [
                   {
@@ -484,7 +530,7 @@
                     "name": "Вопросы со встречи от 22.06.2026",
                     "description": null,
                     "responsible": null,
-                    "status": null,
+                    "status": "Done",
                     "deadline": null,
                     "children": [
                       {
@@ -679,6 +725,33 @@
                 "status": "Done",
                 "deadline": null,
                 "children": []
+              },
+              {
+                "id": "42bee520-d2ab-4363-ad5e-e3ad0d1b91c1",
+                "name": "Поддержание запаса ходовых товаров",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "d7ce071e-e7a1-4e9c-b0e7-07b6a45af99f",
+                "name": "Ценообразование",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "d91e685b-720c-4b79-adb1-0cf6f30827da",
+                "name": "Автоматизация заполнения «Кратность покупки» и ТН ВЭД",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
               }
             ]
           },
@@ -790,7 +863,7 @@
                 "name": "DEVEL-2730 Необходимо после сканирования при упаковке в поле ввода удалять все пробелы и специальные символы, внутри и вконце ШК",
                 "description": null,
                 "responsible": null,
-                "status": null,
+                "status": "Done",
                 "deadline": null,
                 "children": [
                   {
@@ -901,7 +974,7 @@
                 "name": "Проект УПД ЭДО",
                 "description": null,
                 "responsible": "Дима",
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": []
               },
@@ -910,14 +983,14 @@
                 "name": "DEVEL-2786: [ozon] корректировка коррекции по PI",
                 "description": "https://tracker.yandex.ru/DEVEL-2786",
                 "responsible": "Дима",
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "children": []
               },
               {
                 "id": "93c572b2-35d4-4cf1-a0ff-99536fb80d37",
                 "name": "DEVEL-2787: [ozon] Связка вариантов через количство.",
-                "description": "https://tracker.yandex.ru/DEVEL-2787\nВыдал перед отпуском в работу",
+                "description": "https://tracker.yandex.ru/DEVEL-2787",
                 "responsible": "Дима",
                 "status": "New",
                 "deadline": null,
@@ -947,6 +1020,42 @@
                 "description": "https://tracker.yandex.ru/DEVEL-2789",
                 "responsible": null,
                 "status": "Cancelled",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "0cce414c-a335-4b6a-9b8b-899606f35ef0",
+                "name": "DEVEL-2864 Добавить цену товара в таблицу при упаковке",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "dc11d237-adb3-4a56-8ca1-6204f6106344",
+                "name": "DEVEL-2866: Поэтапное снижение цены на WB",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "aca7beb5-7797-4b21-a454-30660f4b3ed8",
+                "name": "DEVEL-2835: Переместить и увеличить Фото в WA для возвратов",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "5fc5ea0f-1b14-4136-b9da-c96d58ec0313",
+                "name": "DEVEL-2850: [ozon] зачеркнутая цена по новой формуле",
+                "description": null,
+                "responsible": null,
+                "status": "New",
                 "deadline": null,
                 "children": []
               }
@@ -1005,6 +1114,24 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "818cb980-98d2-473a-8705-38745d858643",
+                "name": "Отчет в проекте \"Поддержание запаса ходовых товаров\"",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "0c510209-a21d-4f1f-9648-435fccf37360",
+                "name": "INI-88: Разделить заявки возвраты поставщику на потоки \"брак и годный товар\"",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
               }
             ]
           },
@@ -1019,7 +1146,7 @@
               {
                 "id": "ebb14550-c67d-4629-8431-0e4130116266",
                 "name": "ЭТРН",
-                "description": null,
+                "description": "https://app.diagrams.net/#G14zaU3P9np3UiP63ryaYO1qIMXcpTiGK3#%7B%22pageId%22%3A%22VMYNCFsXV8I9hBgD7Tr_%22%7D",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
@@ -1034,6 +1161,24 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "7bf272f2-f8a4-4401-a094-474c857e34c3",
+                "name": "INI-37: Отправка сообщений клиентам",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "1bfe0151-6bbb-49cf-a84f-6b6c60dd0571",
+                "name": "INI-96: Возможность получения вида товаров (с ИИшкой)",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
               }
             ]
           }
