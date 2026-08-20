@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-17T09:15:38.085Z",
+  "updatedAt": "2026-08-20T07:12:08.954Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1054,6 +1054,15 @@
                 "id": "5fc5ea0f-1b14-4136-b9da-c96d58ec0313",
                 "name": "DEVEL-2850: [ozon] зачеркнутая цена по новой формуле",
                 "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "children": []
+              },
+              {
+                "id": "aa6ca51e-ff55-43d0-b86d-313d8a91a2c0",
+                "name": "Еще подвисшие задачи",
+                "description": "https://tracker.yandex.ru/DEVEL-2744 - согласовать выкат с Денисом\nhttps://tracker.yandex.ru/DEVEL-2866 - ревью от Коли, тест от Аллы,  согласовать выкат с Денисом \nhttps://tracker.yandex.ru/DEVEL-2864 - посмотрели с Ромой выкатываем.\nhttps://tracker.yandex.ru/DEVEL-2875 - ждем ревью от Коли\nhttps://tracker.yandex.ru/DEVEL-2870 - ждем Дениса\nhttps://tracker.yandex.ru/DEVEL-2871 - ждем ревью от Коли\nhttps://tracker.yandex.ru/DEVEL-2874 - тут Макса наверное ждем\nhttps://tracker.yandex.ru/DEVEL-2886 - тут Макса наверное ждем\nhttps://tracker.yandex.ru/DEVEL-2860 - ждем ревью от Коли\nhttps://tracker.yandex.ru/DEVEL-2842 - меня ждала  написал что катим\nhttps://tracker.yandex.ru/DEVEL-2787 - вроде договорились на дейли на проде тестировать, видимо упустили этот момент. Щас повторно уточню у Дениса.\nhttps://tracker.yandex.ru/DEVEL-2850 - тут задал Денису вопрос \nhttps://tracker.yandex.ru/DEVEL-2609 - тут 100 раз уже писал Денису\nhttps://tracker.yandex.ru/DEVEL-2736 - тут ждем Дениса, на дейли его звали обсуждали",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
