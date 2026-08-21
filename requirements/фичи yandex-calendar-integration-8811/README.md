@@ -8,15 +8,14 @@
 
 | Файл | Описание |
 |------|----------|
-| [BRD-YandexCalendar-Feature1.md](./BRD-YandexCalendar-Feature1.md) | **v1.1** — из узла создаётся **событие с типом «Задача»** (VEVENT в «Мои события»), не VTODO |
+| [BRD-YandexCalendar-Feature1.md](./BRD-YandexCalendar-Feature1.md) | **v1.2** — **встреча** (`VEVENT`); sync только даты/времени; при `Done` узла — префикс `(Done)` в названии встречи и стоп sync |
 
 См. также:
 - `Plans/yandex-calendar-api.md` — CalDAV / OAuth
-- `Plans/yandex-calendar-oq6-experiment.md` — план эксперимента OQ-6/OQ-7 (маркер типа «Задача»)
+- `Plans/yandex-calendar-oq6-experiment.md` — эксперимент: UI «Задача» через CalDAV недоступна
 
 ## Статус
 
-- **v1.0** — ошибочно требовала создание задачи (VTODO) в `todos-*`; реализация по v1.0 **отклонена** при приёмке.
-- **v1.1** (21.08.2026) — ТЗ исправлено: событие типа «Задача» в календаре событий. Разработка кода **не начинать**, пока не закрыт OQ-6 (маркер типа в iCalendar).
-
-См. также: `Plans/yandex-calendar-api.md` (CalDAV / OAuth).
+- **v1.0** — VTODO — отклонено при приёмке.
+- **v1.1** — событие UI «Задача» — **невозможно через CalDAV** (OQ-6).
+- **v1.2** (21.08.2026) — встреча + sync даты/времени + `(Done)` в `SUMMARY` при статусе узла Done. Код — только после согласования v1.2.
