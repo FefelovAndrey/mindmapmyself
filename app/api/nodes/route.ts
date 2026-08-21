@@ -9,6 +9,11 @@ export async function GET() {
   try {
     const raw = await fs.readFile(DATA_FILE, 'utf-8');
     const data = JSON.parse(raw);
+    // Нормализуем календарные поля для старых снимков (AC-4.2)
+    const parsed = MindMapDocumentSchema.safeParse(data);
+    if (parsed.success) {
+      return NextResponse.json(parsed.data);
+    }
     return NextResponse.json(data);
   } catch {
     return NextResponse.json(

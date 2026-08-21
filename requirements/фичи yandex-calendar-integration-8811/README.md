@@ -12,6 +12,9 @@
 
 ## Статус
 
-Требования v1.0 зафиксированы (21.08.2026). Реализация не начата.
+Требования v1.0 зафиксированы (21.08.2026). Реализация v1 по BRD завершена:
+- модель узла (`calendarUid`, `calendarStartAt`/`EndAt`, `calendarSyncedAt`);
+- CalDAV VTODO create + sync (`/api/calendar/tasks`, `/api/calendar/sync`);
+- UI в NodeCard (дата/время/отправка, признак «В календаре») и кнопка sync в шапке.
 
 См. также: `Plans/yandex-calendar-api.md` (CalDAV / OAuth).

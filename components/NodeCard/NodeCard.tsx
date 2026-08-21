@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import type { MindNode, Status } from '@/types/node';
-import { isoToDeadlineDate, isoToLocalTime } from '@/lib/yandexCalendar/helpers';
+import {
+  isoToDeadlineDate,
+  isoToLocalTime,
+  validateTimeRange,
+} from '@/lib/yandexCalendar/helpers';
 import styles from './NodeCard.module.css';
 
 const MAX_DESCRIPTION = 2000;
@@ -24,8 +28,8 @@ export default function NodeCard({
   const [localResponsible, setLocalResponsible] = useState('');
   const [localDescription, setLocalDescription] = useState('');
   const [calDate, setCalDate] = useState('');
-  const [calStart, setCalStart] = useState('09:00');
-  const [calEnd, setCalEnd] = useState('10:00');
+  const [calStart, setCalStart] = useState('');
+  const [calEnd, setCalEnd] = useState('');
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState<string | null>(null);
 
@@ -36,11 +40,13 @@ export default function NodeCard({
       setLocalDescription(node.description ?? '');
       setCalDate(node.deadline ?? '');
       setSendError(null);
-      if (node.calendarStartAt) {
-        setCalStart(isoToLocalTime(node.calendarStartAt));
-      }
-      if (node.calendarEndAt) {
-        setCalEnd(isoToLocalTime(node.calendarEndAt));
+      if (node.calendarUid) {
+        if (node.calendarStartAt) setCalStart(isoToLocalTime(node.calendarStartAt));
+        if (node.calendarEndAt) setCalEnd(isoToLocalTime(node.calendarEndAt));
+      } else {
+        // OQ-4: дату предзаполняем из deadline; время пользователь указывает сам
+        setCalStart('');
+        setCalEnd('');
       }
     }
   }, [node?.id, node?.calendarUid, node?.deadline, node?.calendarStartAt, node?.calendarEndAt, node?.description, node?.name, node?.responsible]);
@@ -77,6 +83,11 @@ export default function NodeCard({
     setSendError(null);
     if (!calDate || !calStart || !calEnd) {
       setSendError('Укажите дату и время');
+      return;
+    }
+    const rangeError = validateTimeRange(calStart, calEnd);
+    if (rangeError) {
+      setSendError(rangeError);
       return;
     }
     setSending(true);
@@ -185,6 +196,7 @@ export default function NodeCard({
           <div className={styles.label}>Яндекс Календарь</div>
           {linked ? (
             <div className={styles.linkedInfo}>
+              <div className={styles.linkedStatus}>Уже в календаре</div>
               <div>
                 Начало:{' '}
                 {node.calendarStartAt

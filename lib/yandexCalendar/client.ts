@@ -34,6 +34,8 @@ export async function createTodo(params: {
     headers: {
       Authorization: `OAuth ${cfg.token}`,
       'Content-Type': 'text/calendar; charset=utf-8',
+      // Не перезаписывать существующую задачу с тем же UID
+      'If-None-Match': '*',
     },
     body,
   });

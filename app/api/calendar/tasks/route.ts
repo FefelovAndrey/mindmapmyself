@@ -4,6 +4,7 @@ import {
   createTodo,
   localYekaterinburgToIso,
   isoToDeadlineDate,
+  validateTimeRange,
 } from '@/lib/yandexCalendar';
 
 export async function POST(request: Request) {
@@ -21,18 +22,13 @@ export async function POST(request: Request) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
       return NextResponse.json({ error: 'Некорректная дата' }, { status: 400 });
     }
-    if (!/^\d{2}:\d{2}$/.test(startTime) || !/^\d{2}:\d{2}$/.test(endTime)) {
-      return NextResponse.json({ error: 'Некорректное время' }, { status: 400 });
+    const rangeError = validateTimeRange(startTime, endTime);
+    if (rangeError) {
+      return NextResponse.json({ error: rangeError }, { status: 400 });
     }
 
     const startAt = localYekaterinburgToIso(date, startTime);
     const endAt = localYekaterinburgToIso(date, endTime);
-    if (new Date(endAt).getTime() <= new Date(startAt).getTime()) {
-      return NextResponse.json(
-        { error: 'Время окончания должно быть позже начала' },
-        { status: 400 }
-      );
-    }
 
     const todoUid = uuidv4();
     await createTodo({

@@ -184,12 +184,22 @@ export default function HomePage() {
       }
 
       const { successCount, warningCount, errorCount } = data.summary;
+      const firstError = (data.results as Array<{ error?: string; warning?: string }>)
+        .map((r) => r.error || r.warning)
+        .find(Boolean);
+
       if (errorCount > 0) {
         setSyncStatus('error');
-        setSyncMessage(`Готово: ${successCount} ок, ${warningCount} предупр., ${errorCount} ошибок`);
+        setSyncMessage(
+          `Готово: ${successCount} ок, ${warningCount} предупр., ${errorCount} ошибок` +
+            (firstError ? ` — ${firstError}` : '')
+        );
       } else if (warningCount > 0) {
         setSyncStatus('done');
-        setSyncMessage(`Готово: ${successCount} ок, ${warningCount} предупр.`);
+        setSyncMessage(
+          `Готово: ${successCount} ок, ${warningCount} предупр.` +
+            (firstError ? ` — ${firstError}` : '')
+        );
       } else {
         setSyncStatus('done');
         setSyncMessage(`Синхронизировано: ${successCount}`);
