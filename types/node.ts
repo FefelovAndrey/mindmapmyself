@@ -3,7 +3,11 @@ import { z } from 'zod';
 export const StatusEnum = z.enum(['New', 'Done', 'Cancelled']);
 export type Status = z.infer<typeof StatusEnum>;
 
-const nullableString = z.string().nullable().optional().transform((v) => v ?? null);
+/** Старые карты без календарных полей → null (AC-4.2). */
+const calendarField = z
+  .string()
+  .nullish()
+  .transform((v): string | null => v ?? null);
 
 export const MindNodeSchema: z.ZodType<MindNode> = z.lazy(() =>
   z.object({
@@ -13,13 +17,13 @@ export const MindNodeSchema: z.ZodType<MindNode> = z.lazy(() =>
     responsible: z.string().nullable(),
     status: StatusEnum.nullable(),
     deadline: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
-    calendarUid: nullableString,
-    calendarStartAt: nullableString,
-    calendarEndAt: nullableString,
-    calendarSyncedAt: nullableString,
+    calendarUid: calendarField,
+    calendarStartAt: calendarField,
+    calendarEndAt: calendarField,
+    calendarSyncedAt: calendarField,
     children: z.array(MindNodeSchema),
   })
-);
+) as z.ZodType<MindNode>;
 
 export interface MindNode {
   id: string;

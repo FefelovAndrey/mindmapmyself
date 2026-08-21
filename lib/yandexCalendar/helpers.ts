@@ -250,3 +250,102 @@ export function parseVtodoIcs(ics: string): ParsedTodo {
 export function isTodoCompleted(parsed: ParsedTodo): boolean {
   return parsed.status === 'COMPLETED';
 }
+
+export type SyncNodeSnapshot = {
+  id: string;
+  calendarUid: string;
+  description: string | null;
+  status: 'New' | 'Done' | 'Cancelled' | null;
+};
+
+export type SyncPatch = {
+  calendarUid?: string | null;
+  calendarStartAt?: string | null;
+  calendarEndAt?: string | null;
+  calendarSyncedAt?: string | null;
+  deadline?: string | null;
+  status?: 'New' | 'Done' | 'Cancelled' | null;
+  description?: string | null;
+};
+
+export type SyncNodeResult = {
+  id: string;
+  ok: boolean;
+  warning?: string;
+  error?: string;
+  patch?: SyncPatch;
+};
+
+/** Собирает патч узла из ответа CalDAV (без сети) — для AC-3.x. */
+export function buildSyncResultFromTodo(
+  node: SyncNodeSnapshot,
+  todo:
+    | { found: false }
+    | { found: true; parsed: ParsedTodo },
+  syncedAt: string,
+  now: Date = new Date()
+): SyncNodeResult {
+  if (!todo.found) {
+    return {
+      id: node.id,
+      ok: true,
+      warning: 'задача не найдена в календаре',
+      patch: {
+        calendarUid: null,
+        calendarSyncedAt: syncedAt,
+      },
+    };
+  }
+
+  const { parsed } = todo;
+  let status = node.status;
+  let description = node.description;
+  let noteError: string | undefined;
+
+  if (isTodoCompleted(parsed)) {
+    status = 'Done';
+    const completedAt = parsed.completedAt ?? now;
+    const note = appendCompletedNote(description, completedAt);
+    if (!note.ok) {
+      noteError = note.error;
+    } else {
+      description = note.description;
+    }
+  }
+
+  const startAt = parsed.startAt;
+  const endAt = parsed.endAt;
+  const patch: SyncPatch = {
+    calendarUid: node.calendarUid,
+    calendarSyncedAt: syncedAt,
+    status,
+    description,
+  };
+  if (startAt) {
+    patch.calendarStartAt = startAt;
+    patch.deadline = isoToDeadlineDate(startAt);
+  }
+  if (endAt) {
+    patch.calendarEndAt = endAt;
+  }
+
+  return {
+    id: node.id,
+    ok: !noteError,
+    error: noteError,
+    warning: noteError,
+    patch,
+  };
+}
+
+export function validateTimeRange(startTime: string, endTime: string): string | null {
+  if (!/^\d{2}:\d{2}$/.test(startTime) || !/^\d{2}:\d{2}$/.test(endTime)) {
+    return 'Некорректное время';
+  }
+  const [sh, sm] = startTime.split(':').map(Number);
+  const [eh, em] = endTime.split(':').map(Number);
+  if (eh * 60 + em <= sh * 60 + sm) {
+    return 'Время окончания должно быть позже начала';
+  }
+  return null;
+}
