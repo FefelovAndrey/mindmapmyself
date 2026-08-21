@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-20T07:12:08.954Z",
+  "updatedAt": "2026-08-21T10:34:49.467Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -8,6 +8,11 @@
     "responsible": null,
     "status": null,
     "deadline": null,
+    "calendarUid": null,
+    "calendarStartAt": null,
+    "calendarEndAt": null,
+    "calendarSyncedAt": null,
+    "calendarSyncStopped": false,
     "children": [
       {
         "id": "3182e71a-ed1d-4de2-8f29-c1b4441f9a80",
@@ -16,6 +21,11 @@
         "responsible": null,
         "status": null,
         "deadline": null,
+        "calendarUid": null,
+        "calendarStartAt": null,
+        "calendarEndAt": null,
+        "calendarSyncedAt": null,
+        "calendarSyncStopped": false,
         "children": [
           {
             "id": "e78e54cf-7957-4bc3-bc8b-6753d95cfeac",
@@ -24,6 +34,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "9f201b31-541a-4c6f-9b33-6da7dcb681f4",
@@ -32,6 +47,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "adbb7d19-2f8f-41fe-b821-d58e7614d6fa",
@@ -40,6 +60,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -51,6 +76,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "9df07263-03d1-477f-9d56-3cc0856add3f",
@@ -59,6 +89,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -70,6 +105,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "912fb185-3da5-4d66-bafb-1aedce78b3b9",
@@ -78,6 +118,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -87,6 +132,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -98,6 +148,11 @@
                 "responsible": null,
                 "status": null,
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -107,6 +162,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "a78fa048-14c7-47f3-a191-e1858ae937c6",
@@ -115,6 +175,11 @@
                     "responsible": "Роман",
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -124,6 +189,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -135,6 +205,11 @@
                 "responsible": null,
                 "status": null,
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "543ca50c-e493-41d3-8af7-9f42965ee525",
@@ -143,6 +218,11 @@
                     "responsible": null,
                     "status": null,
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -154,6 +234,11 @@
                 "responsible": null,
                 "status": null,
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "9f52ffd1-0a48-45ca-abd3-b14e6140f84d",
@@ -162,6 +247,11 @@
                     "responsible": null,
                     "status": null,
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -173,6 +263,11 @@
                 "responsible": null,
                 "status": null,
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "9dc3ab3e-04ea-41c8-9a3f-c8e75eba5332",
@@ -181,6 +276,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -190,6 +290,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "88253224-105e-49bb-b93c-b5d92c3f2985",
@@ -198,6 +303,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": []
                       }
                     ]
@@ -209,6 +319,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -218,6 +333,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -229,6 +349,11 @@
                 "responsible": null,
                 "status": null,
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "fc67ed0c-e75b-42b6-bc8e-b33bb1e57b78",
@@ -237,6 +362,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -246,6 +376,11 @@
                     "responsible": null,
                     "status": null,
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -257,6 +392,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "daafc88f-a658-4cf3-bd75-81b7bfa6aa4a",
@@ -265,6 +405,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -274,6 +419,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -283,6 +433,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -292,6 +447,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -301,6 +461,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -310,6 +475,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -319,6 +489,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -328,6 +503,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -337,6 +517,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -346,6 +531,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -355,6 +545,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -364,6 +559,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -375,6 +575,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "9e1ff348-1eaa-4889-9a03-a8b356a36422",
@@ -383,6 +588,11 @@
                     "responsible": null,
                     "status": "New",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -394,6 +604,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -403,6 +618,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -411,8 +631,42 @@
                 "description": null,
                 "responsible": null,
                 "status": "New",
-                "deadline": null,
+                "deadline": "2026-08-24",
+                "calendarUid": "70577ecd-81cd-4474-bae3-5b38aae8c34d",
+                "calendarStartAt": "2026-08-24T17:00:00+05:00",
+                "calendarEndAt": "2026-08-24T17:05:00+05:00",
+                "calendarSyncedAt": "2026-08-21T06:12:49.138Z",
+                "calendarSyncStopped": false,
                 "children": []
+              },
+              {
+                "id": "a57cd173-791a-4872-a3f5-325daa531750",
+                "name": "INI-113",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "6419a09b-a90e-4513-803e-890106213779",
+                    "name": "INI-113 Контроль согласования с Денисом",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -423,6 +677,11 @@
             "responsible": null,
             "status": null,
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "81e35cfc-4609-4935-9709-d7992f09f687",
@@ -431,6 +690,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "ce60b46a-7fe3-421d-a22d-95782a47296a",
@@ -439,6 +703,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -448,6 +717,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -457,6 +731,11 @@
                     "responsible": null,
                     "status": null,
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -468,6 +747,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "5ec276e5-6d35-45a7-b75a-3fcb2a37c10f",
@@ -476,6 +760,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -489,6 +778,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "a1e029c5-cfd8-4fe0-bc23-05a5bb677d06",
@@ -497,6 +791,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -506,6 +805,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "70a958f8-feb5-49e5-81d7-791f714e5f01",
@@ -514,6 +818,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -523,6 +832,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -532,6 +846,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "f17167eb-071a-4e2f-81d3-ee3079156c49",
@@ -540,6 +859,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": [
                           {
                             "id": "37f14cf3-ed59-4f1e-9f3f-9ed73640355b",
@@ -548,6 +872,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": [
                               {
                                 "id": "ce4d5ecf-72e8-48bf-949a-7e1e44c95de6",
@@ -556,6 +885,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               },
                               {
@@ -565,6 +899,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               }
                             ]
@@ -578,6 +917,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": [
                           {
                             "id": "2e5110eb-77ce-442e-900c-5044f0838336",
@@ -586,6 +930,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           },
                           {
@@ -595,6 +944,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": [
                               {
                                 "id": "7672541e-4b3c-4ab1-8421-b88cc797673a",
@@ -603,6 +957,11 @@
                                 "responsible": "Андрей",
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               }
                             ]
@@ -614,6 +973,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": [
                               {
                                 "id": "2d2d2ecf-47e5-4c08-8b65-ba83ccb7672f",
@@ -622,6 +986,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               }
                             ]
@@ -639,6 +1008,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "5d8d8061-41d0-432e-8a0a-2a145c23e5e7",
@@ -647,6 +1021,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "b41c61bf-5f49-4310-bdbf-cd41019fbfab",
@@ -655,6 +1034,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": []
                       },
                       {
@@ -664,6 +1048,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": []
                       }
                     ]
@@ -675,6 +1064,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "21ccccba-4a46-4a01-b042-3cb4a5b85b30",
@@ -683,6 +1077,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": []
                       }
                     ]
@@ -696,6 +1095,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "d9a0ca40-a721-4230-a4b8-f1f51d6351ca",
@@ -704,6 +1108,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -713,6 +1122,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -724,6 +1138,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -733,6 +1152,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -742,6 +1166,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -751,6 +1180,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               }
             ]
@@ -762,6 +1196,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "5a1cc6f6-e242-45f0-bdf6-1b36b6511cd0",
@@ -770,6 +1209,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "766be5d3-7ccd-40be-92f4-0c605ec88cd2",
@@ -778,6 +1222,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -787,6 +1236,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "11c8b42b-e05f-481f-80e9-e3f003b4ce1a",
@@ -795,6 +1249,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": [
                           {
                             "id": "9181b608-8ef1-4b03-8611-514f612af61a",
@@ -803,6 +1262,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           }
                         ]
@@ -818,6 +1282,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "97a47f7b-aa08-4407-a1f9-efd4b8533477",
@@ -826,6 +1295,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -835,6 +1309,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -846,6 +1325,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "931cbfd4-93c7-4244-8cae-7a4a93a2c43d",
@@ -854,6 +1338,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -865,6 +1354,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "cfe08677-616e-4fd5-8c0f-9f75dd91b63b",
@@ -873,6 +1367,11 @@
                     "responsible": "Дима",
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -884,6 +1383,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "8df71a92-771f-4bcd-ab79-40606125e83f",
@@ -892,6 +1396,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -901,6 +1410,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -910,6 +1424,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "66a48fbf-5236-496d-99a2-c79e818fe039",
@@ -918,6 +1437,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": []
                       }
                     ]
@@ -929,6 +1453,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -938,6 +1467,11 @@
                     "responsible": "Дима",
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -947,6 +1481,11 @@
                     "responsible": "Дима",
                     "status": "New",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -958,6 +1497,11 @@
                 "responsible": "Дима",
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -967,6 +1511,11 @@
                 "responsible": "Дима",
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -976,6 +1525,11 @@
                 "responsible": "Дима",
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -985,6 +1539,11 @@
                 "responsible": "Дима",
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -994,6 +1553,11 @@
                 "responsible": "Дима",
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1003,6 +1567,11 @@
                 "responsible": "Дима",
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1012,6 +1581,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1021,6 +1595,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1030,6 +1609,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1039,6 +1623,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1048,6 +1637,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1057,6 +1651,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1066,6 +1665,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               }
             ]
@@ -1077,6 +1681,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "518be026-3638-4c75-8041-d06d0822b78a",
@@ -1085,6 +1694,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1094,6 +1708,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1103,6 +1722,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "739cadd8-77d1-4d2e-aff6-88bbf7bd80a7",
@@ -1111,6 +1735,11 @@
                     "responsible": null,
                     "status": "Cancelled",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -1120,6 +1749,11 @@
                     "responsible": "Аня",
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -1131,6 +1765,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1140,6 +1779,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               }
             ]
@@ -1151,6 +1795,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "ebb14550-c67d-4629-8431-0e4130116266",
@@ -1159,6 +1808,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "d094b30a-cef5-4d3e-b19c-b9835e5e88ac",
@@ -1167,6 +1821,11 @@
                     "responsible": null,
                     "status": "New",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -1178,6 +1837,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1187,6 +1851,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               }
             ]
@@ -1200,6 +1869,11 @@
         "responsible": null,
         "status": null,
         "deadline": null,
+        "calendarUid": null,
+        "calendarStartAt": null,
+        "calendarEndAt": null,
+        "calendarSyncedAt": null,
+        "calendarSyncStopped": false,
         "children": [
           {
             "id": "2969b24c-e85e-47a7-86f3-393718e20cc1",
@@ -1208,6 +1882,11 @@
             "responsible": null,
             "status": "Done",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": []
           },
           {
@@ -1217,6 +1896,11 @@
             "responsible": null,
             "status": "Done",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": []
           },
           {
@@ -1226,6 +1910,11 @@
             "responsible": null,
             "status": null,
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "7f95f736-067e-4924-befa-134a15925bcf",
@@ -1234,6 +1923,11 @@
                 "responsible": null,
                 "status": "Cancelled",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1243,6 +1937,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1252,6 +1951,11 @@
                 "responsible": "Андрей",
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1261,6 +1965,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "a79eec21-008a-41cb-ab42-07db2cf53936",
@@ -1269,6 +1978,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": [
                       {
                         "id": "247f2950-b2ff-420a-97c1-d9050ee130cc",
@@ -1277,6 +1991,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": [
                           {
                             "id": "441c8074-a424-4647-856d-d241bbc66ca1",
@@ -1285,6 +2004,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           }
                         ]
@@ -1296,6 +2020,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": []
                       },
                       {
@@ -1305,6 +2034,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": [
                           {
                             "id": "c4ec3ea2-e4cc-4426-87eb-e9ee380389c1",
@@ -1313,6 +2047,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": [
                               {
                                 "id": "a5c7d3b3-acdb-45c9-9c4c-382dbdad68ba",
@@ -1321,6 +2060,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               },
                               {
@@ -1330,6 +2074,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               },
                               {
@@ -1339,6 +2088,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               },
                               {
@@ -1348,6 +2102,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               },
                               {
@@ -1357,6 +2116,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               },
                               {
@@ -1366,6 +2130,11 @@
                                 "responsible": null,
                                 "status": "Done",
                                 "deadline": null,
+                                "calendarUid": null,
+                                "calendarStartAt": null,
+                                "calendarEndAt": null,
+                                "calendarSyncedAt": null,
+                                "calendarSyncStopped": false,
                                 "children": []
                               }
                             ]
@@ -1377,6 +2146,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           },
                           {
@@ -1386,6 +2160,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           },
                           {
@@ -1395,6 +2174,11 @@
                             "responsible": null,
                             "status": "Cancelled",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           }
                         ]
@@ -1406,6 +2190,11 @@
                         "responsible": null,
                         "status": "Done",
                         "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
                         "children": [
                           {
                             "id": "5da1b839-ce9d-44eb-b4d6-746b7b596c13",
@@ -1414,6 +2203,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           },
                           {
@@ -1423,6 +2217,11 @@
                             "responsible": null,
                             "status": "Done",
                             "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
                             "children": []
                           }
                         ]
@@ -1440,6 +2239,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": [
               {
                 "id": "fcd30a1c-57cc-487a-b76c-9f4054326eb3",
@@ -1448,6 +2252,11 @@
                 "responsible": "Андрей",
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               },
               {
@@ -1457,6 +2266,11 @@
                 "responsible": null,
                 "status": "Done",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "09b4e915-2cf8-46a2-b40b-0341fbdee526",
@@ -1465,6 +2279,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -1474,6 +2293,11 @@
                     "responsible": "коля",
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -1485,6 +2309,11 @@
                 "responsible": null,
                 "status": null,
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "ed5f2df0-25b3-4273-a900-81d67bd480c6",
@@ -1493,6 +2322,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -1502,6 +2336,11 @@
                     "responsible": null,
                     "status": "Done",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -1511,6 +2350,11 @@
                     "responsible": null,
                     "status": "New",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -1522,6 +2366,11 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": [
                   {
                     "id": "a7f5ef96-72c3-4b54-bd6b-3d83f71b17c9",
@@ -1530,6 +2379,11 @@
                     "responsible": null,
                     "status": "New",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   },
                   {
@@ -1539,6 +2393,11 @@
                     "responsible": null,
                     "status": "New",
                     "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
@@ -1552,6 +2411,11 @@
             "responsible": null,
             "status": "Done",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": []
           },
           {
@@ -1561,6 +2425,11 @@
             "responsible": null,
             "status": "New",
             "deadline": null,
+            "calendarUid": null,
+            "calendarStartAt": null,
+            "calendarEndAt": null,
+            "calendarSyncedAt": null,
+            "calendarSyncStopped": false,
             "children": []
           }
         ]
