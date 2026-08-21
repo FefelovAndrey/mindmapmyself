@@ -8,8 +8,10 @@
 
 | Файл | Описание |
 |------|----------|
-| [BRD-YandexCalendar-Feature1.md](./BRD-YandexCalendar-Feature1.md) | Черновик требований к фиче #1: создание задачи из узла, синхронизация даты/времени и статуса Done |
+| [BRD-YandexCalendar-Feature1.md](./BRD-YandexCalendar-Feature1.md) | **v1.0** — требования и AC: задача из NodeCard, признак привязки, глобальный sync даты/времени и Done |
 
 ## Статус
 
-Обсуждение и проработка требований. Реализация не начата.
+Требования v1.0 зафиксированы (21.08.2026). Реализация не начата.
+
+См. также: `Plans/yandex-calendar-api.md` (CalDAV / OAuth).
