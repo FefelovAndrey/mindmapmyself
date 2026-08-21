@@ -18,7 +18,7 @@
 .header {
   padding: 16px 16px 12px;
   border-bottom: 1px solid var(--color-border);
-  background: #f9fafb;
+  background: var(--color-surface-muted);
 }
 
 .headerRow {
@@ -120,12 +120,12 @@
 
 .nameField:hover {
   border-color: var(--color-border);
-  background: white;
+  background: var(--color-input-bg);
 }
 
 .nameField:focus {
   border-color: var(--color-primary);
-  background: white;
+  background: var(--color-input-bg);
 }
 
 .fields {
@@ -156,7 +156,7 @@
   padding: 6px 8px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: white;
+  background: var(--color-input-bg);
   outline: none;
   font-size: 13px;
   color: var(--color-text);
@@ -164,7 +164,7 @@
 
 .input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
 .select {
@@ -172,7 +172,7 @@
   padding: 6px 8px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: white;
+  background: var(--color-input-bg);
   outline: none;
   font-size: 13px;
   color: var(--color-text);
@@ -181,7 +181,7 @@
 
 .select:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
 .divider {
@@ -224,7 +224,7 @@
   padding: 8px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: white;
+  background: var(--color-input-bg);
   outline: none;
   font-size: 13px;
   color: var(--color-text);
@@ -235,5 +235,5 @@
 
 .textarea:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }

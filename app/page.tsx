@@ -13,6 +13,8 @@ import {
   filterTree,
   calcNumbers,
   findNode,
+  EMPTY_FILTERS,
+  hasActiveFilters,
   type FilterState,
 } from '@/hooks/useTree';
 import { useKeyboard } from '@/hooks/useKeyboard';
@@ -20,9 +22,11 @@ import TreeOutline from '@/components/TreeOutline/TreeOutline';
 import MapView from '@/components/MapView/MapView';
 import NodeCard from '@/components/NodeCard/NodeCard';
 import FilterBar from '@/components/FilterBar/FilterBar';
+import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
+type SnapshotStatus = 'idle' | 'saving' | 'saved' | 'error';
 type ViewMode = 'outline' | 'map';
 type SyncStatus = 'idle' | 'syncing' | 'done' | 'error';
 
@@ -71,42 +75,80 @@ export default function HomePage() {
   const [editingValue, setEditingValue] = useState('');
   const [editingOriginal, setEditingOriginal] = useState('');
   const [collapsed, setCollapsed] = useState<Set<string>>(new Set());
-  const [filters, setFilters] = useState<FilterState>({ responsible: null, status: null });
+  const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
   const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
   const [syncStatus, setSyncStatus] = useState<SyncStatus>('idle');
   const [syncMessage, setSyncMessage] = useState('');
+  const [snapshotStatus, setSnapshotStatus] = useState<SnapshotStatus>('idle');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const docRef = useRef<MindMapDocument | null>(null);
+  docRef.current = doc;
 
   // Загрузка данных при старте
   useEffect(() => {
     fetch('/api/nodes')
-      .then((r) => r.json())
-      .then((data: MindMapDocument) => {
-        setDoc(data);
+      .then(async (r) => {
+        const data = await r.json();
+        // #region agent log
+        fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:fetch',message:'GET /api/nodes response',data:{ok:r.ok,status:r.status,hasRoot:Boolean(data?.root),keys:Object.keys(data??{}),runId:'post-fix'},timestamp:Date.now(),hypothesisId:'A-B'})}).catch(()=>{});
+        // #endregion
+        if (!r.ok || !data?.root?.id) {
+          setSaveStatus('error');
+          return;
+        }
+        setDoc(data as MindMapDocument);
         setSelectedId(data.root.id);
       })
       .catch(() => setSaveStatus('error'));
+  }, []);
+
+  const saveDocument = useCallback(async (document: MindMapDocument) => {
+    setSaveStatus('saving');
+    try {
+      const res = await fetch('/api/nodes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(document),
+      });
+      if (!res.ok) throw new Error('Save failed');
+      setSaveStatus('saved');
+    } catch {
+      setSaveStatus('error');
+    }
   }, []);
 
   // Автосохранение с дебаунсом 500мс
   const scheduleSave = useCallback((document: MindMapDocument) => {
     if (saveTimerRef.current) clearTimeout(saveTimerRef.current);
     setSaveStatus('saving');
-    saveTimerRef.current = setTimeout(async () => {
-      try {
-        const res = await fetch('/api/nodes', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(document),
-        });
-        if (!res.ok) throw new Error('Save failed');
-        setSaveStatus('saved');
-      } catch {
-        setSaveStatus('error');
-      }
+    saveTimerRef.current = setTimeout(() => {
+      void saveDocument(document);
     }, 500);
-  }, []);
+  }, [saveDocument]);
+
+  const handleSaveClick = useCallback(async () => {
+    if (snapshotStatus === 'saving') return;
+
+    // Сначала сбрасываем отложенное автосохранение, чтобы снимок был актуальным
+    if (saveTimerRef.current) {
+      clearTimeout(saveTimerRef.current);
+      saveTimerRef.current = null;
+      const pending = docRef.current;
+      if (pending) {
+        await saveDocument(pending);
+      }
+    }
+
+    setSnapshotStatus('saving');
+    try {
+      const res = await fetch('/api/snapshot', { method: 'POST' });
+      if (!res.ok) throw new Error('Snapshot failed');
+      setSnapshotStatus('saved');
+    } catch {
+      setSnapshotStatus('error');
+    }
+  }, [snapshotStatus, saveDocument]);
 
   function updateTree(newRoot: MindNode) {
     if (!doc) return;
@@ -118,6 +160,10 @@ export default function HomePage() {
   // Навигация по плоскому списку
   const flatList = useMemo(() => {
     if (!doc) return [];
+    // #region agent log
+    fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:flatList',message:'flatList compute',data:{hasDoc:Boolean(doc),hasRoot:Boolean(doc?.root),rootId:doc?.root?.id??null,runId:'post-fix'},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+    // #endregion
+    if (!doc.root) return [];
     return flatIds(doc.root, collapsed);
   }, [doc, collapsed]);
 
@@ -265,7 +311,7 @@ export default function HomePage() {
   });
 
   // Фильтрация
-  const hasActiveFilter = filters.responsible !== null || filters.status !== null;
+  const hasActiveFilter = hasActiveFilters(filters);
   const filterMap = useMemo(() => {
     if (!doc || !hasActiveFilter) return null;
     return filterTree(doc.root, filters);
@@ -307,15 +353,27 @@ export default function HomePage() {
     return <div className={styles.loading}>Загрузка...</div>;
   }
 
-  const saveLabel =
+  const snapshotLabel =
+    snapshotStatus === 'saving' ? 'Сохранение...' :
+    snapshotStatus === 'saved' ? 'Сохранить удалось' :
+    snapshotStatus === 'error' ? 'Сохранить не удалось, попробуйте позже' :
+    '';
+
+  const autosaveLabel =
+    snapshotLabel ? '' :
     saveStatus === 'saving' ? 'Сохраняется...' :
     saveStatus === 'saved' ? 'Сохранено' :
     saveStatus === 'error' ? 'Ошибка сохранения' :
     '';
 
-  const saveLabelClass =
-    saveStatus === 'saving' ? styles.saveIndicatorSaving :
-    saveStatus === 'error' ? styles.saveIndicatorError :
+  const statusLabel = snapshotLabel || autosaveLabel;
+
+  const statusLabelClass =
+    snapshotStatus === 'saved' ? styles.saveIndicatorSuccess :
+    snapshotStatus === 'error' || (!snapshotLabel && saveStatus === 'error')
+      ? styles.saveIndicatorError :
+    snapshotStatus === 'saving' || (!snapshotLabel && saveStatus === 'saving')
+      ? styles.saveIndicatorSaving :
     styles.saveIndicator;
 
   return (
@@ -336,7 +394,19 @@ export default function HomePage() {
               {syncMessage}
             </span>
           )}
-          <span className={saveLabelClass}>{saveLabel}</span>
+          <span className={statusLabelClass} role="status" aria-live="polite">
+            {statusLabel}
+          </span>
+          <button
+            type="button"
+            className={styles.saveButton}
+            onClick={() => void handleSaveClick()}
+            disabled={snapshotStatus === 'saving'}
+            title="Сохранить"
+          >
+            Сохранить
+          </button>
+          <ThemeToggle />
         </div>
       </header>
 
@@ -363,7 +433,7 @@ export default function HomePage() {
             filters={filters}
             matchCount={matchCount}
             onChange={setFilters}
-            onReset={() => setFilters({ responsible: null, status: null })}
+            onReset={() => setFilters(EMPTY_FILTERS)}
           />
           <div className={styles.treeContent}>
             {hasActiveFilter && matchCount === 0 ? (
@@ -397,6 +467,14 @@ export default function HomePage() {
                 collapsed={collapsed}
                 filterMap={filterMap}
                 onSelect={setSelectedId}
+                onToggleCollapse={(id) => {
+                  setCollapsed((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(id)) next.delete(id);
+                    else next.add(id);
+                    return next;
+                  });
+                }}
               />
             )}
           </div>

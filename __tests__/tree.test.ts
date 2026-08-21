@@ -5,6 +5,7 @@ import {
   addSiblingBefore,
   removeNode,
   filterTree,
+  isNodeVisibleInFilter,
   type FilterState,
 } from '../hooks/useTree';
 import type { MindNode } from '../types/node';
@@ -139,6 +140,7 @@ describe('F4: addChild', () => {
     expect(delta.children).toHaveLength(1);
     expect(delta.children[0].id).toBe(newId);
     expect(delta.children[0].name).toBe('Новый узел');
+    expect(delta.children[0].status).toBe('New');
   });
 
   test('does not mutate original', () => {
@@ -228,28 +230,57 @@ describe('F5: filterTree', () => {
   ]);
 
   test('filter by responsible returns matching nodes', () => {
-    const map = filterTree(treeWithAttrs, { responsible: 'Андрей', status: null });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей'], statuses: [] });
     expect(map.get('a')?.matched).toBe(true);
     expect(map.get('d')?.matched).toBe(true);
     expect(map.get('c')?.matched).toBe(false);
   });
 
   test('filter by status returns matching nodes', () => {
-    const map = filterTree(treeWithAttrs, { responsible: null, status: 'Done' });
+    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: ['Done'] });
     expect(map.get('c')?.matched).toBe(true);
     expect(map.get('d')?.matched).toBe(true);
     expect(map.get('a')?.matched).toBe(false);
   });
 
   test('AND filter: both conditions must match', () => {
-    const map = filterTree(treeWithAttrs, { responsible: 'Андрей', status: 'Done' });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей'], statuses: ['Done'] });
     expect(map.get('d')?.matched).toBe(true);
     expect(map.get('a')?.matched).toBe(false); // Андрей/New — не совпадает по статусу
   });
 
+  test('OR within responsible: multiple values', () => {
+    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей', 'Роман'], statuses: [] });
+    expect(map.get('a')?.matched).toBe(true);
+    expect(map.get('c')?.matched).toBe(true);
+    expect(map.get('d')?.matched).toBe(true);
+  });
+
+  test('OR within status: multiple values', () => {
+    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: ['New', 'Done'] });
+    expect(map.get('a')?.matched).toBe(true);
+    expect(map.get('c')?.matched).toBe(true);
+    expect(map.get('d')?.matched).toBe(true);
+  });
+
+  test('empty filter arrays match all nodes', () => {
+    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: [] });
+    expect(map.get('a')?.matched).toBe(true);
+    expect(map.get('c')?.matched).toBe(true);
+  });
+
   test('parent with matching descendant has hasMatchingDescendant=true', () => {
-    const map = filterTree(treeWithAttrs, { responsible: 'Роман', status: null });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Роман'], statuses: [] });
     expect(map.get('b')?.hasMatchingDescendant).toBe(true);
     expect(map.get('b')?.matched).toBe(false);
+  });
+
+  test('isNodeVisibleInFilter hides non-matching nodes without matching descendants', () => {
+    const map = filterTree(treeWithAttrs, { responsibles: ['Роман'], statuses: [] });
+    expect(isNodeVisibleInFilter(map, 'c')).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'b')).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'a')).toBe(false);
+    expect(isNodeVisibleInFilter(map, 'd')).toBe(false);
+    expect(isNodeVisibleInFilter(null, 'a')).toBe(true);
   });
 });
