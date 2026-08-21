@@ -24,6 +24,45 @@ import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
 type ViewMode = 'outline' | 'map';
+type SyncStatus = 'idle' | 'syncing' | 'done' | 'error';
+
+function collectLinkedNodes(node: MindNode): Array<{
+  id: string;
+  calendarUid: string;
+  description: string | null;
+  status: MindNode['status'];
+}> {
+  const out: Array<{
+    id: string;
+    calendarUid: string;
+    description: string | null;
+    status: MindNode['status'];
+  }> = [];
+  function walk(n: MindNode) {
+    if (n.calendarUid) {
+      out.push({
+        id: n.id,
+        calendarUid: n.calendarUid,
+        description: n.description,
+        status: n.status,
+      });
+    }
+    n.children.forEach(walk);
+  }
+  walk(node);
+  return out;
+}
+
+function applyPatches(
+  root: MindNode,
+  patches: Array<{ id: string; patch: Partial<Omit<MindNode, 'id' | 'children'>> }>
+): MindNode {
+  let next = root;
+  for (const { id, patch } of patches) {
+    next = updateNode(next, id, patch);
+  }
+  return next;
+}
 
 export default function HomePage() {
   const [doc, setDoc] = useState<MindMapDocument | null>(null);
@@ -35,6 +74,8 @@ export default function HomePage() {
   const [filters, setFilters] = useState<FilterState>({ responsible: null, status: null });
   const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>('idle');
+  const [syncMessage, setSyncMessage] = useState('');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Загрузка данных при старте
@@ -107,6 +148,56 @@ export default function HomePage() {
   function cancelEdit() {
     setEditingId(null);
     setEditingValue('');
+  }
+
+  async function syncCalendar() {
+    if (!doc) return;
+    const linked = collectLinkedNodes(doc.root);
+    if (linked.length === 0) {
+      setSyncStatus('done');
+      setSyncMessage('Нет узлов в календаре');
+      return;
+    }
+    setSyncStatus('syncing');
+    setSyncMessage('Синхронизация…');
+    try {
+      const res = await fetch('/api/calendar/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nodes: linked }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setSyncStatus('error');
+        setSyncMessage(data.error || 'Ошибка sync');
+        return;
+      }
+      const patches = (data.results as Array<{
+        id: string;
+        patch?: Partial<Omit<MindNode, 'id' | 'children'>>;
+      }>)
+        .filter((r) => r.patch)
+        .map((r) => ({ id: r.id, patch: r.patch! }));
+
+      if (patches.length) {
+        updateTree(applyPatches(doc.root, patches));
+      }
+
+      const { successCount, warningCount, errorCount } = data.summary;
+      if (errorCount > 0) {
+        setSyncStatus('error');
+        setSyncMessage(`Готово: ${successCount} ок, ${warningCount} предупр., ${errorCount} ошибок`);
+      } else if (warningCount > 0) {
+        setSyncStatus('done');
+        setSyncMessage(`Готово: ${successCount} ок, ${warningCount} предупр.`);
+      } else {
+        setSyncStatus('done');
+        setSyncMessage(`Синхронизировано: ${successCount}`);
+      }
+    } catch {
+      setSyncStatus('error');
+      setSyncMessage('Нет сети или ошибка сервера');
+    }
   }
 
   // Горячие клавиши
@@ -231,7 +322,22 @@ export default function HomePage() {
     <div className={styles.layout}>
       <header className={styles.header}>
         <span className={styles.title}>Mind Map Editor — задачи RULI</span>
-        <span className={saveLabelClass}>{saveLabel}</span>
+        <div className={styles.headerActions}>
+          <button
+            type="button"
+            className={styles.syncButton}
+            disabled={syncStatus === 'syncing'}
+            onClick={syncCalendar}
+          >
+            {syncStatus === 'syncing' ? 'Синхронизация…' : 'Синхронизировать с календарём'}
+          </button>
+          {syncMessage && (
+            <span className={syncStatus === 'error' ? styles.syncMessageError : styles.syncMessage}>
+              {syncMessage}
+            </span>
+          )}
+          <span className={saveLabelClass}>{saveLabel}</span>
+        </div>
       </header>
 
       <div className={styles.body}>
@@ -300,6 +406,7 @@ export default function HomePage() {
           <NodeCard
             node={selectedNode}
             nodeNumber={selectedNumber}
+            calendarBusy={syncStatus === 'syncing'}
             onChange={(patch) => {
               if (!selectedId || !doc) return;
               updateTree(updateNode(doc.root, selectedId, patch));
