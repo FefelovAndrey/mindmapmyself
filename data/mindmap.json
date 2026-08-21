@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-21T10:34:49.467Z",
+  "updatedAt": "2026-08-21T10:52:26.096Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -658,11 +658,11 @@
                     "description": null,
                     "responsible": null,
                     "status": "New",
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
+                    "deadline": "2026-08-24",
+                    "calendarUid": "2bdb4512-9fd3-45e6-9d33-2b345ab9ab24",
+                    "calendarStartAt": "2026-08-24T17:00:00+05:00",
+                    "calendarEndAt": "2026-08-24T17:30:00+05:00",
+                    "calendarSyncedAt": "2026-08-21T10:52:21.581Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
