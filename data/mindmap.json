@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-21T10:52:26.096Z",
+  "updatedAt": "2026-08-21T11:22:30.928Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -599,8 +599,8 @@
               },
               {
                 "id": "faf1aa57-73a3-421c-99fb-e019303d554f",
-                "name": "INI-104: [ozon] Доля рекламы в заказе - через ИИ",
-                "description": "С Денисом провести встречу и далее прогнать через логику ИИ",
+                "name": "INI-104: [ozon] DEVEL-2900 Доля рекламы в заказе - через ИИ (скинул в чат Коле Иванову)",
+                "description": "Скинул в чат к Коле Иванову 19.08",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
@@ -613,7 +613,7 @@
               },
               {
                 "id": "a487a74c-9feb-4235-850f-62e037bd2c4d",
-                "name": "DEVEL-2869: [wb] не верно считается комиссия в МП прибыли - через ИИ",
+                "name": "DEVEL-2869: [wb] INI-112 не верно считается комиссия в МП прибыли - через ИИ сделал бриф. PRD позже нужна",
                 "description": "С Денисом обсудить и далее запустить через ИИшку",
                 "responsible": null,
                 "status": "New",
@@ -632,16 +632,16 @@
                 "responsible": null,
                 "status": "New",
                 "deadline": "2026-08-24",
-                "calendarUid": "70577ecd-81cd-4474-bae3-5b38aae8c34d",
+                "calendarUid": null,
                 "calendarStartAt": "2026-08-24T17:00:00+05:00",
                 "calendarEndAt": "2026-08-24T17:05:00+05:00",
-                "calendarSyncedAt": "2026-08-21T06:12:49.138Z",
+                "calendarSyncedAt": "2026-08-21T10:52:50.072Z",
                 "calendarSyncStopped": false,
                 "children": []
               },
               {
                 "id": "a57cd173-791a-4872-a3f5-325daa531750",
-                "name": "INI-113",
+                "name": "INI-113: [WB] Обнуление ФВ по нашим складам",
                 "description": null,
                 "responsible": null,
                 "status": "New",
@@ -662,7 +662,7 @@
                     "calendarUid": "2bdb4512-9fd3-45e6-9d33-2b345ab9ab24",
                     "calendarStartAt": "2026-08-24T17:00:00+05:00",
                     "calendarEndAt": "2026-08-24T17:30:00+05:00",
-                    "calendarSyncedAt": "2026-08-21T10:52:21.581Z",
+                    "calendarSyncedAt": "2026-08-21T10:53:31.100Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
