@@ -28,6 +28,42 @@ import styles from './page.module.css';
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
 type SnapshotStatus = 'idle' | 'saving' | 'saved' | 'error';
 type ViewMode = 'outline' | 'map';
+type SyncStatus = 'idle' | 'syncing' | 'done' | 'error';
+
+function collectLinkedNodes(node: MindNode): Array<{
+  id: string;
+  calendarUid: string;
+  calendarSyncStopped: boolean;
+}> {
+  const out: Array<{
+    id: string;
+    calendarUid: string;
+    calendarSyncStopped: boolean;
+  }> = [];
+  function walk(n: MindNode) {
+    if (n.calendarUid) {
+      out.push({
+        id: n.id,
+        calendarUid: n.calendarUid,
+        calendarSyncStopped: Boolean(n.calendarSyncStopped),
+      });
+    }
+    n.children.forEach(walk);
+  }
+  walk(node);
+  return out;
+}
+
+function applyPatches(
+  root: MindNode,
+  patches: Array<{ id: string; patch: Partial<Omit<MindNode, 'id' | 'children'>> }>
+): MindNode {
+  let next = root;
+  for (const { id, patch } of patches) {
+    next = updateNode(next, id, patch);
+  }
+  return next;
+}
 
 export default function HomePage() {
   const [doc, setDoc] = useState<MindMapDocument | null>(null);
@@ -39,6 +75,8 @@ export default function HomePage() {
   const [filters, setFilters] = useState<FilterState>(EMPTY_FILTERS);
   const [viewMode, setViewMode] = useState<ViewMode>('outline');
   const [saveStatus, setSaveStatus] = useState<SaveStatus>('idle');
+  const [syncStatus, setSyncStatus] = useState<SyncStatus>('idle');
+  const [syncMessage, setSyncMessage] = useState('');
   const [snapshotStatus, setSnapshotStatus] = useState<SnapshotStatus>('idle');
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const docRef = useRef<MindMapDocument | null>(null);
@@ -112,6 +150,85 @@ export default function HomePage() {
   function updateTree(newRoot: MindNode) {
     if (!doc) return;
     const newDoc = { ...doc, root: newRoot };
+    setDoc(newDoc);
+    scheduleSave(newDoc);
+  }
+
+  async function syncCalendar() {
+    if (!doc) return;
+    const linked = collectLinkedNodes(doc.root);
+    if (linked.length === 0) {
+      setSyncStatus('done');
+      setSyncMessage('Нет узлов в календаре');
+      return;
+    }
+    setSyncStatus('syncing');
+    setSyncMessage('Синхронизация…');
+    try {
+      const res = await fetch('/api/calendar/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nodes: linked }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setSyncStatus('error');
+        setSyncMessage(data.error || 'Ошибка sync');
+        return;
+      }
+      const patches = (data.results as Array<{
+        id: string;
+        patch?: Partial<Omit<MindNode, 'id' | 'children'>>;
+      }>)
+        .filter((r) => r.patch)
+        .map((r) => ({ id: r.id, patch: r.patch! }));
+
+      if (patches.length) {
+        updateTree(applyPatches(doc.root, patches));
+      }
+
+      const { successCount, warningCount, skippedCount, errorCount } = data.summary;
+      const skipPart = skippedCount ? `, ${skippedCount} проп.` : '';
+      if (errorCount > 0) {
+        setSyncStatus('error');
+        setSyncMessage(
+          `Готово: ${successCount} ок, ${warningCount} предупр.${skipPart}, ${errorCount} ошибок`
+        );
+      } else if (warningCount > 0 || skippedCount > 0) {
+        setSyncStatus('done');
+        setSyncMessage(`Готово: ${successCount} ок, ${warningCount} предупр.${skipPart}`);
+      } else {
+        setSyncStatus('done');
+        setSyncMessage(`Синхронизировано: ${successCount}`);
+      }
+    } catch {
+      setSyncStatus('error');
+      setSyncMessage('Нет сети или ошибка сервера');
+    }
+  }
+
+  async function handleStatusDone(node: MindNode) {
+    if (!node.calendarUid || node.calendarSyncStopped) return;
+    const res = await fetch('/api/calendar/mark-done', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        calendarUid: node.calendarUid,
+        name: node.name,
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      throw new Error(data.error || 'Ошибка пометки (Done) в календаре');
+    }
+    const current = docRef.current;
+    if (!current) return;
+    const patched = updateNode(current.root, node.id, {
+      calendarSyncStopped: true,
+      calendarSyncedAt: data.calendarSyncedAt ?? new Date().toISOString(),
+      ...(data.calendarUid === null ? { calendarUid: null } : {}),
+    });
+    const newDoc = { ...current, root: patched };
     setDoc(newDoc);
     scheduleSave(newDoc);
   }
@@ -290,6 +407,19 @@ export default function HomePage() {
       <header className={styles.header}>
         <span className={styles.title}>Mind Map Editor — задачи RULI</span>
         <div className={styles.headerActions}>
+          <button
+            type="button"
+            className={styles.syncButton}
+            disabled={syncStatus === 'syncing'}
+            onClick={() => void syncCalendar()}
+          >
+            {syncStatus === 'syncing' ? 'Синхронизация…' : 'Синхронизировать с календарём'}
+          </button>
+          {syncMessage && (
+            <span className={syncStatus === 'error' ? styles.syncMessageError : styles.syncMessage}>
+              {syncMessage}
+            </span>
+          )}
           <span className={statusLabelClass} role="status" aria-live="polite">
             {statusLabel}
           </span>
@@ -380,6 +510,8 @@ export default function HomePage() {
           <NodeCard
             node={selectedNode}
             nodeNumber={selectedNumber}
+            calendarBusy={syncStatus === 'syncing'}
+            onStatusDone={handleStatusDone}
             onChange={(patch) => {
               if (!selectedId || !doc) return;
               updateTree(updateNode(doc.root, selectedId, patch));

@@ -42,8 +42,13 @@ function buildNode(topic: XmlTopic): MindNode {
     name,
     description: null,
     responsible: null,
-    status: 'New',
+    status: null,
     deadline: null,
+    calendarUid: null,
+    calendarStartAt: null,
+    calendarEndAt: null,
+    calendarSyncedAt: null,
+    calendarSyncStopped: false,
     children,
   };
 }

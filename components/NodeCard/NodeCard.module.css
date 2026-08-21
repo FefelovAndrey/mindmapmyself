@@ -21,6 +21,88 @@
   background: var(--color-surface-muted);
 }
 
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.calendarBadge {
+  flex-shrink: 0;
+  margin-top: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-status-done, #065f46);
+  background: color-mix(in srgb, var(--color-status-done, #10b981) 18%, transparent);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.calendarSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.sendButton {
+  margin-top: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.sendButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.sendButton:hover:not(:disabled) {
+  filter: brightness(0.95);
+}
+
+.errorText {
+  font-size: 12px;
+  color: var(--color-danger);
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.linkedInfo {
+  font-size: 13px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.linkedStatus {
+  font-weight: 600;
+}
+
 .nodeNumber {
   font-size: 11px;
   color: var(--color-text-muted);
@@ -30,6 +112,8 @@
 
 .nameField {
   width: 100%;
+  flex: 1;
+  min-width: 0;
   font-size: 15px;
   font-weight: 600;
   border: 1px solid transparent;
