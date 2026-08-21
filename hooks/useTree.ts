@@ -27,6 +27,11 @@ function newNode(name = 'Новый узел'): MindNode {
     responsible: null,
     status: 'New',
     deadline: null,
+    calendarUid: null,
+    calendarStartAt: null,
+    calendarEndAt: null,
+    calendarSyncedAt: null,
+    calendarSyncStopped: false,
     children: [],
   };
 }

@@ -11,7 +11,20 @@ import {
 import type { MindNode } from '../types/node';
 
 function makeNode(id: string, name: string, children: MindNode[] = []): MindNode {
-  return { id, name, description: null, responsible: null, status: null, deadline: null, children };
+  return {
+    id,
+    name,
+    description: null,
+    responsible: null,
+    status: null,
+    deadline: null,
+    calendarUid: null,
+    calendarStartAt: null,
+    calendarEndAt: null,
+    calendarSyncedAt: null,
+    calendarSyncStopped: false,
+    children,
+  };
 }
 
 // Тестовое дерево:
