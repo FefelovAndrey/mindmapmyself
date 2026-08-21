@@ -19,7 +19,7 @@ export const MindNodeSchema: z.ZodType<MindNode> = z.lazy(() =>
     calendarSyncedAt: nullableString,
     children: z.array(MindNodeSchema),
   })
-);
+) as z.ZodType<MindNode>;
 
 export interface MindNode {
   id: string;
