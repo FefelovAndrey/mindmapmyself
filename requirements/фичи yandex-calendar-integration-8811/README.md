@@ -10,6 +10,10 @@
 |------|----------|
 | [BRD-YandexCalendar-Feature1.md](./BRD-YandexCalendar-Feature1.md) | **v1.1** — из узла создаётся **событие с типом «Задача»** (VEVENT в «Мои события»), не VTODO |
 
+См. также:
+- `Plans/yandex-calendar-api.md` — CalDAV / OAuth
+- `Plans/yandex-calendar-oq6-experiment.md` — план эксперимента OQ-6/OQ-7 (маркер типа «Задача»)
+
 ## Статус
 
 - **v1.0** — ошибочно требовала создание задачи (VTODO) в `todos-*`; реализация по v1.0 **отклонена** при приёмке.
