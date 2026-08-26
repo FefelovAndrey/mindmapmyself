@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-26T13:12:05.900Z",
+  "updatedAt": "2026-08-26T13:19:37.195Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -672,11 +672,11 @@
                     "description": "Если в одном городе есть остаток у нас на складе, а во втором городе есть остаток у поставщика, то остаток у поставщика обнулится - проверка что это в задае 2772?",
                     "responsible": null,
                     "status": "New",
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
+                    "deadline": "2026-08-27",
+                    "calendarUid": "076b52e9-4fcf-4885-b09f-8b5590dbbbf9",
+                    "calendarStartAt": "2026-08-27T08:30:00+05:00",
+                    "calendarEndAt": "2026-08-27T09:00:00+05:00",
+                    "calendarSyncedAt": "2026-08-26T13:17:46.069Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
