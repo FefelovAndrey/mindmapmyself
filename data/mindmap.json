@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-31T04:53:11.041Z",
+  "updatedAt": "2026-08-31T04:55:33.664Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -685,6 +685,34 @@
               {
                 "id": "cc062f50-6b38-4bbd-bad7-4d8615dd55a8",
                 "name": "CKA-1551 Прописать требования за Максима",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "ac0a27f1-dde4-4fac-9e34-a42f11ac0cb1",
+                "name": "Проработать схему нового процесса который будет поддерживать режим \"Приемка по субботе\" (новая связка УПД-ПТУ)",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "5e2a0b32-2bdc-445f-93a8-2a36ceec8992",
+                "name": "Для Марии Красотиной подготовить примеры использования ИИ",
                 "description": null,
                 "responsible": null,
                 "status": "New",
@@ -1917,6 +1945,20 @@
               {
                 "id": "1bfe0151-6bbb-49cf-a84f-6b6c60dd0571",
                 "name": "INI-96: Возможность получения вида товаров (с ИИшкой)",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "07cc490a-725e-4de1-890b-04348d92ffb8",
+                "name": "ЯндексМаркет",
                 "description": null,
                 "responsible": null,
                 "status": "New",
