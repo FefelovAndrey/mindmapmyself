@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-31T05:56:17.642Z",
+  "updatedAt": "2026-08-31T12:20:22.056Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -713,6 +713,20 @@
               {
                 "id": "5e2a0b32-2bdc-445f-93a8-2a36ceec8992",
                 "name": "Для Марии Красотиной подготовить примеры использования ИИ",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "8e592b5d-34d6-4b09-bd65-48d4d672a7e2",
+                "name": "ПО UI ценообразования написать разработчикам требования",
                 "description": null,
                 "responsible": null,
                 "status": "New",
