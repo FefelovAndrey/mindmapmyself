@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-31T04:55:33.664Z",
+  "updatedAt": "2026-08-31T05:56:17.642Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1604,7 +1604,7 @@
               },
               {
                 "id": "93c572b2-35d4-4cf1-a0ff-99536fb80d37",
-                "name": "DEVEL-2787: [ozon] Связка вариантов через количство.",
+                "name": "DEVEL-2787: [ozon] Связка вариантов через количество.",
                 "description": "https://tracker.yandex.ru/DEVEL-2787",
                 "responsible": "Дима",
                 "status": "New",
