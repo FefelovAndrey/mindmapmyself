@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-08-31T12:20:22.056Z",
+  "updatedAt": "2026-09-01T12:47:22.781Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -699,7 +699,7 @@
               {
                 "id": "ac0a27f1-dde4-4fac-9e34-a42f11ac0cb1",
                 "name": "Проработать схему нового процесса который будет поддерживать режим \"Приемка по субботе\" (новая связка УПД-ПТУ)",
-                "description": null,
+                "description": "01.09 Проблема не дает двигаться дальше - сегодня обсудили, надо с Сергеем и с Вячеславом обсудить",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
@@ -729,7 +729,7 @@
                 "name": "ПО UI ценообразования написать разработчикам требования",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
