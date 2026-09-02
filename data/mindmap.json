@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-01T12:47:22.781Z",
+  "updatedAt": "2026-09-02T12:49:05.632Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -630,7 +630,7 @@
                 "name": "INI-110: Признак сертификата в прайсах для поставщиков - аналитика готова - нужен Коля чтобы запускать разработку через ИИ",
                 "description": "31.08 закинул в чат питона",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": "2026-08-24",
                 "calendarUid": null,
                 "calendarStartAt": "2026-08-24T17:00:00+05:00",
@@ -684,7 +684,7 @@
               },
               {
                 "id": "cc062f50-6b38-4bbd-bad7-4d8615dd55a8",
-                "name": "CKA-1551 Прописать требования за Максима",
+                "name": "CKA-1551 Разобраться с отменами и отменами отмен",
                 "description": null,
                 "responsible": null,
                 "status": "New",
@@ -701,7 +701,7 @@
                 "name": "Проработать схему нового процесса который будет поддерживать режим \"Приемка по субботе\" (новая связка УПД-ПТУ)",
                 "description": "01.09 Проблема не дает двигаться дальше - сегодня обсудили, надо с Сергеем и с Вячеславом обсудить",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
@@ -730,6 +730,20 @@
                 "description": null,
                 "responsible": null,
                 "status": "Done",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "b70473a5-72f2-48f2-8cc7-1a03d9f61116",
+                "name": "INI-109/DEVEL-2869 [wb] не верно считается комиссия в МП прибыли",
+                "description": "02.09 - отдал в разработку в команду ВА",
+                "responsible": null,
+                "status": "New",
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
@@ -1255,7 +1269,22 @@
                 "calendarEndAt": null,
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
-                "children": []
+                "children": [
+                  {
+                    "id": "91df37e0-0594-4336-a7c5-9fc529be1588",
+                    "name": "DEVEL-2900 Одна доработка в ВА - ждет когда выкатят второй кабинет и потом делаем",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
