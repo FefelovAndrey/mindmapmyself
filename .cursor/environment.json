@@ -1,0 +1,11 @@
+{
+  "name": "Mind Map Editor",
+  "install": "npm ci",
+  "terminals": [
+    {
+      "name": "dev",
+      "command": "npm run dev",
+      "description": "Next.js dev server on http://localhost:3000"
+    }
+  ]
+}
