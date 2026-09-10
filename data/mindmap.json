@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-10T13:11:59.349Z",
+  "updatedAt": "2026-09-10T13:12:22.829Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2017,11 +2017,11 @@
                     "description": null,
                     "responsible": "Андрей",
                     "status": "New",
-                    "deadline": "2026-09-14",
+                    "deadline": "2026-09-15",
                     "calendarUid": "6329fd9a-0701-4969-b9ab-6c2288f56332",
-                    "calendarStartAt": "2026-09-14T19:00:00+05:00",
-                    "calendarEndAt": "2026-09-14T19:30:00+05:00",
-                    "calendarSyncedAt": "2026-09-10T13:11:56.781Z",
+                    "calendarStartAt": "2026-09-15T19:00:00+05:00",
+                    "calendarEndAt": "2026-09-15T19:30:00+05:00",
+                    "calendarSyncedAt": "2026-09-10T13:12:18.066Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
