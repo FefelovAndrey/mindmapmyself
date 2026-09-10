@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-10T13:12:22.829Z",
+  "updatedAt": "2026-09-10T13:30:01.915Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2112,6 +2112,35 @@
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
                 "children": []
+              },
+              {
+                "id": "61e9010d-bc5e-4324-b579-89c551909345",
+                "name": "Комплекты",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "7e34e1fd-25a3-46b3-a8c9-df7d92c058bd",
+                    "name": "Отдать Диме комплекты",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "deadline": "2026-09-16",
+                    "calendarUid": "f34bfa67-a795-4cca-9b1e-ac8da69e5825",
+                    "calendarStartAt": "2026-09-16T20:00:00+05:00",
+                    "calendarEndAt": "2026-09-16T20:30:00+05:00",
+                    "calendarSyncedAt": "2026-09-10T13:29:53.657Z",
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           }
