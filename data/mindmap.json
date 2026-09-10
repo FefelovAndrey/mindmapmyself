@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-07T10:51:14.628Z",
+  "updatedAt": "2026-09-10T04:30:54.184Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1283,7 +1283,36 @@
                 "calendarEndAt": null,
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
-                "children": []
+                "children": [
+                  {
+                    "id": "c6b35ef1-bd15-4b2e-848c-9fa7bd7cd49c",
+                    "name": "Я/Проверить что там с отменами и если что переделать",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "265ff6c1-3ee5-45b3-b4bb-8888501c5d95",
+                    "name": "План подготовки",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               },
               {
                 "id": "d7ce071e-e7a1-4e9c-b0e7-07b6a45af99f",
