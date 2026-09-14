@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-14T04:59:01.914Z",
+  "updatedAt": "2026-09-14T08:54:39.205Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -767,20 +767,6 @@
                 "children": []
               },
               {
-                "id": "476d07b9-4615-4ac1-aec9-e3aec8b24995",
-                "name": "Склонировать гиn по BI и подключить реплику БД 1С (видимо будет нужен доступ)",
-                "description": null,
-                "responsible": null,
-                "status": "New",
-                "deadline": null,
-                "calendarUid": null,
-                "calendarStartAt": null,
-                "calendarEndAt": null,
-                "calendarSyncedAt": null,
-                "calendarSyncStopped": false,
-                "children": []
-              },
-              {
                 "id": "37fcdc42-e2f9-4632-83f2-76f9cf0013f9",
                 "name": "Вместе с Сашей Терешко посмотреть логику пополнения ходовых запасов при большом количестве соглашений плюс отмены",
                 "description": null,
@@ -793,6 +779,49 @@
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
                 "children": []
+              },
+              {
+                "id": "2a9df8f9-29a3-4530-80c1-8fd15fa73307",
+                "name": "Не срочно - развитие",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "ef8380eb-7e9b-40a0-aee6-c8e2105831cb",
+                    "name": "С Юлей обсуждали нормальный тестовый контур в 1С (разраб - тест - препрод - прод). По идее надо такое организовывать везде (или по потребности)",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "476d07b9-4615-4ac1-aec9-e3aec8b24995",
+                    "name": "Склонировать гиn по BI и подключить реплику БД 1С (видимо будет нужен доступ)",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
