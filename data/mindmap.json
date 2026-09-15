@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-15T05:02:44.133Z",
+  "updatedAt": "2026-09-15T05:35:00.365Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -571,7 +571,7 @@
               {
                 "id": "5ba67bd5-3663-4685-9309-aeed4f90f11f",
                 "name": "Разобраться с повышением индекса отмен и просрочек - какие изменения нужны в мониторинге",
-                "description": "INI-27: Детализировать в BI причины отмен Озон по нашей вине\nЗадача переросла в несколько другой формат - начинаю плясать от индекса отмен\nнепонятно что с ней дальше - вроде Коля подхватил, а вроде и нет",
+                "description": "INI-27: Детализировать в BI причины отмен Озон по нашей вине\nЗадача переросла в несколько другой формат - начинаю плясать от индекса отмен\nеще Вячеслав копал отмены тут - https://wiki.yandex.ru/homepage/baza-znanijj/it-otdel/vidy-otmen-po-nashejj-vine/?utm_referrer=about%3Ablank",
                 "responsible": null,
                 "status": "New",
                 "deadline": null,
@@ -865,6 +865,20 @@
                     ]
                   }
                 ]
+              },
+              {
+                "id": "69f2bde3-84e9-4ad7-a107-2d136c9a92ea",
+                "name": "Поправить регламент по проектам РУЛИ",
+                "description": "https://wiki.yandex.ru/homepage/baza-znanijj/it-otdel/reglament-vedenija-proekta/?utm_referrer=about%3Ablank\nВячеслав пишет:\nЯ немного поправил регламент: добавил вступление и указал на новый путь постановки задач. Поправил до зеленого. Дальше прошу дописать вам с Колей. Плюс поправьте схему, если она изменилась.\n\nНе срочно. Можно сделать до конца недели.",
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
               }
             ]
           },
