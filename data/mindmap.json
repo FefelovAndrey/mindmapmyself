@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-14T08:54:39.205Z",
+  "updatedAt": "2026-09-15T05:02:44.133Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -687,7 +687,7 @@
                 "name": "CKA-1551 Разобраться с отменами и отменами отмен",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
@@ -812,7 +812,7 @@
                     "name": "Склонировать гиn по BI и подключить реплику БД 1С (видимо будет нужен доступ)",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Done",
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -820,6 +820,49 @@
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
                     "children": []
+                  },
+                  {
+                    "id": "0218b7a7-2ac2-43c2-ad97-eeb3a7d89059",
+                    "name": "Развитие приложения MindMap",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": [
+                      {
+                        "id": "b1f7131b-6a00-4087-84ae-dca563202026",
+                        "name": "Добавить приоритеты",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "23fcdc43-4a89-4ea2-a664-a706e431f6d9",
+                        "name": "Сделать ответственных списком и список редактируемый в отдельном фоне",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               }
@@ -1153,6 +1196,20 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "id": "5f271af0-42d6-422f-a23e-3d50e61d7fb3",
+                    "name": "Тестирование Автозаказы (1-ый этап ТрейдСофт)",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
                   }
                 ]
               },
@@ -1318,7 +1375,7 @@
                     "name": "Я/Проверить что там с отменами и если что переделать",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Cancelled",
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -1332,6 +1389,20 @@
                     "name": "План подготовки",
                     "description": null,
                     "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "d772718a-cc09-4663-94ac-95222d9e5463",
+                    "name": "Подготовка и проведения ДЕМО",
+                    "description": null,
+                    "responsible": "Максим",
                     "status": "New",
                     "deadline": null,
                     "calendarUid": null,
@@ -1385,34 +1456,6 @@
                     "children": []
                   }
                 ]
-              },
-              {
-                "id": "d772718a-cc09-4663-94ac-95222d9e5463",
-                "name": "Тестирование и запуск проекта \"Поддержание ходовых остатков\"",
-                "description": null,
-                "responsible": null,
-                "status": "New",
-                "deadline": null,
-                "calendarUid": null,
-                "calendarStartAt": null,
-                "calendarEndAt": null,
-                "calendarSyncedAt": null,
-                "calendarSyncStopped": false,
-                "children": []
-              },
-              {
-                "id": "5f271af0-42d6-422f-a23e-3d50e61d7fb3",
-                "name": "Тестирование Автозаказы (1-ый этап ТрейдСофт)",
-                "description": null,
-                "responsible": null,
-                "status": "New",
-                "deadline": null,
-                "calendarUid": null,
-                "calendarStartAt": null,
-                "calendarEndAt": null,
-                "calendarSyncedAt": null,
-                "calendarSyncStopped": false,
-                "children": []
               }
             ]
           },
