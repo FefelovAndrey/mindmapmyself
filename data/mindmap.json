@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-15T05:35:00.365Z",
+  "updatedAt": "2026-09-16T04:04:31.277Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -863,6 +863,20 @@
                         "children": []
                       }
                     ]
+                  },
+                  {
+                    "id": "4a005686-23e1-45c3-a4b0-38fd86eb0f65",
+                    "name": "Наполнять графы своими процессами в проекте Инициативы и проверять как он умеет это читать",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
                   }
                 ]
               },
@@ -1779,7 +1793,7 @@
                 "name": "[wb] Настройка передачи остатков по складам DEVEL-2772",
                 "description": "https://tracker.yandex.ru/DEVEL-2772",
                 "responsible": "Дима",
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
