@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-16T08:35:43.181Z",
+  "updatedAt": "2026-09-17T03:42:05.149Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -926,6 +926,49 @@
                     "name": "ПОдготовить отчет-сводку по проектам",
                     "description": "Прошу к инициативам подготовить сводку/отчет по каждому проекту в работе, какой объем требований в нем ожидается, а какой вынесен за рамки. На комитете нужно в том числе определиться, увеличиваем ли мы набор требований по проекту и работаем дальше, или заканчиваем на текущем наборе.\n\nХороший пример - ЧЗ. На сколько понимаю, про ВБ и розничных продажах сейчас речи не идет. Все должны понимать, что нам надо их либо доделывать, либо откладывать.",
                     "responsible": "Андрей",
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "533867e7-ae13-4ac2-b9d2-1268d91792e1",
+                "name": "Развитие Тестирования",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "cdce2ad5-1da2-41dd-86d5-6d914bf9e0ea",
+                    "name": "Сделать отчет по багам и попробовать их разобрать с курсором",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "c0700f72-ed3b-4616-a8c3-a107973f41d4",
+                    "name": "На примере Димы включить в PRD тест кейсы (или по Геркину или в упрощенном порядке - типо тестпланов чтобы проверить выполнение требований)",
+                    "description": null,
+                    "responsible": null,
                     "status": "New",
                     "deadline": null,
                     "calendarUid": null,
