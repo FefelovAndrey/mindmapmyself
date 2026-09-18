@@ -20,6 +20,12 @@ out/
 .vscode/
 .cursor/*
 !.cursor/environment.json
+!.cursor/commands/
+!.cursor/commands/**
+!.cursor/skills/
+!.cursor/skills/**
+!.cursor/rules/
+!.cursor/rules/**
 
 # logs
 npm-debug.log*

@@ -1,0 +1,49 @@
+schema: spec-driven
+
+context: |
+  Language: Russian (ru)
+  All artifacts must be written in Russian (ru).
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  Product: local Next.js 15 / React 19 / TypeScript mind-map editor (mindmap-editor).
+  Persistence: data/mindmap.json (gitignored, created on first GET /api/nodes). No database.
+  Package manager: npm. Tests: npm test (Jest + ts-jest). Typecheck: npm run build.
+  UI is keyboard-driven in Outline: Tab child, Enter sibling, F2 rename, Delete remove.
+  Autosave 500ms via POST /api/nodes; header shows «Сохраняется…» → «Сохранено».
+
+  Existing docs in requirements/ (BRD.md, Decision.md, map-view/) are source material,
+  not OpenSpec specs. Do not bulk-convert them. Point at the relevant section when
+  proposing a change.
+
+  Human review style: the owner does not read or review code. They spend 2–5 minutes
+  on scenarios, then test in the browser. Specs must be a clickable test checklist.
+  After apply, present the scenario list and wait for their test result. Do not ask
+  them to inspect diffs.
+
+rules:
+  proposal:
+    - Keep the proposal short enough to review in 2–5 minutes
+    - Always include a "Non-goals" section
+    - Describe user-visible behavior, not implementation
+  specs:
+    - Write requirements and scenarios in Russian
+    - Keep structural headings and SHALL/MUST in English
+    - Every scenario MUST be testable in the UI without reading code
+    - Prefer Given/When/Then with concrete UI actions and visible outcomes
+  design:
+    - Keep design brief; the owner will not review it as a code plan
+    - "Call out test strategy: Jest for logic, human UI pass for scenarios"
+  tasks:
+    - Include automated tests for non-UI logic
+    - Map tasks back to spec scenarios where possible
+
+operations:
+  apply:
+    guidance:
+      - Do not ask the owner to review code or diffs
+      - Run npm test after implementation
+      - When finished, print the spec scenarios as a numbered UI test checklist and wait
+  archive:
+    guidance:
+      - Archive only after the owner confirmed the UI scenarios, or they explicitly asked to archive
+      - Keep the completion summary concise

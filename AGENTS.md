@@ -37,3 +37,17 @@ containers, or external services — data is persisted to a local JSON file at
   adds a child, `Enter` adds a sibling (or edits the root), `F2` renames,
   `Delete` removes. Edits autosave (500 ms debounce) via `POST /api/nodes`;
   the header shows `Сохраняется…` → `Сохранено`.
+
+## OpenSpec
+
+Behavior changes go through OpenSpec (`openspec/`). The owner reviews scenarios
+(2–5 minutes) and tests in the browser; they do not review code.
+
+- Unclear idea: `/opsx-explore`
+- Propose: `/opsx-propose`
+- Implement after they accept scenarios: `/opsx-apply`
+- Check vs scenarios + `npm test`: `/verify-openspec`
+- Archive after they confirm UI: `/opsx-archive`
+
+Artifact language is Russian (`openspec/config.yaml`). Existing `requirements/`
+docs are source material, not OpenSpec specs.

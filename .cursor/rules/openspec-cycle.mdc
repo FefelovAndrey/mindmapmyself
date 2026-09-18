@@ -1,0 +1,21 @@
+---
+description: OpenSpec cycle for new features — specs first, owner tests UI, no code review
+alwaysApply: true
+---
+
+# OpenSpec cycle
+
+New features and behavior changes go through OpenSpec in this repo.
+
+1. Unclear idea → `/opsx-explore` (no files, no code).
+2. Known change → `/opsx-propose` (planning artifacts only; stop before coding).
+3. Owner reviews **scenarios** for 2–5 minutes (not diffs).
+4. `/opsx-apply` only after they accept the scenarios.
+5. Give them the scenario checklist to test in the browser. Wait.
+6. `/opsx-archive` after they confirm, or if they ask to archive.
+
+Do not start implementing a behavior change until `openspec/changes/<name>/` exists, unless they say to skip OpenSpec. Tiny typo/build fixes may skip it.
+
+The owner does not read code. After apply, do not paste large diffs. Point them at scenarios.
+
+Existing `requirements/` docs are source material, not OpenSpec specs.
