@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-22T03:29:59.197Z",
+  "updatedAt": "2026-09-22T04:53:08.261Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -996,7 +996,7 @@
                     "id": "cdce2ad5-1da2-41dd-86d5-6d914bf9e0ea",
                     "name": "Сделать отчет по багам и попробовать их разобрать с курсором",
                     "description": null,
-                    "responsible": null,
+                    "responsible": "Андрей",
                     "status": "New",
                     "deadline": null,
                     "calendarUid": null,
@@ -1010,7 +1010,7 @@
                     "id": "c0700f72-ed3b-4616-a8c3-a107973f41d4",
                     "name": "На примере Димы включить в PRD тест кейсы (или по Геркину или в упрощенном порядке - типо тестпланов чтобы проверить выполнение требований)",
                     "description": null,
-                    "responsible": null,
+                    "responsible": "Андрей",
                     "status": "New",
                     "deadline": null,
                     "calendarUid": null,
@@ -1365,7 +1365,22 @@
                     "calendarEndAt": null,
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
-                    "children": []
+                    "children": [
+                      {
+                        "id": "b582f031-567e-416b-ae0d-027014df8edc",
+                        "name": "Попробовать сделать с курсором план тестирования / AC / testcase, чтобы можно было проверить не только Аллой",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               },
