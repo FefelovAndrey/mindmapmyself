@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-22T04:53:08.261Z",
+  "updatedAt": "2026-09-23T03:31:57.004Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -940,7 +940,7 @@
                     "name": "Проверить все инициативы и поставить трудозатраты",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -966,6 +966,20 @@
                   {
                     "id": "56c78b7e-33f5-4a90-8d3b-97fdcfb1ec6a",
                     "name": "Согласовать планируемую мощность с Вячеславом",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "Done",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "e7fd5b19-0c50-4edb-a2ef-c69fa446d622",
+                    "name": "Детально разобрать новые инициативы чтобы были детальные требования",
                     "description": null,
                     "responsible": "Андрей",
                     "status": "New",
