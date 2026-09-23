@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-23T09:29:11.787Z",
+  "updatedAt": "2026-09-23T09:40:28.492Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1044,11 +1044,25 @@
                     "calendarUid": "9ed605e4-8950-4805-948b-020edf36466a",
                     "calendarStartAt": "2026-09-23T19:00:00+05:00",
                     "calendarEndAt": "2026-09-23T19:30:00+05:00",
-                    "calendarSyncedAt": "2026-09-23T09:29:10.052Z",
+                    "calendarSyncedAt": "2026-09-23T09:29:18.313Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "54ff569d-91d7-4d4d-9542-791e202230e5",
+                "name": "Ценность нового ценообразования",
+                "description": null,
+                "responsible": "Андрей",
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
               }
             ]
           },
@@ -2288,11 +2302,11 @@
                     "description": null,
                     "responsible": "Андрей",
                     "status": "Done",
-                    "deadline": "2026-09-15",
+                    "deadline": "2026-09-16",
                     "calendarUid": "6329fd9a-0701-4969-b9ab-6c2288f56332",
-                    "calendarStartAt": "2026-09-15T19:00:00+05:00",
-                    "calendarEndAt": "2026-09-15T19:30:00+05:00",
-                    "calendarSyncedAt": "2026-09-10T13:12:18.066Z",
+                    "calendarStartAt": "2026-09-16T10:00:00+05:00",
+                    "calendarEndAt": "2026-09-16T10:30:00+05:00",
+                    "calendarSyncedAt": "2026-09-23T09:29:18.313Z",
                     "calendarSyncStopped": false,
                     "children": []
                   },
@@ -2421,7 +2435,7 @@
                     "calendarUid": "f34bfa67-a795-4cca-9b1e-ac8da69e5825",
                     "calendarStartAt": "2026-09-16T20:00:00+05:00",
                     "calendarEndAt": "2026-09-16T20:30:00+05:00",
-                    "calendarSyncedAt": "2026-09-10T13:29:53.657Z",
+                    "calendarSyncedAt": "2026-09-23T09:29:18.313Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
