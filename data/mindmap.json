@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-23T09:24:32.539Z",
+  "updatedAt": "2026-09-23T09:29:11.787Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1036,15 +1036,15 @@
                   },
                   {
                     "id": "61b8e99c-62be-41df-8b67-cac62b6fd9c2",
-                    "name": "Сделать ретро по тестированию последнего релиза ТСД - как сделать так, чтобы ошибок не было при релизе на прод (Вячеслав, Юля, Володя, Радмил)",
+                    "name": "Поставить ретро по тестированию последнего релиза ТСД - как сделать так, чтобы ошибок не было при релизе на прод (Вячеслав, Юля, Володя, Радмил)",
                     "description": null,
                     "responsible": "Андрей",
                     "status": "New",
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
+                    "deadline": "2026-09-23",
+                    "calendarUid": "9ed605e4-8950-4805-948b-020edf36466a",
+                    "calendarStartAt": "2026-09-23T19:00:00+05:00",
+                    "calendarEndAt": "2026-09-23T19:30:00+05:00",
+                    "calendarSyncedAt": "2026-09-23T09:29:10.052Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
