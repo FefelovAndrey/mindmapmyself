@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-23T03:37:19.056Z",
+  "updatedAt": "2026-09-23T09:24:32.539Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1023,6 +1023,20 @@
                   {
                     "id": "c0700f72-ed3b-4616-a8c3-a107973f41d4",
                     "name": "На примере Димы включить в PRD тест кейсы (или по Геркину или в упрощенном порядке - типо тестпланов чтобы проверить выполнение требований)",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "61b8e99c-62be-41df-8b67-cac62b6fd9c2",
+                    "name": "Сделать ретро по тестированию последнего релиза ТСД - как сделать так, чтобы ошибок не было при релизе на прод (Вячеслав, Юля, Володя, Радмил)",
                     "description": null,
                     "responsible": "Андрей",
                     "status": "New",
