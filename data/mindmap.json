@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-23T03:31:57.004Z",
+  "updatedAt": "2026-09-23T03:37:19.056Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -644,7 +644,7 @@
                 "name": "DEVEL-2914/INI-113: [WB] Обнуление ФВ по нашим складам - жду от Дениса апрува по PRD и далее буду запускать в команду",
                 "description": "27.08 - взяли в спринт и повесили на Диму Гаган",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
