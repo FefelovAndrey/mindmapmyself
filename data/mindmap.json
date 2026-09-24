@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-24T07:49:16.496Z",
+  "updatedAt": "2026-09-24T10:09:31.021Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1067,6 +1067,20 @@
               {
                 "id": "54ff569d-91d7-4d4d-9542-791e202230e5",
                 "name": "Ценность нового ценообразования",
+                "description": null,
+                "responsible": "Андрей",
+                "status": "New",
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "52453069-7570-475c-a12c-f271f5a28a30",
+                "name": "Сделать отчет для Матвея по INI-131",
                 "description": null,
                 "responsible": "Андрей",
                 "status": "New",
