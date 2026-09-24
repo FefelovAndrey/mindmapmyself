@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-23T09:40:28.492Z",
+  "updatedAt": "2026-09-24T07:49:16.496Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -881,6 +881,20 @@
                   {
                     "id": "eef792f8-1a7e-4e03-b297-06116498960d",
                     "name": "Посмотреть что у Димы получается в гитхабе и насколько это можно использовать",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "be51304e-53a0-4a63-8cdd-3680cf0ac17f",
+                    "name": "Сделать для бизнеса чат бот чтобы заполнять инициативы",
                     "description": null,
                     "responsible": null,
                     "status": "New",
