@@ -118,7 +118,15 @@ function NodeRow({
     isSelected ? styles.selected : '',
     node.status === 'Done' ? styles.done : '',
     node.status === 'Cancelled' ? styles.cancelled : '',
+    node.priority === 1 ? styles.priority1 : '',
   ].filter(Boolean).join(' ');
+
+  const priorityClass =
+    node.priority === 1
+      ? styles.priorityHigh
+      : node.priority != null
+        ? styles.priorityQuiet
+        : null;
 
   return (
     <>
@@ -128,6 +136,7 @@ function NodeRow({
         onClick={() => onSelect(node.id)}
         onDoubleClick={() => onEditStart(node.id, node.name)}
         data-node-id={node.id}
+        data-priority={node.priority ?? ''}
       >
         {/* Кнопка сворачивания */}
         {node.children.length > 0 ? (
@@ -145,6 +154,15 @@ function NodeRow({
 
         <div className={styles.content}>
           <span className={styles.number}>{node.number}</span>
+
+          {node.priority != null && priorityClass && (
+            <span
+              className={`${styles.priorityBadge} ${priorityClass}`}
+              aria-label={`Приоритет ${node.priority}`}
+            >
+              {node.priority}
+            </span>
+          )}
 
           {isEditing ? (
             <input

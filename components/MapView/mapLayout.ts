@@ -1,6 +1,6 @@
 import dagre from '@dagrejs/dagre';
 import type { Edge, Node } from '@xyflow/react';
-import type { MindNode, Status } from '@/types/node';
+import type { MindNode, Priority, Status } from '@/types/node';
 import { calcNumbers, countDescendants, isNodeVisibleInFilter, type NumberedNode } from '@/hooks/useTree';
 
 export const MAP_NODE_WIDTH = 220;
@@ -12,6 +12,7 @@ export type MapNodeData = {
   name: string;
   responsible: string | null;
   status: Status | null;
+  priority: Priority | null;
   dimmed: boolean;
   parentContext: boolean;
 };
@@ -60,6 +61,7 @@ function walkVisibleTree(
       name: node.name,
       responsible: node.responsible,
       status: node.status,
+      priority: node.priority,
       dimmed: false,
       parentContext: false,
     },

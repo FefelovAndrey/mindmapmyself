@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import type { MindNode, Status } from '@/types/node';
+import type { MindNode, Priority, Status } from '@/types/node';
 import {
   isoToDeadlineDate,
   isoToLocalTime,
@@ -92,6 +92,12 @@ export default function NodeCard({
   function commitDescription() {
     const description = localDescription.trim() || null;
     if (description !== node!.description) onChange({ description });
+  }
+
+  function handlePriorityChange(val: string) {
+    const priority: Priority | null =
+      val === '1' || val === '2' || val === '3' ? (Number(val) as Priority) : null;
+    onChange({ priority });
   }
 
   async function handleStatusChange(val: string) {
@@ -204,6 +210,21 @@ export default function NodeCard({
             }}
             placeholder="Не указан"
           />
+        </div>
+
+        <div className={styles.fieldRow}>
+          <label className={styles.label} htmlFor="node-priority">Приоритет</label>
+          <select
+            id="node-priority"
+            className={styles.select}
+            value={node.priority ?? ''}
+            onChange={(e) => handlePriorityChange(e.target.value)}
+          >
+            <option value="">не указан</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
 
         <div className={styles.fieldRow}>

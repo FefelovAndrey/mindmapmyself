@@ -176,6 +176,7 @@ describe('MindNode schema calendar fields (AC-5.2)', () => {
     if (result.success) {
       expect(result.data.root.calendarUid).toBeNull();
       expect(result.data.root.calendarSyncStopped).toBe(false);
+      expect(result.data.root.priority).toBeNull();
     }
   });
 });
