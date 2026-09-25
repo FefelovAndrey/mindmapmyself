@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import type { MindNode, Status } from '@/types/node';
+import type { MindNode, Priority, Status } from '@/types/node';
 
 export interface NumberedNode extends MindNode {
   number: string;
@@ -26,6 +26,7 @@ function newNode(name = 'Новый узел'): MindNode {
     description: null,
     responsible: null,
     status: 'New',
+    priority: null,
     deadline: null,
     calendarUid: null,
     calendarStartAt: null,
@@ -198,15 +199,28 @@ export function collectResponsibles(node: MindNode): string[] {
   return Array.from(set).sort();
 }
 
+/** 'none' — узел без приоритета. Остальные значения совпадают с цифрой на узле. */
+export type PriorityFilter = '1' | '2' | '3' | 'none';
+
 export type FilterState = {
   responsibles: string[];
   statuses: Status[];
+  priorities: PriorityFilter[];
 };
 
-export const EMPTY_FILTERS: FilterState = { responsibles: [], statuses: [] };
+export const EMPTY_FILTERS: FilterState = { responsibles: [], statuses: [], priorities: [] };
 
 export function hasActiveFilters(filters: FilterState): boolean {
-  return filters.responsibles.length > 0 || filters.statuses.length > 0;
+  return (
+    filters.responsibles.length > 0 ||
+    filters.statuses.length > 0 ||
+    filters.priorities.length > 0
+  );
+}
+
+function priorityMatches(priority: Priority | null, selected: PriorityFilter): boolean {
+  if (selected === 'none') return priority === null;
+  return priority === Number(selected);
 }
 
 export type FilteredNode = MindNode & {
@@ -228,7 +242,10 @@ export function filterTree(
     const statusMatch =
       filters.statuses.length === 0 ||
       (n.status !== null && filters.statuses.includes(n.status));
-    const selfMatch = responsibleMatch && statusMatch;
+    const priorityMatch =
+      filters.priorities.length === 0 ||
+      filters.priorities.some((value) => priorityMatches(n.priority, value));
+    const selfMatch = responsibleMatch && statusMatch && priorityMatch;
 
     // Используем forEach чтобы обойти ВСЕХ детей (some прерывается досрочно)
     let hasMatchingDescendant = false;

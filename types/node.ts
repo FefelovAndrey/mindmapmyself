@@ -3,6 +3,15 @@ import { z } from 'zod';
 export const StatusEnum = z.enum(['New', 'Done', 'Cancelled']);
 export type Status = z.infer<typeof StatusEnum>;
 
+export const PrioritySchema = z.union([z.literal(1), z.literal(2), z.literal(3)]);
+export type Priority = z.infer<typeof PrioritySchema>;
+
+/** Старые карты без поля priority → null. Значение вне 1–3 отклоняется. */
+const optionalPriority = z
+  .union([PrioritySchema, z.null()])
+  .optional()
+  .transform((v) => v ?? null);
+
 /** Старые карты без календарных полей → null / false */
 const nullableString = z
   .string()
@@ -22,6 +31,7 @@ export const MindNodeSchema: z.ZodType<MindNode> = z.lazy(() =>
     description: z.string().max(2000).nullable(),
     responsible: z.string().nullable(),
     status: StatusEnum.nullable(),
+    priority: optionalPriority,
     deadline: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).nullable(),
     calendarUid: nullableString,
     calendarStartAt: nullableString,
@@ -38,6 +48,7 @@ export interface MindNode {
   description: string | null;
   responsible: string | null;
   status: Status | null;
+  priority: Priority | null;
   deadline: string | null;
   calendarUid: string | null;
   calendarStartAt: string | null;

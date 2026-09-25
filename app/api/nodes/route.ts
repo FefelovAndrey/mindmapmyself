@@ -16,6 +16,7 @@ function createDefaultDocument(): MindMapDocument {
       description: null,
       responsible: null,
       status: 'New',
+      priority: null,
       deadline: null,
       calendarUid: null,
       calendarStartAt: null,

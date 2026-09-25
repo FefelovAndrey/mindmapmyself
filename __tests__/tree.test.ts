@@ -17,6 +17,7 @@ function makeNode(id: string, name: string, children: MindNode[] = []): MindNode
     description: null,
     responsible: null,
     status: null,
+    priority: null,
     deadline: null,
     calendarUid: null,
     calendarStartAt: null,
@@ -63,6 +64,66 @@ describe('F1: zod schema validation', () => {
     };
     const result = MindMapDocumentSchema.safeParse(doc);
     expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.root.priority).toBeNull();
+    }
+  });
+
+  test('missing priority loads as null', () => {
+    const doc = {
+      version: '1.0',
+      updatedAt: '2026-06-23T09:00:00Z',
+      root: {
+        id: '00000000-0000-0000-0000-000000000001',
+        name: 'Root',
+        description: null,
+        responsible: null,
+        status: null,
+        deadline: null,
+        children: [],
+      },
+    };
+    const result = MindMapDocumentSchema.safeParse(doc);
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.root.priority).toBeNull();
+  });
+
+  test('priority outside 1-3 fails', () => {
+    const doc = {
+      version: '1.0',
+      updatedAt: '2026-06-23T09:00:00Z',
+      root: {
+        id: '00000000-0000-0000-0000-000000000001',
+        name: 'Root',
+        description: null,
+        responsible: null,
+        status: null,
+        deadline: null,
+        priority: 4,
+        children: [],
+      },
+    };
+    expect(MindMapDocumentSchema.safeParse(doc).success).toBe(false);
+  });
+
+  test('priority 1 passes', () => {
+    const doc = {
+      version: '1.0',
+      updatedAt: '2026-06-23T09:00:00Z',
+      root: {
+        id: '00000000-0000-0000-0000-000000000001',
+        name: 'Root',
+        description: null,
+        responsible: null,
+        status: null,
+        deadline: null,
+        priority: 1,
+        children: [],
+      },
+    };
+    const result = MindMapDocumentSchema.safeParse(doc);
+    expect(result.success).toBe(true);
+    if (result.success) expect(result.data.root.priority).toBe(1);
   });
 
   test('missing root fails', () => {
@@ -142,6 +203,7 @@ describe('F4: addChild', () => {
     expect(delta.children[0].id).toBe(newId);
     expect(delta.children[0].name).toBe('Новый узел');
     expect(delta.children[0].status).toBe('New');
+    expect(delta.children[0].priority).toBeNull();
   });
 
   test('does not mutate original', () => {
@@ -231,57 +293,130 @@ describe('F5: filterTree', () => {
   ]);
 
   test('filter by responsible returns matching nodes', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей'], statuses: [] });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей'], statuses: [], priorities: [] });
     expect(map.get('a')?.matched).toBe(true);
     expect(map.get('d')?.matched).toBe(true);
     expect(map.get('c')?.matched).toBe(false);
   });
 
   test('filter by status returns matching nodes', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: ['Done'] });
+    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: ['Done'], priorities: [] });
     expect(map.get('c')?.matched).toBe(true);
     expect(map.get('d')?.matched).toBe(true);
     expect(map.get('a')?.matched).toBe(false);
   });
 
   test('AND filter: both conditions must match', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей'], statuses: ['Done'] });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей'], statuses: ['Done'], priorities: [] });
     expect(map.get('d')?.matched).toBe(true);
     expect(map.get('a')?.matched).toBe(false); // Андрей/New — не совпадает по статусу
   });
 
   test('OR within responsible: multiple values', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей', 'Роман'], statuses: [] });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Андрей', 'Роман'], statuses: [], priorities: [] });
     expect(map.get('a')?.matched).toBe(true);
     expect(map.get('c')?.matched).toBe(true);
     expect(map.get('d')?.matched).toBe(true);
   });
 
   test('OR within status: multiple values', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: ['New', 'Done'] });
+    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: ['New', 'Done'], priorities: [] });
     expect(map.get('a')?.matched).toBe(true);
     expect(map.get('c')?.matched).toBe(true);
     expect(map.get('d')?.matched).toBe(true);
   });
 
   test('empty filter arrays match all nodes', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: [] });
+    const map = filterTree(treeWithAttrs, { responsibles: [], statuses: [], priorities: [] });
     expect(map.get('a')?.matched).toBe(true);
     expect(map.get('c')?.matched).toBe(true);
   });
 
   test('parent with matching descendant has hasMatchingDescendant=true', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: ['Роман'], statuses: [] });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Роман'], statuses: [], priorities: [] });
     expect(map.get('b')?.hasMatchingDescendant).toBe(true);
     expect(map.get('b')?.matched).toBe(false);
   });
 
   test('isNodeVisibleInFilter hides non-matching nodes without matching descendants', () => {
-    const map = filterTree(treeWithAttrs, { responsibles: ['Роман'], statuses: [] });
+    const map = filterTree(treeWithAttrs, { responsibles: ['Роман'], statuses: [], priorities: [] });
     expect(isNodeVisibleInFilter(map, 'c')).toBe(true);
     expect(isNodeVisibleInFilter(map, 'b')).toBe(true);
     expect(isNodeVisibleInFilter(map, 'a')).toBe(false);
     expect(isNodeVisibleInFilter(map, 'd')).toBe(false);
     expect(isNodeVisibleInFilter(null, 'a')).toBe(true);
+  });
+});
+
+describe('F5: filterTree priority', () => {
+  const priorityTree = makeNode('root', 'Корень', [
+    makeNode('branch', 'Ветка', [
+      { ...makeNode('urgent', 'Срочная'), priority: 1, status: 'Done' },
+      { ...makeNode('sibling', 'Сосед'), priority: 2 },
+    ]),
+    { ...makeNode('mid', 'Средняя'), priority: 2, status: 'New' },
+    { ...makeNode('low', 'Низкая'), priority: 3 },
+    { ...makeNode('plain', 'Без'), priority: null, status: 'New' },
+    { ...makeNode('fresh', 'Новое'), priority: 1, status: 'New' },
+  ]);
+
+  const base = { responsibles: [] as string[], statuses: [] as const };
+
+  test('empty priority filter matches all', () => {
+    const map = filterTree(priorityTree, { ...base, statuses: [], priorities: [] });
+    expect(map.get('urgent')?.matched).toBe(true);
+    expect(map.get('plain')?.matched).toBe(true);
+    expect(map.get('low')?.matched).toBe(true);
+  });
+
+  test('checkbox 1 matches only priority 1', () => {
+    const map = filterTree(priorityTree, { ...base, statuses: [], priorities: ['1'] });
+    expect(map.get('urgent')?.matched).toBe(true);
+    expect(map.get('fresh')?.matched).toBe(true);
+    expect(map.get('sibling')?.matched).toBe(false);
+    expect(map.get('plain')?.matched).toBe(false);
+    expect(isNodeVisibleInFilter(map, 'sibling')).toBe(false);
+  });
+
+  test('checkboxes 1 and 2 match either', () => {
+    const map = filterTree(priorityTree, { ...base, statuses: [], priorities: ['1', '2'] });
+    expect(map.get('urgent')?.matched).toBe(true);
+    expect(map.get('mid')?.matched).toBe(true);
+    expect(map.get('sibling')?.matched).toBe(true);
+    expect(map.get('low')?.matched).toBe(false);
+  });
+
+  test('none matches only nodes without priority', () => {
+    const map = filterTree(priorityTree, { ...base, statuses: [], priorities: ['none'] });
+    expect(map.get('plain')?.matched).toBe(true);
+    expect(map.get('root')?.matched).toBe(true);
+    expect(map.get('branch')?.matched).toBe(true);
+    expect(map.get('urgent')?.matched).toBe(false);
+    expect(isNodeVisibleInFilter(map, 'urgent')).toBe(false);
+  });
+
+  test('ancestors of priority 1 stay visible', () => {
+    const map = filterTree(priorityTree, { ...base, statuses: [], priorities: ['1'] });
+    expect(map.get('urgent')?.matched).toBe(true);
+    expect(map.get('branch')?.matched).toBe(false);
+    expect(map.get('branch')?.hasMatchingDescendant).toBe(true);
+    expect(map.get('root')?.hasMatchingDescendant).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'root')).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'branch')).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'urgent')).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'sibling')).toBe(false);
+  });
+
+  test('priority 1 AND status Done', () => {
+    const map = filterTree(priorityTree, {
+      responsibles: [],
+      statuses: ['Done'],
+      priorities: ['1'],
+    });
+    expect(map.get('urgent')?.matched).toBe(true);
+    expect(map.get('fresh')?.matched).toBe(false);
+    expect(isNodeVisibleInFilter(map, 'fresh')).toBe(false);
+    expect(isNodeVisibleInFilter(map, 'branch')).toBe(true);
+    expect(isNodeVisibleInFilter(map, 'root')).toBe(true);
   });
 });

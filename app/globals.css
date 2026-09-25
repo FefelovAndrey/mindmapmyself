@@ -23,6 +23,9 @@
   --color-status-new-bg: #dbeafe;
   --color-status-done-bg: #dcfce7;
   --color-status-cancelled-bg: #fee2e2;
+  --color-priority-high: #b45309;
+  --color-priority-high-fg: #ffffff;
+  --color-priority-high-bg: color-mix(in srgb, #d97706 18%, transparent);
   --color-dimmed: #9ca3af;
   --color-danger: #ef4444;
   --color-hover: #f3f4f6;
@@ -64,6 +67,9 @@
   --color-status-new-bg: #1e3a5f;
   --color-status-done-bg: #14532d;
   --color-status-cancelled-bg: #450a0a;
+  --color-priority-high: #fbbf24;
+  --color-priority-high-fg: #1c1408;
+  --color-priority-high-bg: color-mix(in srgb, #fbbf24 22%, transparent);
   --color-dimmed: #6b7280;
   --color-danger: #f87171;
   --color-hover: #243040;

@@ -19,6 +19,14 @@
   box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
+.card.priority1 {
+  background: var(--color-priority-high-bg);
+}
+
+.card.priority1.selected {
+  background: color-mix(in srgb, var(--color-selected) 72%, var(--color-priority-high) 28%);
+}
+
 .card.dimmed {
   opacity: 0.35;
   pointer-events: none;
@@ -34,11 +42,42 @@
   text-decoration: line-through;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
 .number {
   font-size: 11px;
   font-family: var(--font-mono);
   color: var(--color-text-muted);
-  margin-bottom: 4px;
+}
+
+.priorityBadge {
+  flex-shrink: 0;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.priorityHigh {
+  background: var(--color-priority-high);
+  color: var(--color-priority-high-fg);
+  border: 1px solid var(--color-priority-high);
+}
+
+.priorityQuiet {
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
 }
 
 .name {

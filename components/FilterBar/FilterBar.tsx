@@ -2,13 +2,20 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { Status } from '@/types/node';
-import { hasActiveFilters, type FilterState } from '@/hooks/useTree';
+import { hasActiveFilters, type FilterState, type PriorityFilter } from '@/hooks/useTree';
 import styles from './FilterBar.module.css';
 
 const STATUS_OPTIONS: { value: Status; label: string }[] = [
   { value: 'New', label: 'New' },
   { value: 'Done', label: 'Done' },
   { value: 'Cancelled', label: 'Cancelled' },
+];
+
+const PRIORITY_OPTIONS: { value: PriorityFilter; label: string }[] = [
+  { value: '1', label: '1' },
+  { value: '2', label: '2' },
+  { value: '3', label: '3' },
+  { value: 'none', label: 'Без приоритета' },
 ];
 
 interface FilterBarProps {
@@ -120,6 +127,13 @@ export default function FilterBar({
         options={STATUS_OPTIONS}
         selected={filters.statuses}
         onChange={(statuses) => onChange({ ...filters, statuses })}
+      />
+
+      <MultiSelect
+        label="Приоритет:"
+        options={PRIORITY_OPTIONS}
+        selected={filters.priorities}
+        onChange={(priorities) => onChange({ ...filters, priorities })}
       />
 
       {hasActive && (
