@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-27T18:40:29.798Z",
+  "updatedAt": "2026-09-28T11:37:11.868Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -898,7 +898,7 @@
                         "name": "Добавить приоритеты",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -938,7 +938,38 @@
                     "calendarEndAt": null,
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
-                    "children": []
+                    "children": [
+                      {
+                        "id": "b03685b4-a594-4ae7-a9dc-b597187fafe9",
+                        "name": "Добавить процесс по товарным карточкам",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "ae82f94b-04b1-483e-8d5d-3e769ec9b36e",
+                        "name": "Добавить процесс по заказам",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "id": "eef792f8-1a7e-4e03-b297-06116498960d",
@@ -1036,7 +1067,7 @@
                     "name": "Подготовить новый канвас к планированию",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -1066,8 +1097,23 @@
                     "name": "Детально разобрать новые инициативы чтобы были детальные требования",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": 1,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "1e9f3038-0936-4387-a164-13c5206eba2b",
+                    "name": "Какие инициативы взяли и что будем с ними делать?",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "priority": null,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -1543,7 +1589,7 @@
                         "description": null,
                         "responsible": null,
                         "status": "New",
-                        "priority": null,
+                        "priority": 3,
                         "deadline": null,
                         "calendarUid": null,
                         "calendarStartAt": null,
@@ -1744,7 +1790,7 @@
                     "name": "План подготовки",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Cancelled",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -1802,7 +1848,7 @@
                 "children": [
                   {
                     "id": "91df37e0-0594-4336-a7c5-9fc529be1588",
-                    "name": "DEVEL-2900 Одна доработка в ВА - ждет когда выкатят второй кабинет и потом делаем",
+                    "name": "DEVEL-2873 Одна доработка в ВА - ждет когда выкатят второй кабинет и потом делаем",
                     "description": null,
                     "responsible": null,
                     "status": "New",
