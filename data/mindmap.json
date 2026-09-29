@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-29T06:31:44.747Z",
+  "updatedAt": "2026-09-29T06:38:51.998Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -913,7 +913,7 @@
                         "name": "Сделать ответственных списком и список редактируемый в отдельном фоне",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1273,6 +1273,37 @@
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
                         "children": []
+                      },
+                      {
+                        "id": "b9e93d0f-8fb0-40eb-b525-984e046ae321",
+                        "name": "(Юля и Рома) INI-127: Доработка топологии в 1С",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": [
+                          {
+                            "id": "bebf5a0f-35c3-4936-bb9d-d451f173b64b",
+                            "name": "Обсудить с Юлей на дейлике когда будем брать в работу (после всех крупных доработок?)",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": "2026-10-05",
+                            "calendarUid": "0bc04832-d061-4f05-8887-38c7596b99df",
+                            "calendarStartAt": "2026-10-05T12:00:00+05:00",
+                            "calendarEndAt": "2026-10-05T12:30:00+05:00",
+                            "calendarSyncedAt": "2026-09-29T06:36:11.429Z",
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   },
@@ -1312,7 +1343,7 @@
                     "name": "Сделать отчет по багам и попробовать их разобрать с курсором",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -1327,7 +1358,7 @@
                     "name": "На примере Димы включить в PRD тест кейсы (или по Геркину или в упрощенном порядке - типо тестпланов чтобы проверить выполнение требований)",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -1349,6 +1380,21 @@
                     "calendarStartAt": "2026-09-23T19:00:00+05:00",
                     "calendarEndAt": "2026-09-23T19:30:00+05:00",
                     "calendarSyncedAt": "2026-09-23T09:29:18.313Z",
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "ea553962-861f-4a35-856d-db3da8c0a1f3",
+                    "name": "Еще раз посмотреть тестплан по кратности и сделать так, чтобы он был более понятен (может все таки в сторону интерфейса уходить?)",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
                     "children": []
                   }
