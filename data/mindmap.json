@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-29T05:53:07.443Z",
+  "updatedAt": "2026-09-29T05:55:06.636Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1180,8 +1180,38 @@
                             "calendarSyncedAt": "2026-09-29T05:53:06.248Z",
                             "calendarSyncStopped": false,
                             "children": []
+                          },
+                          {
+                            "id": "b1afef57-995d-47e7-9fbb-22553f01108f",
+                            "name": "Новый узел",
+                            "description": null,
+                            "responsible": null,
+                            "status": "Cancelled",
+                            "priority": null,
+                            "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
+                            "children": []
                           }
                         ]
+                      },
+                      {
+                        "id": "88fef67b-f419-4f83-ae4c-97b2adde10c7",
+                        "name": "INI-25: Автоматизация съема сроков для приоритета складов / INI-125: МРЦ по цене покупателя OZON парсить цены товаров",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
                       }
                     ]
                   },
