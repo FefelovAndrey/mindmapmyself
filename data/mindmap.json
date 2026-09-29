@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-29T05:51:45.819Z",
+  "updatedAt": "2026-09-29T05:53:07.443Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1142,11 +1142,11 @@
                             "responsible": null,
                             "status": "New",
                             "priority": null,
-                            "deadline": null,
-                            "calendarUid": null,
-                            "calendarStartAt": null,
-                            "calendarEndAt": null,
-                            "calendarSyncedAt": null,
+                            "deadline": "2026-09-29",
+                            "calendarUid": "7d55bf29-37c5-4e51-ae77-c939f6dee4b5",
+                            "calendarStartAt": "2026-09-29T19:00:00+05:00",
+                            "calendarEndAt": "2026-09-29T19:30:00+05:00",
+                            "calendarSyncedAt": "2026-09-29T05:51:59.086Z",
                             "calendarSyncStopped": false,
                             "children": []
                           }
@@ -1165,7 +1165,23 @@
                         "calendarEndAt": null,
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
-                        "children": []
+                        "children": [
+                          {
+                            "id": "9cd46f82-e093-41ba-854f-1e72359b5cf7",
+                            "name": "Сделать через агента аналитику по INI-128 и запустить в команду разработки",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": "2026-09-29",
+                            "calendarUid": "bf232dfa-5be7-47fc-81d4-f94c985c8590",
+                            "calendarStartAt": "2026-09-29T19:30:00+05:00",
+                            "calendarEndAt": "2026-09-29T20:00:00+05:00",
+                            "calendarSyncedAt": "2026-09-29T05:53:06.248Z",
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   },
