@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-29T05:55:06.636Z",
+  "updatedAt": "2026-09-29T06:31:44.747Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1123,7 +1123,7 @@
                     "children": [
                       {
                         "id": "31e7bd29-0396-40e7-91ba-5fd912d44f81",
-                        "name": "INI-133 Дубль 2: Изменить логику доступности предложения поставщиков 4%",
+                        "name": "(Максим) INI-133 Дубль 2: Изменить логику доступности предложения поставщиков 4%",
                         "description": "Можно брать и делать прямо сейчас. Аналитики тут на 1 час",
                         "responsible": null,
                         "status": "New",
@@ -1154,7 +1154,7 @@
                       },
                       {
                         "id": "dfcf28dd-d68b-4a8a-bd60-837cb63870fa",
-                        "name": "INI-128: Ограничить предложение брендов отдельными Поставщиками",
+                        "name": "(Максим) INI-128: Ограничить предложение брендов отдельными Поставщиками",
                         "description": "Можно брать и делать тоже. Нужно немного аналитику прибрать (с агентом)",
                         "responsible": null,
                         "status": "New",
@@ -1200,7 +1200,68 @@
                       },
                       {
                         "id": "88fef67b-f419-4f83-ae4c-97b2adde10c7",
-                        "name": "INI-25: Автоматизация съема сроков для приоритета складов / INI-125: МРЦ по цене покупателя OZON парсить цены товаров",
+                        "name": "(Коля Б + Дима) INI-25: Автоматизация съема сроков для приоритета складов / INI-125: МРЦ по цене покупателя OZON парсить цены товаров",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "e97f3fad-b16d-4e61-92a8-2da28c26ce31",
+                        "name": "(Андрей) INI-27: Детализировать в BI причины отмен Озон по нашей вине",
+                        "description": "Матвей должен перефразировать и тогда надо исследовать и пересорт",
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "7b6b3e8f-e14d-4ec5-bfbc-67c405e89d56",
+                        "name": "(Юля и Максим) INI-117: Логирование отборов",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": [
+                          {
+                            "id": "a4051e7a-8f37-4ee6-b847-b5ffe7e9050c",
+                            "name": "Логирование отборов приоритезировать в спринт 1С",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": "2026-10-05",
+                            "calendarUid": "8be9f741-0e77-4ec5-bcca-9c8022e54fdf",
+                            "calendarStartAt": "2026-10-05T12:00:00+05:00",
+                            "calendarEndAt": "2026-10-05T12:30:00+05:00",
+                            "calendarSyncedAt": "2026-09-29T06:31:43.312Z",
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "7361a6e0-0caa-4ddc-a408-cca571285819",
+                        "name": "(Максим и Аня) INI-116: Перенос отчётов складов в Grafana",
                         "description": null,
                         "responsible": null,
                         "status": "New",
@@ -2479,6 +2540,21 @@
                 "id": "aa6ca51e-ff55-43d0-b86d-313d8a91a2c0",
                 "name": "Еще подвисшие задачи",
                 "description": "https://tracker.yandex.ru/DEVEL-2744 - согласовать выкат с Денисом\nhttps://tracker.yandex.ru/DEVEL-2866 - ревью от Коли, тест от Аллы,  согласовать выкат с Денисом \nhttps://tracker.yandex.ru/DEVEL-2864 - посмотрели с Ромой выкатываем.\nhttps://tracker.yandex.ru/DEVEL-2875 - ждем ревью от Коли\nhttps://tracker.yandex.ru/DEVEL-2870 - ждем Дениса\nhttps://tracker.yandex.ru/DEVEL-2871 - ждем ревью от Коли\nhttps://tracker.yandex.ru/DEVEL-2874 - тут Макса наверное ждем\nhttps://tracker.yandex.ru/DEVEL-2886 - тут Макса наверное ждем\nhttps://tracker.yandex.ru/DEVEL-2860 - ждем ревью от Коли\nhttps://tracker.yandex.ru/DEVEL-2842 - меня ждала  написал что катим\nhttps://tracker.yandex.ru/DEVEL-2787 - вроде договорились на дейли на проде тестировать, видимо упустили этот момент. Щас повторно уточню у Дениса.\nhttps://tracker.yandex.ru/DEVEL-2850 - тут задал Денису вопрос \nhttps://tracker.yandex.ru/DEVEL-2609 - тут 100 раз уже писал Денису\nhttps://tracker.yandex.ru/DEVEL-2736 - тут ждем Дениса, на дейли его звали обсуждали",
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "de0e8e07-dfbd-4346-960c-dfd6333f22ee",
+                "name": "OZON PAY",
+                "description": null,
                 "responsible": null,
                 "status": "New",
                 "priority": null,
