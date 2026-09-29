@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-28T11:37:11.868Z",
+  "updatedAt": "2026-09-29T05:51:45.819Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1113,6 +1113,68 @@
                     "description": null,
                     "responsible": null,
                     "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": [
+                      {
+                        "id": "31e7bd29-0396-40e7-91ba-5fd912d44f81",
+                        "name": "INI-133 Дубль 2: Изменить логику доступности предложения поставщиков 4%",
+                        "description": "Можно брать и делать прямо сейчас. Аналитики тут на 1 час",
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": [
+                          {
+                            "id": "268761e4-6095-496f-812c-2f52f52a7bbc",
+                            "name": "Сделать самому аналитику по INI-133 (можно без агента и запустить)",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "dfcf28dd-d68b-4a8a-bd60-837cb63870fa",
+                        "name": "INI-128: Ограничить предложение брендов отдельными Поставщиками",
+                        "description": "Можно брать и делать тоже. Нужно немного аналитику прибрать (с агентом)",
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "4ca66f7e-7062-44e3-8b43-1f897c320ebb",
+                    "name": "Новый узел",
+                    "description": null,
+                    "responsible": null,
+                    "status": "Cancelled",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
