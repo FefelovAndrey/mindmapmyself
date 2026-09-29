@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-29T06:38:51.998Z",
+  "updatedAt": "2026-09-29T06:41:54.737Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1300,6 +1300,52 @@
                             "calendarStartAt": "2026-10-05T12:00:00+05:00",
                             "calendarEndAt": "2026-10-05T12:30:00+05:00",
                             "calendarSyncedAt": "2026-09-29T06:36:11.429Z",
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "id": "e68dac2e-d8be-4893-8758-934507a4eb28",
+                        "name": "(Аня, Рома и Юля - после 15.10) INI-129: Схлапывание процессов приёмки и обратной комплектации",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "e54c8f27-ef4d-4c64-94e5-087d9ab2fe5e",
+                        "name": "(Дима Ли) INI-131: Получить список товаров в наличии, которые не доступны к покупке на маркетах",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": [
+                          {
+                            "id": "8a771d0d-48f7-4aa1-8922-2f583c190a2a",
+                            "name": "Отдать INI-131 Дима в аналитику - там надо с курсором поиграться",
+                            "description": null,
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": "2026-09-30",
+                            "calendarUid": "eb30148c-fb35-4178-b1de-9cfa6d757708",
+                            "calendarStartAt": "2026-09-30T10:00:00+05:00",
+                            "calendarEndAt": "2026-09-30T10:30:00+05:00",
+                            "calendarSyncedAt": "2026-09-29T06:41:53.564Z",
                             "calendarSyncStopped": false,
                             "children": []
                           }
