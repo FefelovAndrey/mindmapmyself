@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-29T06:41:54.737Z",
+  "updatedAt": "2026-09-29T07:08:04.043Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1350,6 +1350,21 @@
                             "children": []
                           }
                         ]
+                      },
+                      {
+                        "id": "9d14df4e-4159-4474-bc3c-235a255f0c37",
+                        "name": "(Андрей) INI-132: Добавить применимость  в поля контента  для SEO Данных о товаре с помощью базы Stellox и популярности автомобилей.",
+                        "description": "Надо брать мне в работу",
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
                       }
                     ]
                   },
@@ -1448,7 +1463,7 @@
               },
               {
                 "id": "54ff569d-91d7-4d4d-9542-791e202230e5",
-                "name": "Ценность нового ценообразования",
+                "name": "Ценность нового ценообразования - забираю у команды PY",
                 "description": null,
                 "responsible": "Андрей",
                 "status": "New",
