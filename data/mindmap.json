@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-09-30T03:47:26.799Z",
+  "updatedAt": "2026-10-01T04:32:25.475Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -968,6 +968,21 @@
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
                         "children": []
+                      },
+                      {
+                        "id": "cf9e1b2a-8cc7-4e52-b49f-f838025d9b86",
+                        "name": "Научить мой граф работать с графами систем",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
                       }
                     ]
                   },
@@ -1127,7 +1142,7 @@
                         "description": "Можно брать и делать прямо сейчас. Аналитики тут на 1 час",
                         "responsible": null,
                         "status": "New",
-                        "priority": 2,
+                        "priority": 1,
                         "deadline": null,
                         "calendarUid": null,
                         "calendarStartAt": null,
@@ -1158,7 +1173,7 @@
                         "description": "Можно брать и делать тоже. Нужно немного аналитику прибрать (с агентом)",
                         "responsible": null,
                         "status": "New",
-                        "priority": 2,
+                        "priority": 1,
                         "deadline": null,
                         "calendarUid": null,
                         "calendarStartAt": null,
@@ -1372,7 +1387,7 @@
                         "description": null,
                         "responsible": null,
                         "status": "New",
-                        "priority": 2,
+                        "priority": 1,
                         "deadline": null,
                         "calendarUid": null,
                         "calendarStartAt": null,
