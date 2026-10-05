@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-01T04:32:25.475Z",
+  "updatedAt": "2026-10-05T06:33:39.851Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1161,7 +1161,7 @@
                             "calendarUid": "7d55bf29-37c5-4e51-ae77-c939f6dee4b5",
                             "calendarStartAt": "2026-09-29T19:00:00+05:00",
                             "calendarEndAt": "2026-09-29T19:30:00+05:00",
-                            "calendarSyncedAt": "2026-09-29T05:51:59.086Z",
+                            "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                             "calendarSyncStopped": false,
                             "children": []
                           }
@@ -1192,7 +1192,7 @@
                             "calendarUid": "bf232dfa-5be7-47fc-81d4-f94c985c8590",
                             "calendarStartAt": "2026-09-29T19:30:00+05:00",
                             "calendarEndAt": "2026-09-29T20:00:00+05:00",
-                            "calendarSyncedAt": "2026-09-29T05:53:06.248Z",
+                            "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                             "calendarSyncStopped": false,
                             "children": []
                           },
@@ -1268,7 +1268,7 @@
                             "calendarUid": "8be9f741-0e77-4ec5-bcca-9c8022e54fdf",
                             "calendarStartAt": "2026-10-05T12:00:00+05:00",
                             "calendarEndAt": "2026-10-05T12:30:00+05:00",
-                            "calendarSyncedAt": "2026-09-29T06:31:43.312Z",
+                            "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                             "calendarSyncStopped": false,
                             "children": []
                           }
@@ -1314,7 +1314,7 @@
                             "calendarUid": "0bc04832-d061-4f05-8887-38c7596b99df",
                             "calendarStartAt": "2026-10-05T12:00:00+05:00",
                             "calendarEndAt": "2026-10-05T12:30:00+05:00",
-                            "calendarSyncedAt": "2026-09-29T06:36:11.429Z",
+                            "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                             "calendarSyncStopped": false,
                             "children": []
                           }
@@ -1360,7 +1360,7 @@
                             "calendarUid": "eb30148c-fb35-4178-b1de-9cfa6d757708",
                             "calendarStartAt": "2026-09-30T10:00:00+05:00",
                             "calendarEndAt": "2026-09-30T10:30:00+05:00",
-                            "calendarSyncedAt": "2026-09-29T06:41:53.564Z",
+                            "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                             "calendarSyncStopped": false,
                             "children": []
                           }
@@ -2125,7 +2125,7 @@
               },
               {
                 "id": "d7ce071e-e7a1-4e9c-b0e7-07b6a45af99f",
-                "name": "Ценообразование",
+                "name": "Ценообразование MVP",
                 "description": null,
                 "responsible": null,
                 "status": "New",
@@ -2157,7 +2157,7 @@
                     "name": "DEVEL-2873 Одна доработка в ВА - ждет когда выкатят второй кабинет и потом делаем",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Done",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -2168,6 +2168,68 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "5b7cb80d-fc39-4108-b17a-29bd5609aa05",
+                "name": "Ценообразование перенос из WA в MPS (фриз)",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "9e1d485b-d061-49e8-8597-62f65bd585e1",
+                    "name": "Сделать мониторинг чтобы понять где у нас узкое место",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": [
+                      {
+                        "id": "3dfbab7c-13c1-4bfc-8778-ee6c1db35edd",
+                        "name": "Сформулировать цели проекта мониторинга",
+                        "description": null,
+                        "responsible": "Максим",
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6ab27c46-3ceb-4811-b9dd-36eadc99bc5f",
+                "name": "Новый узел",
+                "description": null,
+                "responsible": null,
+                "status": "Cancelled",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
               }
             ]
           },
@@ -2865,7 +2927,7 @@
                     "calendarUid": "6329fd9a-0701-4969-b9ab-6c2288f56332",
                     "calendarStartAt": "2026-09-16T10:00:00+05:00",
                     "calendarEndAt": "2026-09-16T10:30:00+05:00",
-                    "calendarSyncedAt": "2026-09-23T09:29:18.313Z",
+                    "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                     "calendarSyncStopped": false,
                     "children": []
                   },
@@ -3003,7 +3065,7 @@
                     "calendarUid": "f34bfa67-a795-4cca-9b1e-ac8da69e5825",
                     "calendarStartAt": "2026-09-16T20:00:00+05:00",
                     "calendarEndAt": "2026-09-16T20:30:00+05:00",
-                    "calendarSyncedAt": "2026-09-23T09:29:18.313Z",
+                    "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
                     "calendarSyncStopped": false,
                     "children": []
                   }
