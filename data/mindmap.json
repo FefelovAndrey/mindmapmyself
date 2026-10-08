@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-07T09:18:09.931Z",
+  "updatedAt": "2026-10-08T04:09:03.457Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1246,7 +1246,7 @@
                       {
                         "id": "7b6b3e8f-e14d-4ec5-bfbc-67c405e89d56",
                         "name": "(Юля и Максим) INI-117: Логирование отборов",
-                        "description": null,
+                        "description": "Передал Юле в разработку 05.10",
                         "responsible": null,
                         "status": "New",
                         "priority": null,
