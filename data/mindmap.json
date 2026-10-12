@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-12T04:03:02.913Z",
+  "updatedAt": "2026-10-12T04:07:52.180Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1398,18 +1398,34 @@
                       },
                       {
                         "id": "db15f786-1cbf-46c4-aaa5-f155a78faf0c",
-                        "name": "Новый узел",
+                        "name": "Замена плагина Stockdays на календарь",
                         "description": null,
-                        "responsible": "INI-135 Замена плагина Stockday на календарь",
+                        "responsible": "Андрей",
                         "status": "New",
-                        "priority": null,
+                        "priority": 1,
                         "deadline": null,
                         "calendarUid": null,
                         "calendarStartAt": null,
                         "calendarEndAt": null,
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
-                        "children": []
+                        "children": [
+                          {
+                            "id": "f7c72fc9-407c-4a6a-b65f-9ee1a42bd7f0",
+                            "name": "Внести изменения по замечаниями Вячеслава и Матвея и пустить в работу",
+                            "description": "Замечания Вячеслава:",
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   },
