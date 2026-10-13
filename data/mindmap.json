@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-12T04:45:03.623Z",
+  "updatedAt": "2026-10-13T12:37:38.652Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1185,7 +1185,7 @@
                             "id": "9cd46f82-e093-41ba-854f-1e72359b5cf7",
                             "name": "Сделать через агента аналитику по INI-128 и запустить в команду разработки",
                             "description": null,
-                            "responsible": "Андрей",
+                            "responsible": "Дима",
                             "status": "New",
                             "priority": 1,
                             "deadline": "2026-09-29",
