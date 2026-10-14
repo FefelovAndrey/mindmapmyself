@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-14T04:02:16.667Z",
+  "updatedAt": "2026-10-14T06:05:28.299Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2649,7 +2649,7 @@
                     "id": "d9589117-41a6-47d8-adcb-a93e10bb450e",
                     "name": "Аня,Дима/Новые требования ОЗОН по указанию маркировки в инфообмене",
                     "description": "https://tracker.yandex.ru/DEVEL-2771",
-                    "responsible": "Дима",
+                    "responsible": "Аня",
                     "status": "New",
                     "priority": null,
                     "deadline": null,
