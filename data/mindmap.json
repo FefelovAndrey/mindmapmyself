@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-14T03:46:40.349Z",
+  "updatedAt": "2026-10-14T04:02:16.667Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2294,10 +2294,41 @@
               },
               {
                 "id": "3487823c-5cbe-4f72-a6de-c433f594bee3",
-                "name": "(Максим) INI-133 Дубль 2: Изменить логику доступности предложения поставщиков 4%",
+                "name": "(Максим) INI-133/PY-1878: Дубль 2: Изменить логику доступности предложения поставщиков 4%",
                 "description": null,
                 "responsible": null,
                 "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "c5192e06-9496-414a-a53d-f8f1dbd08a2f",
+                    "name": "По готовности задачи принять логику и протестировать",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "priority": 2,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "5ab17d19-7790-438b-9883-feb0b22d1877",
+                "name": "Новый узел",
+                "description": null,
+                "responsible": null,
+                "status": "Cancelled",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
