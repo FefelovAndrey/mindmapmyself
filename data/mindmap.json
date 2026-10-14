@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-14T03:37:21.878Z",
+  "updatedAt": "2026-10-14T03:46:40.349Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1429,7 +1429,7 @@
                       },
                       {
                         "id": "6b2e9d83-380e-4446-b07d-ad18689893b2",
-                        "name": "INI-139 Сформулировать задачу",
+                        "name": "INI-139 Сформулировать задачу с Владиславом",
                         "description": null,
                         "responsible": null,
                         "status": "New",
