@@ -22,17 +22,43 @@
   background: var(--color-selected);
 }
 
-.node.priority1 {
-  background: var(--color-priority-high-bg);
+.node.priority1,
+.node.priority2,
+.node.priority3 {
+  background: var(--priority-bg);
 }
 
-.node.priority1:hover {
-  background: color-mix(in srgb, var(--color-hover) 45%, var(--color-priority-high-bg));
+.node.priority1 {
+  --priority-color: var(--color-priority-1);
+  --priority-fg: var(--color-priority-1-fg);
+  --priority-bg: var(--color-priority-1-bg);
+}
+
+.node.priority2 {
+  --priority-color: var(--color-priority-2);
+  --priority-fg: var(--color-priority-2-fg);
+  --priority-bg: var(--color-priority-2-bg);
+}
+
+.node.priority3 {
+  --priority-color: var(--color-priority-3);
+  --priority-fg: var(--color-priority-3-fg);
+  --priority-bg: var(--color-priority-3-bg);
+}
+
+.node.priority1:hover,
+.node.priority2:hover,
+.node.priority3:hover {
+  background: color-mix(in srgb, var(--color-hover) 45%, var(--priority-bg));
 }
 
 .node.priority1.selected,
-.node.priority1.selected:hover {
-  background: color-mix(in srgb, var(--color-selected) 72%, var(--color-priority-high) 28%);
+.node.priority1.selected:hover,
+.node.priority2.selected,
+.node.priority2.selected:hover,
+.node.priority3.selected,
+.node.priority3.selected:hover {
+  background: color-mix(in srgb, var(--color-selected) 72%, var(--priority-color) 28%);
 }
 
 .node.dimmed {
@@ -136,18 +162,9 @@
   font-weight: 700;
   line-height: 16px;
   text-align: center;
-}
-
-.priorityHigh {
-  background: var(--color-priority-high);
-  color: var(--color-priority-high-fg);
-  border: 1px solid var(--color-priority-high);
-}
-
-.priorityQuiet {
-  background: transparent;
-  color: var(--color-text-muted);
-  border: 1px solid var(--color-border);
+  background: var(--priority-color);
+  color: var(--priority-fg);
+  border: 1px solid color-mix(in srgb, var(--priority-color) 68%, #000);
 }
 
 .statusBadge {

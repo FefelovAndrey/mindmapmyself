@@ -23,6 +23,8 @@ function MapNodeComponent({ data, selected }: NodeProps<Node<MapNodeData>>) {
     data.status === 'Done' ? styles.done : '',
     data.status === 'Cancelled' ? styles.cancelled : '',
     data.priority === 1 ? styles.priority1 : '',
+    data.priority === 2 ? styles.priority2 : '',
+    data.priority === 3 ? styles.priority3 : '',
   ]
     .filter(Boolean)
     .join(' ');
@@ -35,9 +37,7 @@ function MapNodeComponent({ data, selected }: NodeProps<Node<MapNodeData>>) {
           <div className={styles.number}>{data.number}</div>
           {data.priority != null && (
             <span
-              className={`${styles.priorityBadge} ${
-                data.priority === 1 ? styles.priorityHigh : styles.priorityQuiet
-              }`}
+              className={styles.priorityBadge}
               aria-label={`Приоритет ${data.priority}`}
             >
               {data.priority}
