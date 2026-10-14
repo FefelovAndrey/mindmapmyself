@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-13T12:37:38.652Z",
+  "updatedAt": "2026-10-14T03:37:21.878Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1426,6 +1426,21 @@
                             "children": []
                           }
                         ]
+                      },
+                      {
+                        "id": "6b2e9d83-380e-4446-b07d-ad18689893b2",
+                        "name": "INI-139 Сформулировать задачу",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": 1,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
                       }
                     ]
                   },
@@ -3038,6 +3053,21 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "3c47bbeb-69bd-4dbc-9bac-6059e314eb1c",
+                "name": "Придумать какую задачу дать Ане (мониторинг цен) и ее сформулировать",
+                "description": null,
+                "responsible": "Андрей",
+                "status": "New",
+                "priority": 1,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
               }
             ]
           },
