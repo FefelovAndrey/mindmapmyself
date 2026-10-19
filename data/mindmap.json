@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-19T04:40:53.984Z",
+  "updatedAt": "2026-10-19T04:44:44.135Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1549,6 +1549,21 @@
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
                     "children": []
+                  },
+                  {
+                    "id": "bc8c6f0d-cb38-4d71-a909-c44891a82ac8",
+                    "name": "Препрод для 1С и препрод для WA (немного пересобрать логику тестирования - подумать с собой и обсудить с командами)",
+                    "description": "Цель - уменьшить количество багов на проде после выкатки, по причине того, что тестовая среда расходится с продовой",
+                    "responsible": null,
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
                   }
                 ]
               },
@@ -1587,7 +1602,7 @@
                 "name": "УЗнать по аналитике подразделений в ПТУ  - вопрос от ЮЛИ CKA-1682",
                 "description": "https://tracker.yandex.ru/CKA-1682",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": 1,
                 "deadline": null,
                 "calendarUid": null,
@@ -1970,7 +1985,7 @@
                         "name": "Попробовать сделать с курсором план тестирования / AC / testcase, чтобы можно было проверить не только Аллой",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Cancelled",
                         "priority": 3,
                         "deadline": null,
                         "calendarUid": null,
@@ -2905,6 +2920,21 @@
               {
                 "id": "de0e8e07-dfbd-4346-960c-dfd6333f22ee",
                 "name": "OZON PAY",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "a66c0f89-17df-4392-8b55-2dbfa9e1d73b",
+                "name": "DEVEL-3026 (INI-135) Перейти на календарь отгрузок в ВА",
                 "description": null,
                 "responsible": null,
                 "status": "New",
