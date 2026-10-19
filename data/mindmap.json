@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-15T07:59:22.027Z",
+  "updatedAt": "2026-10-16T12:47:11.619Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -927,7 +927,7 @@
                   },
                   {
                     "id": "4a005686-23e1-45c3-a4b0-38fd86eb0f65",
-                    "name": "Наполнять графы своими процессами в проекте Инициативы и проверять как он умеет это читать",
+                    "name": "Доработка оркестратора",
                     "description": null,
                     "responsible": null,
                     "status": "New",
@@ -972,6 +972,21 @@
                       {
                         "id": "cf9e1b2a-8cc7-4e52-b49f-f838025d9b86",
                         "name": "Научить мой граф работать с графами систем",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "bd814457-4a61-469a-934a-2d97843c3ab6",
+                        "name": "Добавить в оркестратор чтобы писал тесткейсы по скиллу и прикреплял к задаче",
                         "description": null,
                         "responsible": null,
                         "status": "New",
