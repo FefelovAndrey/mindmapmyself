@@ -11,9 +11,15 @@ import styles from './NodeCard.module.css';
 
 const MAX_DESCRIPTION = 2000;
 
+function responsibleChoices(activeNames: string[], current: string | null): string[] {
+  if (current && !activeNames.includes(current)) return [...activeNames, current];
+  return activeNames;
+}
+
 interface NodeCardProps {
   node: MindNode | null;
   nodeNumber: string | null;
+  activeResponsibles: string[];
   onChange: (patch: Partial<Omit<MindNode, 'id' | 'children'>>) => void;
   onStatusDone?: (node: MindNode) => Promise<void>;
   calendarBusy?: boolean;
@@ -22,12 +28,12 @@ interface NodeCardProps {
 export default function NodeCard({
   node,
   nodeNumber,
+  activeResponsibles,
   onChange,
   onStatusDone,
   calendarBusy = false,
 }: NodeCardProps) {
   const [localName, setLocalName] = useState('');
-  const [localResponsible, setLocalResponsible] = useState('');
   const [localDescription, setLocalDescription] = useState('');
   const [calDate, setCalDate] = useState('');
   const [calStart, setCalStart] = useState('');
@@ -39,7 +45,6 @@ export default function NodeCard({
   useEffect(() => {
     if (node) {
       setLocalName(node.name);
-      setLocalResponsible(node.responsible ?? '');
       setLocalDescription(node.description ?? '');
       setCalDate(node.deadline ?? '');
       setSendError(null);
@@ -61,7 +66,6 @@ export default function NodeCard({
     node?.calendarEndAt,
     node?.description,
     node?.name,
-    node?.responsible,
   ]);
 
   if (!node) {
@@ -82,11 +86,6 @@ export default function NodeCard({
     const name = localName.trim();
     if (name && name !== node!.name) onChange({ name });
     else setLocalName(node!.name);
-  }
-
-  function commitResponsible() {
-    const responsible = localResponsible.trim() || null;
-    if (responsible !== node!.responsible) onChange({ responsible });
   }
 
   function commitDescription() {
@@ -196,20 +195,20 @@ export default function NodeCard({
 
       <div className={styles.fields}>
         <div className={styles.fieldRow}>
-          <label className={styles.label}>Ответственный</label>
-          <input
-            className={styles.input}
-            value={localResponsible}
-            onChange={(e) => setLocalResponsible(e.target.value)}
-            onBlur={commitResponsible}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                e.preventDefault();
-                commitResponsible();
-              }
-            }}
-            placeholder="Не указан"
-          />
+          <label className={styles.label} htmlFor="node-responsible">Ответственный</label>
+          <select
+            id="node-responsible"
+            className={styles.select}
+            value={node.responsible ?? ''}
+            onChange={(e) => onChange({ responsible: e.target.value || null })}
+          >
+            <option value="">не указан</option>
+            {responsibleChoices(activeResponsibles, node.responsible).map((name) => (
+              <option key={name} value={name}>
+                {name}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className={styles.fieldRow}>

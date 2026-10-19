@@ -25,6 +25,7 @@ function createDefaultDocument(): MindMapDocument {
       calendarSyncStopped: false,
       children: [],
     },
+    responsibles: [],
   };
 }
 

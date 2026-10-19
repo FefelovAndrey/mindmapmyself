@@ -58,10 +58,56 @@ export interface MindNode {
   children: MindNode[];
 }
 
-export const MindMapDocumentSchema = z.object({
-  version: z.string(),
-  updatedAt: z.string(),
-  root: MindNodeSchema,
+export interface ResponsibleEntry {
+  name: string;
+  active: boolean;
+}
+
+const ResponsibleEntrySchema = z.object({
+  name: z.string().min(1),
+  active: z.boolean(),
 });
+
+function assignedNames(node: MindNode): string[] {
+  const names = new Set<string>();
+  const walk = (n: MindNode) => {
+    const name = n.responsible?.trim();
+    if (name) names.add(name);
+    n.children.forEach(walk);
+  };
+  walk(node);
+  return Array.from(names);
+}
+
+/** Нет поля — имена с узлов, все активные. Имя на узле, которого нет в списке, добавляется активным. */
+export function normalizeResponsibles(
+  root: MindNode,
+  entries: ResponsibleEntry[] | undefined
+): ResponsibleEntry[] {
+  const byName = new Map<string, ResponsibleEntry>();
+  for (const entry of entries ?? []) {
+    const name = entry.name.trim();
+    if (!name || byName.has(name)) continue;
+    byName.set(name, { name, active: entry.active });
+  }
+  for (const name of assignedNames(root)) {
+    if (!byName.has(name)) byName.set(name, { name, active: true });
+  }
+  return Array.from(byName.values()).sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+}
+
+export const MindMapDocumentSchema = z
+  .object({
+    version: z.string(),
+    updatedAt: z.string(),
+    root: MindNodeSchema,
+    responsibles: z.array(ResponsibleEntrySchema).optional(),
+  })
+  .transform((doc) => ({
+    version: doc.version,
+    updatedAt: doc.updatedAt,
+    root: doc.root,
+    responsibles: normalizeResponsibles(doc.root, doc.responsibles),
+  }));
 
 export type MindMapDocument = z.infer<typeof MindMapDocumentSchema>;
