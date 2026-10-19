@@ -119,14 +119,9 @@ function NodeRow({
     node.status === 'Done' ? styles.done : '',
     node.status === 'Cancelled' ? styles.cancelled : '',
     node.priority === 1 ? styles.priority1 : '',
+    node.priority === 2 ? styles.priority2 : '',
+    node.priority === 3 ? styles.priority3 : '',
   ].filter(Boolean).join(' ');
-
-  const priorityClass =
-    node.priority === 1
-      ? styles.priorityHigh
-      : node.priority != null
-        ? styles.priorityQuiet
-        : null;
 
   return (
     <>
@@ -155,9 +150,9 @@ function NodeRow({
         <div className={styles.content}>
           <span className={styles.number}>{node.number}</span>
 
-          {node.priority != null && priorityClass && (
+          {node.priority != null && (
             <span
-              className={`${styles.priorityBadge} ${priorityClass}`}
+              className={styles.priorityBadge}
               aria-label={`Приоритет ${node.priority}`}
             >
               {node.priority}

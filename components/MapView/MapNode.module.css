@@ -19,12 +19,34 @@
   box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
-.card.priority1 {
-  background: var(--color-priority-high-bg);
+.card.priority1,
+.card.priority2,
+.card.priority3 {
+  background: var(--priority-bg);
 }
 
-.card.priority1.selected {
-  background: color-mix(in srgb, var(--color-selected) 72%, var(--color-priority-high) 28%);
+.card.priority1 {
+  --priority-color: var(--color-priority-1);
+  --priority-fg: var(--color-priority-1-fg);
+  --priority-bg: var(--color-priority-1-bg);
+}
+
+.card.priority2 {
+  --priority-color: var(--color-priority-2);
+  --priority-fg: var(--color-priority-2-fg);
+  --priority-bg: var(--color-priority-2-bg);
+}
+
+.card.priority3 {
+  --priority-color: var(--color-priority-3);
+  --priority-fg: var(--color-priority-3-fg);
+  --priority-bg: var(--color-priority-3-bg);
+}
+
+.card.priority1.selected,
+.card.priority2.selected,
+.card.priority3.selected {
+  background: color-mix(in srgb, var(--color-selected) 72%, var(--priority-color) 28%);
 }
 
 .card.dimmed {
@@ -66,18 +88,9 @@
   font-weight: 700;
   line-height: 16px;
   text-align: center;
-}
-
-.priorityHigh {
-  background: var(--color-priority-high);
-  color: var(--color-priority-high-fg);
-  border: 1px solid var(--color-priority-high);
-}
-
-.priorityQuiet {
-  background: transparent;
-  color: var(--color-text-muted);
-  border: 1px solid var(--color-border);
+  background: var(--priority-color);
+  color: var(--priority-fg);
+  border: 1px solid color-mix(in srgb, var(--priority-color) 68%, #000);
 }
 
 .name {
