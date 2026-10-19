@@ -139,6 +139,14 @@
   border-right: 1px solid var(--color-border);
 }
 
+.treePanelWide {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .treeContent {
   flex: 1;
   overflow: hidden;

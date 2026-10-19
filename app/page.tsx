@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
-import type { MindNode, MindMapDocument } from '@/types/node';
+import { MindMapDocumentSchema, type MindNode, type MindMapDocument } from '@/types/node';
 import {
   addChild,
   addSiblingAfter,
@@ -9,7 +9,6 @@ import {
   removeNode,
   updateNode,
   flatIds,
-  collectResponsibles,
   filterTree,
   calcNumbers,
   findNode,
@@ -17,17 +16,24 @@ import {
   hasActiveFilters,
   type FilterState,
 } from '@/hooks/useTree';
+import {
+  addResponsible,
+  renameResponsible,
+  setResponsibleActive,
+  type DirectoryError,
+} from '@/lib/responsibles';
 import { useKeyboard } from '@/hooks/useKeyboard';
 import TreeOutline from '@/components/TreeOutline/TreeOutline';
 import MapView from '@/components/MapView/MapView';
 import NodeCard from '@/components/NodeCard/NodeCard';
 import FilterBar from '@/components/FilterBar/FilterBar';
+import ResponsiblesScreen from '@/components/ResponsiblesScreen/ResponsiblesScreen';
 import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 import styles from './page.module.css';
 
 type SaveStatus = 'saved' | 'saving' | 'error' | 'idle';
 type SnapshotStatus = 'idle' | 'saving' | 'saved' | 'error';
-type ViewMode = 'outline' | 'map';
+type ViewMode = 'outline' | 'map' | 'responsibles';
 type SyncStatus = 'idle' | 'syncing' | 'done' | 'error';
 
 function collectLinkedNodes(node: MindNode): Array<{
@@ -90,12 +96,13 @@ export default function HomePage() {
         // #region agent log
         fetch('http://127.0.0.1:7610/ingest/96800b1d-f0c3-453c-8102-93c2a2a52b11',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'70051d'},body:JSON.stringify({sessionId:'70051d',location:'app/page.tsx:fetch',message:'GET /api/nodes response',data:{ok:r.ok,status:r.status,hasRoot:Boolean(data?.root),keys:Object.keys(data??{}),runId:'post-fix'},timestamp:Date.now(),hypothesisId:'A-B'})}).catch(()=>{});
         // #endregion
-        if (!r.ok || !data?.root?.id) {
+        const parsed = MindMapDocumentSchema.safeParse(data);
+        if (!r.ok || !parsed.success) {
           setSaveStatus('error');
           return;
         }
-        setDoc(data as MindMapDocument);
-        setSelectedId(data.root.id);
+        setDoc(parsed.data);
+        setSelectedId(parsed.data.root.id);
       })
       .catch(() => setSaveStatus('error'));
   }, []);
@@ -152,6 +159,38 @@ export default function HomePage() {
     const newDoc = { ...doc, root: newRoot };
     setDoc(newDoc);
     scheduleSave(newDoc);
+  }
+
+  function applyDocument(next: MindMapDocument) {
+    setDoc(next);
+    scheduleSave(next);
+  }
+
+  function handleAddResponsible(name: string): DirectoryError | null {
+    if (!doc) return null;
+    const result = addResponsible(doc, name);
+    if (!result.ok) return result.error;
+    applyDocument(result.doc);
+    return null;
+  }
+
+  function handleRenameResponsible(from: string, name: string): DirectoryError | null {
+    if (!doc) return null;
+    const result = renameResponsible(doc, from, name);
+    if (!result.ok) return result.error;
+    if (result.doc !== doc) {
+      setFilters((prev) => ({
+        ...prev,
+        responsibles: prev.responsibles.map((item) => (item === from ? name.trim() : item)),
+      }));
+      applyDocument(result.doc);
+    }
+    return null;
+  }
+
+  function handleSetResponsibleActive(name: string, active: boolean) {
+    if (!doc) return;
+    applyDocument(setResponsibleActive(doc, name, active));
   }
 
   async function syncCalendar() {
@@ -352,7 +391,12 @@ export default function HomePage() {
 
   const responsibles = useMemo(() => {
     if (!doc) return [];
-    return collectResponsibles(doc.root);
+    return doc.responsibles.map((entry) => entry.name);
+  }, [doc]);
+
+  const activeResponsibles = useMemo(() => {
+    if (!doc) return [];
+    return doc.responsibles.filter((entry) => entry.active).map((entry) => entry.name);
   }, [doc]);
 
   // Вычисляем номер выбранного узла для NodeCard
@@ -437,7 +481,7 @@ export default function HomePage() {
       </header>
 
       <div className={styles.body}>
-        <div className={styles.treePanel}>
+        <div className={viewMode === 'responsibles' ? styles.treePanelWide : styles.treePanel}>
           <div className={styles.viewTabs}>
             <button
               type="button"
@@ -453,7 +497,15 @@ export default function HomePage() {
             >
               Карта
             </button>
+            <button
+              type="button"
+              className={`${styles.viewTab} ${viewMode === 'responsibles' ? styles.viewTabActive : ''}`}
+              onClick={() => setViewMode('responsibles')}
+            >
+              Ответственные
+            </button>
           </div>
+          {viewMode !== 'responsibles' && (
           <FilterBar
             responsibles={responsibles}
             filters={filters}
@@ -461,8 +513,16 @@ export default function HomePage() {
             onChange={setFilters}
             onReset={() => setFilters(EMPTY_FILTERS)}
           />
+          )}
           <div className={styles.treeContent}>
-            {hasActiveFilter && matchCount === 0 ? (
+            {viewMode === 'responsibles' ? (
+              <ResponsiblesScreen
+                entries={doc.responsibles}
+                onAdd={handleAddResponsible}
+                onRename={handleRenameResponsible}
+                onSetActive={handleSetResponsibleActive}
+              />
+            ) : hasActiveFilter && matchCount === 0 ? (
               <div className={styles.noResults}>Нет результатов</div>
             ) : viewMode === 'outline' ? (
               <TreeOutline
@@ -506,10 +566,12 @@ export default function HomePage() {
           </div>
         </div>
 
+        {viewMode !== 'responsibles' && (
         <div className={styles.cardPanel}>
           <NodeCard
             node={selectedNode}
             nodeNumber={selectedNumber}
+            activeResponsibles={activeResponsibles}
             calendarBusy={syncStatus === 'syncing'}
             onStatusDone={handleStatusDone}
             onChange={(patch) => {
@@ -518,6 +580,7 @@ export default function HomePage() {
             }}
           />
         </div>
+        )}
       </div>
     </div>
   );

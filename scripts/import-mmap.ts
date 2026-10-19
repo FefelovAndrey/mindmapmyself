@@ -87,6 +87,7 @@ async function main() {
     version: '1.0',
     updatedAt: new Date().toISOString(),
     root,
+    responsibles: [],
   };
 
   writeFileSync(OUTPUT, JSON.stringify(document, null, 2), 'utf-8');
