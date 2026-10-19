@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-19T11:53:41.579Z",
+  "updatedAt": "2026-10-19T11:54:17.446Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2353,11 +2353,11 @@
                 "children": [
                   {
                     "id": "c5192e06-9496-414a-a53d-f8f1dbd08a2f",
-                    "name": "По готовности задачи принять логику и протестировать",
+                    "name": "Тестирование задачи по 4%",
                     "description": null,
                     "responsible": "Андрей",
                     "status": "New",
-                    "priority": 2,
+                    "priority": 1,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
