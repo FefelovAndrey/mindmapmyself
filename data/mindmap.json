@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-19T04:44:44.135Z",
+  "updatedAt": "2026-10-19T07:17:09.872Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -3141,14 +3141,30 @@
                     "calendarEndAt": null,
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
-                    "children": []
+                    "children": [
+                      {
+                        "id": "f746bf7a-a905-46ec-85fd-3a3089ff387c",
+                        "name": "Новый узел",
+                        "description": null,
+                        "responsible": null,
+                        "status": "Cancelled",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
                   },
                   {
                     "id": "f5772cb5-858e-44e7-94ca-3d50a58388fb",
                     "name": "По замечаниям Вячеслава проверить логику когда соглашение прихоодит на несколько складов - что с возвратами",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": 1,
                     "deadline": null,
                     "calendarUid": null,
@@ -3257,7 +3273,7 @@
                 "name": "ЯндексМаркет",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Cancelled",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -3271,7 +3287,7 @@
                     "name": "Добить тестирование по ЯМ по фичам WA",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Done",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -3317,6 +3333,21 @@
               {
                 "id": "f77c2fa5-10ba-4be4-b8e1-121543c787c7",
                 "name": "INI-132: Добавить применимость  в поля контента  для SEO Данных о товаре с помощью базы Stellox и популярности автомобилей.",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "1b863a03-20ab-423d-b0a5-62ea43ee7d07",
+                "name": "INI-137: Доработать передачу кратности на ОЗОН",
                 "description": null,
                 "responsible": null,
                 "status": "New",
