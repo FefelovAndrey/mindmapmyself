@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-20T04:15:11.466Z",
+  "updatedAt": "2026-10-20T11:51:09.961Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1611,6 +1611,67 @@
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
                 "children": []
+              },
+              {
+                "id": "32ce4403-ca84-41a7-a82c-0e94c9443c4a",
+                "name": "Переезд проектов и задач в 4 квартал",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "e39bd574-9bb3-4766-ba58-7646447d9278",
+                    "name": "Перенести задачи и проект в новый портфель",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "Done",
+                    "priority": 2,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "eff24a74-4bb2-44e0-82e4-93d98577eb26",
+                    "name": "Дать Диме и Максиму задание прошерстить 070 Одиночные задачи в старом портфеле (перенести в новый или отменить)",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "priority": 3,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "371b497a-3d17-4308-aae1-7759d9aea7d1",
+                    "name": "Кинуть в команду WA задачу https://tracker.yandex.ru/DEVEL-3001",
+                    "description": "https://tracker.yandex.ru/DEVEL-3001",
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "priority": 3,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
