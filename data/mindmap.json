@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-19T11:54:17.446Z",
+  "updatedAt": "2026-10-20T04:15:11.466Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -644,7 +644,7 @@
                 "name": "DEVEL-2900/INI-104: [ozon]  Доля рекламы в заказе - через ИИ (скинул в чат Коле Иванову)",
                 "description": "Скинул в чат к Коле Иванову 19.08 - взяли в спринт",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -659,7 +659,7 @@
                 "name": "DEVEL-2869: [wb] INI-109 не верно считается комиссия в МП прибыли (скинул в чат ВА)",
                 "description": "С Денисом обсудить и далее запустить через ИИшку",
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -1416,7 +1416,7 @@
                         "name": "Замена плагина Stockdays на календарь",
                         "description": null,
                         "responsible": "Андрей",
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1446,7 +1446,7 @@
                         "id": "6b2e9d83-380e-4446-b07d-ad18689893b2",
                         "name": "INI-139 Сформулировать задачу с Владиславом",
                         "description": null,
-                        "responsible": "Дима",
+                        "responsible": "Дима Ли",
                         "status": "New",
                         "priority": 2,
                         "deadline": null,
@@ -1587,7 +1587,7 @@
                 "name": "Сделать отчет для Матвея по INI-131",
                 "description": null,
                 "responsible": "Андрей",
-                "status": "New",
+                "status": "Done",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -2308,7 +2308,7 @@
                         "name": "Сформулировать цели проекта трассировки расчета (с меня ревью и утверждение у Вячеслава)",
                         "description": null,
                         "responsible": "Максим",
-                        "status": "New",
+                        "status": "Cancelled",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -2712,6 +2712,21 @@
                     "responsible": "Аня",
                     "status": "New",
                     "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "07315fcf-41c1-4222-a765-fe91be5f5bf4",
+                    "name": "Разобраться что делать с GTIN и с признаком Честного знака",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "priority": 2,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -3822,7 +3837,7 @@
                     "id": "c70e4cf8-5c57-4907-a2d1-ad5f1c2cf41c",
                     "name": "Коля/Дать аналитику по капасити",
                     "description": null,
-                    "responsible": "коля",
+                    "responsible": "Коля",
                     "status": "Done",
                     "priority": null,
                     "deadline": null,
@@ -3977,5 +3992,35 @@
         ]
       }
     ]
-  }
+  },
+  "responsibles": [
+    {
+      "name": "Андрей",
+      "active": true
+    },
+    {
+      "name": "Аня",
+      "active": true
+    },
+    {
+      "name": "Дима",
+      "active": true
+    },
+    {
+      "name": "Дима Ли",
+      "active": true
+    },
+    {
+      "name": "Коля",
+      "active": true
+    },
+    {
+      "name": "Максим",
+      "active": true
+    },
+    {
+      "name": "Роман",
+      "active": true
+    }
+  ]
 }
