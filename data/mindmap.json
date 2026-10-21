@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-20T11:51:09.961Z",
+  "updatedAt": "2026-10-21T06:23:51.164Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -998,6 +998,37 @@
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
                         "children": []
+                      },
+                      {
+                        "id": "88925ad7-3023-4ab4-b1d3-6e0b7842ab48",
+                        "name": "Обучение на примерах",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": [
+                          {
+                            "id": "bf275ce5-38d8-4a15-9dea-9324c9832d4e",
+                            "name": "21.10.2026",
+                            "description": "https://tracker.yandex.ru/DEVEL-3026#6ad75e7e0975b5510a6d7113\n3. API календаря на тесте нашел (10.10.1.21:8001, swagger), он просит X-API-Key. Нужен ключ для WA на тест и на прод, адрес прод-сервиса, лимиты. И что делаем, если календарь не отвечает: падаем на старые сроки stocksdays или что-то другое?\nНадо научить чтобы оркестратор при решении вопросов интеграции всегда думал что если недоступен сервис",
+                            "responsible": null,
+                            "status": "New",
+                            "priority": null,
+                            "deadline": null,
+                            "calendarUid": null,
+                            "calendarStartAt": null,
+                            "calendarEndAt": null,
+                            "calendarSyncedAt": null,
+                            "calendarSyncStopped": false,
+                            "children": []
+                          }
+                        ]
                       }
                     ]
                   },
@@ -1448,7 +1479,7 @@
                         "description": null,
                         "responsible": "Дима Ли",
                         "status": "New",
-                        "priority": 2,
+                        "priority": null,
                         "deadline": null,
                         "calendarUid": null,
                         "calendarStartAt": null,
@@ -2403,7 +2434,7 @@
                 "name": "(Максим) INI-133/PY-1878: Дубль 2: Изменить логику доступности предложения поставщиков 4%",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -2417,7 +2448,7 @@
                     "name": "Тестирование задачи по 4%",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": 1,
                     "deadline": null,
                     "calendarUid": null,
