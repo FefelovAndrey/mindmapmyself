@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-21T08:54:09.156Z",
+  "updatedAt": "2026-10-21T09:26:06.622Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1033,7 +1033,7 @@
                       {
                         "id": "e07b74f3-6cc5-44e9-9bd1-2a14b5803fa6",
                         "name": "Зашить в наш репо доки ОЗОН, доки WBб все нужные MCP и CodeBase",
-                        "description": null,
+                        "description": "Все MCP доступа к БД\nВсе ссылки на кодовые базы, инструкция по клонированию и гитигнор",
                         "responsible": null,
                         "status": "New",
                         "priority": null,
@@ -3473,6 +3473,21 @@
                 "description": null,
                 "responsible": null,
                 "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "0e586fa0-4449-4e8e-83e2-915bd6eb763c",
+                "name": "INI-128",
+                "description": null,
+                "responsible": null,
+                "status": "Cancelled",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
