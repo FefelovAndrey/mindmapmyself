@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-22T10:16:52.576Z",
+  "updatedAt": "2026-10-27T10:21:02.829Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1674,7 +1674,7 @@
                             "name": "21.10.2026",
                             "description": "https://tracker.yandex.ru/DEVEL-3026#6ad75e7e0975b5510a6d7113\n3. API календаря на тесте нашел (10.10.1.21:8001, swagger), он просит X-API-Key. Нужен ключ для WA на тест и на прод, адрес прод-сервиса, лимиты. И что делаем, если календарь не отвечает: падаем на старые сроки stocksdays или что-то другое?\nНадо научить чтобы оркестратор при решении вопросов интеграции всегда думал что если недоступен сервис\n\nВсегда думать и спрашивать про раскатку фичи",
                             "responsible": null,
-                            "status": "New",
+                            "status": "Done",
                             "priority": null,
                             "deadline": null,
                             "calendarUid": null,
@@ -1690,6 +1690,21 @@
                         "id": "e07b74f3-6cc5-44e9-9bd1-2a14b5803fa6",
                         "name": "Зашить в наш репо доки ОЗОН, доки WBб все нужные MCP и CodeBase",
                         "description": "Все MCP доступа к БД\nВсе ссылки на кодовые базы, инструкция по клонированию и гитигнор",
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      },
+                      {
+                        "id": "11f46276-39c4-4da7-b915-532d1900584b",
+                        "name": "Добавить в модель самообучение по результатам",
+                        "description": null,
                         "responsible": null,
                         "status": "New",
                         "priority": null,
@@ -1734,6 +1749,21 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "id": "cd7f4e8f-99ce-4229-8b77-3ad007223200",
+                "name": "Переговорить с Матвеем. Что он имеет в виду?",
+                "description": "в ТГ Вячеслава\nЭто очень близко к таблице которую делал Дима https://tracker.yandex.ru/INI-131",
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
               }
             ]
           },
@@ -2124,10 +2154,10 @@
               },
               {
                 "id": "5a7c5f67-31a0-41f6-82eb-37ea7ff43117",
-                "name": "Календарь отгрузок",
+                "name": "Календарь (PMC)",
                 "description": null,
                 "responsible": null,
-                "status": "Done",
+                "status": "New",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -2880,7 +2910,7 @@
                 "name": "Второй кабинет ОЗОН",
                 "description": "https://tracker.yandex.ru/pages/projects/709/comments",
                 "responsible": "Дима",
-                "status": "New",
+                "status": "Done",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
