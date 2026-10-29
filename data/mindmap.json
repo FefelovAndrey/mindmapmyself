@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-29T13:07:18.492Z",
+  "updatedAt": "2026-10-29T13:07:27.218Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1801,7 +1801,7 @@
                 "name": "Переговорить с Вячеславом. Что он имеет в виду?",
                 "description": "в ТГ Вячеслава\nЭто очень близко к таблице которую делал Дима https://tracker.yandex.ru/INI-131",
                 "responsible": "Андрей",
-                "status": "New",
+                "status": "Done",
                 "priority": 3,
                 "deadline": null,
                 "calendarUid": null,
