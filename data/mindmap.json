@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-29T05:51:06.028Z",
+  "updatedAt": "2026-10-29T05:53:31.248Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1660,7 +1660,7 @@
                         "name": "Обучение на примерах",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1691,7 +1691,7 @@
                         "name": "Зашить в наш репо доки ОЗОН, доки WBб все нужные MCP и CodeBase",
                         "description": "Все MCP доступа к БД\nВсе ссылки на кодовые базы, инструкция по клонированию и гитигнор",
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1747,6 +1747,21 @@
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
                     "children": []
+                  },
+                  {
+                    "id": "d1eba3ae-9422-44e2-b47f-0cd54bc91405",
+                    "name": "Установить новый Гит у Дениса и на нем проверить",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "New",
+                    "priority": 2,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
                   }
                 ]
               },
@@ -1754,7 +1769,7 @@
                 "id": "cd7f4e8f-99ce-4229-8b77-3ad007223200",
                 "name": "Переговорить с Вячеславом. Что он имеет в виду?",
                 "description": "в ТГ Вячеслава\nЭто очень близко к таблице которую делал Дима https://tracker.yandex.ru/INI-131",
-                "responsible": null,
+                "responsible": "Андрей",
                 "status": "New",
                 "priority": 3,
                 "deadline": null,
@@ -1769,7 +1784,7 @@
                 "id": "825b577c-e681-4e9e-b7d6-2fa954bf11b4",
                 "name": "Срочная задача по аналитике от Матвея - почему упали продажи - смотрю в MPS",
                 "description": null,
-                "responsible": null,
+                "responsible": "Андрей",
                 "status": "New",
                 "priority": 1,
                 "deadline": "2026-10-29",
