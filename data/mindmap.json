@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-10-27T10:21:02.829Z",
+  "updatedAt": "2026-10-29T05:51:06.028Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -613,7 +613,7 @@
                 "name": "Разобраться с повышением индекса отмен и просрочек - какие изменения нужны в мониторинге",
                 "description": "INI-27: Детализировать в BI причины отмен Озон по нашей вине\nЗадача переросла в несколько другой формат - начинаю плясать от индекса отмен\nеще Вячеслав копал отмены тут - https://wiki.yandex.ru/homepage/baza-znanijj/it-otdel/vidy-otmen-po-nashejj-vine/?utm_referrer=about%3Ablank",
                 "responsible": null,
-                "status": "New",
+                "status": "Cancelled",
                 "priority": null,
                 "deadline": null,
                 "calendarUid": null,
@@ -1127,7 +1127,7 @@
                         "name": "(Коля Б + Дима) INI-25: Автоматизация съема сроков для приоритета складов / INI-125: МРЦ по цене покупателя OZON парсить цены товаров",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1188,7 +1188,7 @@
                         "name": "(Максим и Аня) INI-116: Перенос отчётов складов в Grafana",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1376,7 +1376,7 @@
                 "description": null,
                 "responsible": null,
                 "status": "New",
-                "priority": 3,
+                "priority": null,
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
@@ -1630,7 +1630,7 @@
                         "name": "Научить мой граф работать с графами систем у ребят в репозиториях",
                         "description": "И разобраться как работают графы у нас в конце концов (что то не очень)\nНадо добавить чтобы он при разработке схемы как есть смотрел сам и только потом спрашивал\nВ наименовании ветки писать INI-123 (так потом проще)\nКогда выводит на ревью PRD не дает на него ссылку, чтобы тутже прочитать\nВ задачу писать только после Merge (так ссылки не сбиваются) - или поговорить с ним как сделать так, чтобы ссылки были не битые\nВ процессе AS IS запускать поиск в базе субагентами",
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1645,7 +1645,7 @@
                         "name": "Добавить в оркестратор чтобы писал тесткейсы по скиллу и прикреплял к задаче",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1752,16 +1752,31 @@
               },
               {
                 "id": "cd7f4e8f-99ce-4229-8b77-3ad007223200",
-                "name": "Переговорить с Матвеем. Что он имеет в виду?",
+                "name": "Переговорить с Вячеславом. Что он имеет в виду?",
                 "description": "в ТГ Вячеслава\nЭто очень близко к таблице которую делал Дима https://tracker.yandex.ru/INI-131",
                 "responsible": null,
                 "status": "New",
-                "priority": null,
+                "priority": 3,
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
                 "calendarEndAt": null,
                 "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "825b577c-e681-4e9e-b7d6-2fa954bf11b4",
+                "name": "Срочная задача по аналитике от Матвея - почему упали продажи - смотрю в MPS",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": 1,
+                "deadline": "2026-10-29",
+                "calendarUid": "39bbf80b-e6ce-4b24-b0b4-bdf49dbefac4",
+                "calendarStartAt": "2026-10-29T09:00:00+05:00",
+                "calendarEndAt": "2026-10-29T10:30:00+05:00",
+                "calendarSyncedAt": "2026-10-29T05:51:04.467Z",
                 "calendarSyncStopped": false,
                 "children": []
               }
@@ -2863,6 +2878,37 @@
                     "name": "Аня,Дима/Новые требования ОЗОН по указанию маркировки в инфообмене",
                     "description": "https://tracker.yandex.ru/DEVEL-2771",
                     "responsible": "Аня",
+                    "status": "Cancelled",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": [
+                      {
+                        "id": "a10a198d-d8d0-440a-a7fa-2e380458a8b8",
+                        "name": "Разобраться со маркировкой фар",
+                        "description": null,
+                        "responsible": null,
+                        "status": "Done",
+                        "priority": 1,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "07315fcf-41c1-4222-a765-fe91be5f5bf4",
+                    "name": "Спроектировать заполнение GTIN и разобраться откуда его брать",
+                    "description": null,
+                    "responsible": "Дима Ли",
                     "status": "New",
                     "priority": null,
                     "deadline": null,
@@ -2871,22 +2917,23 @@
                     "calendarEndAt": null,
                     "calendarSyncedAt": null,
                     "calendarSyncStopped": false,
-                    "children": []
-                  },
-                  {
-                    "id": "07315fcf-41c1-4222-a765-fe91be5f5bf4",
-                    "name": "Разобраться что делать с GTIN и с признаком Честного знака",
-                    "description": null,
-                    "responsible": "Андрей",
-                    "status": "New",
-                    "priority": 2,
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
-                    "calendarSyncStopped": false,
-                    "children": []
+                    "children": [
+                      {
+                        "id": "9f4541a4-0e62-429c-88b9-68c1723cb02d",
+                        "name": "Провести ревью",
+                        "description": null,
+                        "responsible": "Андрей",
+                        "status": "New",
+                        "priority": 1,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               },
@@ -3349,7 +3396,7 @@
                 "name": "Придумать какую задачу дать Ане (мониторинг цен) и ее сформулировать",
                 "description": null,
                 "responsible": "Андрей",
-                "status": "New",
+                "status": "Done",
                 "priority": 2,
                 "deadline": null,
                 "calendarUid": null,
@@ -3511,7 +3558,23 @@
                 "calendarEndAt": null,
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
-                "children": []
+                "children": [
+                  {
+                    "id": "7bde1f40-8316-47d9-9d55-675e2db80660",
+                    "name": "Обсудить с Матвеем загрузку применимости",
+                    "description": null,
+                    "responsible": null,
+                    "status": "New",
+                    "priority": 1,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               },
               {
                 "id": "1b863a03-20ab-423d-b0a5-62ea43ee7d07",
