@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-03T12:57:57.343Z",
+  "updatedAt": "2026-11-03T14:04:07.251Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1884,6 +1884,51 @@
                 "calendarEndAt": "2026-10-29T10:30:00+05:00",
                 "calendarSyncedAt": "2026-11-03T12:05:06.884Z",
                 "calendarSyncStopped": true,
+                "children": []
+              },
+              {
+                "id": "c4e8ead5-d32a-40b3-8b0e-d0c0c4d28573",
+                "name": "Раскидать проекты по целям Матвея",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": 1,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "59ab80d3-20b0-4b1f-a292-bb6b8dee52c6",
+                "name": "С Денисом обсудить как будем в ценообразовании учитывать 16.11",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": 1,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "1ae89238-cf3e-4d29-9d15-1fe628722a57",
+                "name": "Связать инициативы с проектами - чтобы была связь в наименовании и в связах",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": 1,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
                 "children": []
               }
             ]
