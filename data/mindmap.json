@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-03T06:13:44.377Z",
+  "updatedAt": "2026-11-03T12:57:57.343Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1465,7 +1465,7 @@
                     "description": "Цель - уменьшить количество багов на проде после выкатки, по причине того, что тестовая среда расходится с продовой",
                     "responsible": null,
                     "status": "New",
-                    "priority": null,
+                    "priority": 3,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -1791,6 +1791,21 @@
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
                         "children": []
+                      },
+                      {
+                        "id": "2db49c89-5d1e-4cf6-8c56-425ff9bdd7cd",
+                        "name": "Попробовать по Честному знаку собрать граф проекта",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
                       }
                     ]
                   },
@@ -1861,14 +1876,14 @@
                 "name": "Срочная задача по аналитике от Матвея - почему упали продажи - смотрю в MPS",
                 "description": null,
                 "responsible": "Андрей",
-                "status": "New",
+                "status": "Done",
                 "priority": 1,
                 "deadline": "2026-10-29",
                 "calendarUid": "39bbf80b-e6ce-4b24-b0b4-bdf49dbefac4",
                 "calendarStartAt": "2026-10-29T09:00:00+05:00",
                 "calendarEndAt": "2026-10-29T10:30:00+05:00",
-                "calendarSyncedAt": "2026-10-29T05:51:04.467Z",
-                "calendarSyncStopped": false,
+                "calendarSyncedAt": "2026-11-03T12:05:06.884Z",
+                "calendarSyncStopped": true,
                 "children": []
               }
             ]
@@ -3701,7 +3716,7 @@
                 "id": "08233ddc-23a2-4a83-8424-435f02d7634d",
                 "name": "По INI-131 сделать с Димой и возможно с Матвеем usecase для Коли Беспалова.",
                 "description": "Обсудили, что логика в отчете INI-131 это то, что должен ловить мониторинг. Надо для Коли сформулировать юзкейсы плюс возможные причины и как их ловить\nВозможно надо с Матвеем переговорить",
-                "responsible": "Андрей",
+                "responsible": "Дима Ли",
                 "status": "New",
                 "priority": 3,
                 "deadline": null,
