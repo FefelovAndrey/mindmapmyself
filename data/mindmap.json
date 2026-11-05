@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-05T03:49:39.446Z",
+  "updatedAt": "2026-11-05T03:50:22.946Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1613,9 +1613,9 @@
                   },
                   {
                     "id": "371b497a-3d17-4308-aae1-7759d9aea7d1",
-                    "name": "Кинуть в команду WA задачу https://tracker.yandex.ru/DEVEL-3001",
+                    "name": "Дать фидбек по задаче https://tracker.yandex.ru/DEVEL-3001",
                     "description": "https://tracker.yandex.ru/DEVEL-3001",
-                    "responsible": "Андрей",
+                    "responsible": "Дима",
                     "status": "New",
                     "priority": 3,
                     "deadline": null,
