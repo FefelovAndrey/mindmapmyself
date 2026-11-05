@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-05T03:50:22.946Z",
+  "updatedAt": "2026-11-05T03:51:10.178Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1782,7 +1782,7 @@
                         "name": "Добавить чтобы в PRD требования писал без ссылки на formatter и писал человеческим языком",
                         "description": null,
                         "responsible": null,
-                        "status": "New",
+                        "status": "Done",
                         "priority": null,
                         "deadline": null,
                         "calendarUid": null,
@@ -1841,7 +1841,7 @@
                   },
                   {
                     "id": "d1eba3ae-9422-44e2-b47f-0cd54bc91405",
-                    "name": "Установить новый Гит у Дениса и на нем проверить",
+                    "name": "Настроить новый Гит у Дениса и на нем проверить",
                     "description": null,
                     "responsible": "Андрей",
                     "status": "New",
