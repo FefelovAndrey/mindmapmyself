@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-05T03:51:10.178Z",
+  "updatedAt": "2026-11-05T03:53:13.323Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -854,7 +854,7 @@
                     "name": "С Юлей обсуждали нормальный тестовый контур в 1С (разраб - тест - препрод - прод). По идее надо такое организовывать везде (или по потребности)",
                     "description": null,
                     "responsible": null,
-                    "status": "New",
+                    "status": "Cancelled",
                     "priority": null,
                     "deadline": null,
                     "calendarUid": null,
@@ -3714,9 +3714,9 @@
                     "id": "7bde1f40-8316-47d9-9d55-675e2db80660",
                     "name": "Обсудить с Матвеем загрузку применимости",
                     "description": null,
-                    "responsible": "Андрей",
+                    "responsible": "Дима Ли",
                     "status": "New",
-                    "priority": 1,
+                    "priority": 3,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -3771,6 +3771,37 @@
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
                 "children": []
+              },
+              {
+                "id": "a3717891-e5bc-40f6-842d-f85e7c8fe62e",
+                "name": "INI-139: Получение доступа к просмотру Курсором фотографий с нашей базы.",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "f6377ff6-3b1a-489a-9601-bf64a7e3c27e",
+                    "name": "Обсудить с Колей Ивановым что не делаем API, но исправляем ошибки",
+                    "description": null,
+                    "responsible": "Дима Ли",
+                    "status": "New",
+                    "priority": 3,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           }
