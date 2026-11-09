@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-06T12:02:44.517Z",
+  "updatedAt": "2026-11-09T05:21:17.933Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1616,7 +1616,7 @@
                     "name": "Дать фидбек по задаче https://tracker.yandex.ru/DEVEL-3001",
                     "description": "https://tracker.yandex.ru/DEVEL-3001",
                     "responsible": "Дима",
-                    "status": "New",
+                    "status": "Done",
                     "priority": 3,
                     "deadline": null,
                     "calendarUid": null,
@@ -1851,6 +1851,21 @@
                         "calendarSyncedAt": null,
                         "calendarSyncStopped": false,
                         "children": []
+                      },
+                      {
+                        "id": "52005db3-e7f3-499f-a26d-289393eff034",
+                        "name": "?Нарисовать себе полностью все стадии разработки и переходы и обсудить с Колей",
+                        "description": null,
+                        "responsible": null,
+                        "status": "New",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
                       }
                     ]
                   },
@@ -1889,7 +1904,7 @@
                     "name": "Настроить новый Гит у Дениса и на нем проверить",
                     "description": null,
                     "responsible": "Андрей",
-                    "status": "New",
+                    "status": "Done",
                     "priority": 2,
                     "deadline": null,
                     "calendarUid": null,
@@ -1936,7 +1951,7 @@
                 "name": "Раскидать проекты по целям Матвея",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": 1,
                 "deadline": null,
                 "calendarUid": null,
@@ -1951,7 +1966,7 @@
                 "name": "С Денисом обсудить как будем в ценообразовании учитывать 16.11",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": 1,
                 "deadline": null,
                 "calendarUid": null,
@@ -1966,7 +1981,7 @@
                 "name": "Связать инициативы с проектами - чтобы была связь в наименовании и в связах",
                 "description": null,
                 "responsible": null,
-                "status": "New",
+                "status": "Done",
                 "priority": 1,
                 "deadline": null,
                 "calendarUid": null,
@@ -2468,6 +2483,21 @@
                         "children": []
                       }
                     ]
+                  },
+                  {
+                    "id": "10baa707-31ab-419b-936c-91cf9319b558",
+                    "name": "Подготовить UseCase по занесению информации",
+                    "description": null,
+                    "responsible": "Максим",
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
                   }
                 ]
               },
@@ -2578,7 +2608,7 @@
                   },
                   {
                     "id": "d772718a-cc09-4663-94ac-95222d9e5463",
-                    "name": "Подготовка и проведения ДЕМО",
+                    "name": "? Что тут? Подготовка и проведения ДЕМО",
                     "description": null,
                     "responsible": "Максим",
                     "status": "New",
@@ -2670,7 +2700,7 @@
                 "children": [
                   {
                     "id": "9e1d485b-d061-49e8-8597-62f65bd585e1",
-                    "name": "Сделать трассировку чтобы понять где у нас узкое место",
+                    "name": "?а что с этим вопросом? Сделали мониторинг чтобы определить где у нас стопорится расчет",
                     "description": null,
                     "responsible": null,
                     "status": "New",
@@ -2764,9 +2794,9 @@
               },
               {
                 "id": "4e0b0dab-8465-46fa-a711-7a534a20eac7",
-                "name": "INI-128: Ограничить предложение брендов отдельными Поставщиками",
+                "name": "INI-128: Ограничить предложение брендов отдельными Поставщиками (черные/белые списки)",
                 "description": "https://tracker.yandex.ru/INI-128",
-                "responsible": null,
+                "responsible": "Максим",
                 "status": "New",
                 "priority": null,
                 "deadline": null,
@@ -2776,6 +2806,144 @@
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
                 "children": []
+              },
+              {
+                "id": "bd77b480-56c3-41b3-b0fa-a22dc8d03602",
+                "name": "Реинкарнация SAIS",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "d50f1d7d-a69d-47f8-9a18-dab0c4c701be",
+                    "name": "Подготовить UseCase по SAIS",
+                    "description": null,
+                    "responsible": "Максим",
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": "8f2534da-8a06-456a-b9a0-5ed884a8c45d",
+                "name": "INI-95 Автоматизация возвратов",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": [
+                  {
+                    "id": "9be232c7-ab02-45af-be49-5fc21889e269",
+                    "name": "Передать задачу Ане",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "Done",
+                    "priority": null,
+                    "deadline": "2026-09-16",
+                    "calendarUid": "6329fd9a-0701-4969-b9ab-6c2288f56332",
+                    "calendarStartAt": "2026-09-16T10:00:00+05:00",
+                    "calendarEndAt": "2026-09-16T10:30:00+05:00",
+                    "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "fc524476-4bcc-47bf-a934-7d54913f4aa6",
+                    "name": "Поднять репо в Гитхабе по аналогии с ЯндексМаркет",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "Cancelled",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "ba7b778c-9a7c-4dd1-86d4-08431ee85ac9",
+                    "name": "Оцифровать сколько у нас потенциально невозвратов потому что товары ШАТЕ и товары АРМТЕК смешиваются",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "Done",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": [
+                      {
+                        "id": "f746bf7a-a905-46ec-85fd-3a3089ff387c",
+                        "name": "Новый узел",
+                        "description": null,
+                        "responsible": null,
+                        "status": "Cancelled",
+                        "priority": null,
+                        "deadline": null,
+                        "calendarUid": null,
+                        "calendarStartAt": null,
+                        "calendarEndAt": null,
+                        "calendarSyncedAt": null,
+                        "calendarSyncStopped": false,
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "f5772cb5-858e-44e7-94ca-3d50a58388fb",
+                    "name": "По замечаниям Вячеслава проверить логику когда соглашение прихоодит на несколько складов - что с возвратами",
+                    "description": null,
+                    "responsible": "Андрей",
+                    "status": "Done",
+                    "priority": 1,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "a01bbef1-b5b8-4d03-9b24-cca0aae0a881",
+                    "name": "Встретиться с Юрой и посмотреть какие у него есть замечания и тутже их разобрать",
+                    "description": null,
+                    "responsible": "Максим",
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -3511,104 +3679,27 @@
                 "children": []
               },
               {
-                "id": "8f2534da-8a06-456a-b9a0-5ed884a8c45d",
-                "name": "INI-95 Автоматизация возвратов",
-                "description": null,
-                "responsible": null,
-                "status": "New",
-                "priority": null,
-                "deadline": null,
-                "calendarUid": null,
-                "calendarStartAt": null,
-                "calendarEndAt": null,
-                "calendarSyncedAt": null,
-                "calendarSyncStopped": false,
-                "children": [
-                  {
-                    "id": "9be232c7-ab02-45af-be49-5fc21889e269",
-                    "name": "Передать задачу Ане",
-                    "description": null,
-                    "responsible": "Андрей",
-                    "status": "Done",
-                    "priority": null,
-                    "deadline": "2026-09-16",
-                    "calendarUid": "6329fd9a-0701-4969-b9ab-6c2288f56332",
-                    "calendarStartAt": "2026-09-16T10:00:00+05:00",
-                    "calendarEndAt": "2026-09-16T10:30:00+05:00",
-                    "calendarSyncedAt": "2026-10-05T04:18:33.970Z",
-                    "calendarSyncStopped": false,
-                    "children": []
-                  },
-                  {
-                    "id": "fc524476-4bcc-47bf-a934-7d54913f4aa6",
-                    "name": "Поднять репо в Гитхабе по аналогии с ЯндексМаркет",
-                    "description": null,
-                    "responsible": "Андрей",
-                    "status": "Cancelled",
-                    "priority": null,
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
-                    "calendarSyncStopped": false,
-                    "children": []
-                  },
-                  {
-                    "id": "ba7b778c-9a7c-4dd1-86d4-08431ee85ac9",
-                    "name": "Оцифровать сколько у нас потенциально невозвратов потому что товары ШАТЕ и товары АРМТЕК смешиваются",
-                    "description": null,
-                    "responsible": "Андрей",
-                    "status": "New",
-                    "priority": null,
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
-                    "calendarSyncStopped": false,
-                    "children": [
-                      {
-                        "id": "f746bf7a-a905-46ec-85fd-3a3089ff387c",
-                        "name": "Новый узел",
-                        "description": null,
-                        "responsible": null,
-                        "status": "Cancelled",
-                        "priority": null,
-                        "deadline": null,
-                        "calendarUid": null,
-                        "calendarStartAt": null,
-                        "calendarEndAt": null,
-                        "calendarSyncedAt": null,
-                        "calendarSyncStopped": false,
-                        "children": []
-                      }
-                    ]
-                  },
-                  {
-                    "id": "f5772cb5-858e-44e7-94ca-3d50a58388fb",
-                    "name": "По замечаниям Вячеслава проверить логику когда соглашение прихоодит на несколько складов - что с возвратами",
-                    "description": null,
-                    "responsible": "Андрей",
-                    "status": "Done",
-                    "priority": 1,
-                    "deadline": null,
-                    "calendarUid": null,
-                    "calendarStartAt": null,
-                    "calendarEndAt": null,
-                    "calendarSyncedAt": null,
-                    "calendarSyncStopped": false,
-                    "children": []
-                  }
-                ]
-              },
-              {
                 "id": "3c47bbeb-69bd-4dbc-9bac-6059e314eb1c",
                 "name": "Придумать какую задачу дать Ане (мониторинг цен) и ее сформулировать",
                 "description": null,
                 "responsible": "Андрей",
                 "status": "Done",
                 "priority": 2,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "055c7f4d-5eee-4672-a8d9-b5394af3217a",
+                "name": "Отчеты для склада",
+                "description": null,
+                "responsible": null,
+                "status": "New",
+                "priority": null,
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
