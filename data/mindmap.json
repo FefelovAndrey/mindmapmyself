@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-10T04:59:36.394Z",
+  "updatedAt": "2026-11-10T08:04:25.423Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2377,11 +2377,11 @@
                   },
                   {
                     "id": "5f271af0-42d6-422f-a23e-3d50e61d7fb3",
-                    "name": "Тестирование Автозаказы (1-ый этап ТрейдСофт)",
+                    "name": "Тестирование Автозаказы (1-ый этап ТрейдСофт) - тестирование под запись",
                     "description": null,
-                    "responsible": null,
+                    "responsible": "Максим",
                     "status": "New",
-                    "priority": null,
+                    "priority": 1,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -2623,8 +2623,8 @@
                   },
                   {
                     "id": "d772718a-cc09-4663-94ac-95222d9e5463",
-                    "name": "? Что тут? Подготовка и проведения ДЕМО",
-                    "description": null,
+                    "name": "Посмотреть с Юрой почему из календаря летят \"не те сроки\"",
+                    "description": "10.11 выкатили доработку и взяли в тестирование. Юра говорит, что сроки стоят не те, которые нужны",
                     "responsible": "Максим",
                     "status": "New",
                     "priority": null,
