@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-10T04:53:58.628Z",
+  "updatedAt": "2026-11-10T04:59:36.394Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -1494,7 +1494,7 @@
               {
                 "id": "54ff569d-91d7-4d4d-9542-791e202230e5",
                 "name": "Ценность нового ценообразования - забираю у команды PY",
-                "description": null,
+                "description": "Сделал презентацию Вячеславу, Лоскутову и Денису 09.11 \nПо результатам - смысла запускать нет. 10.11 с Вячеславоом утверждаю это и закрываю задачу",
                 "responsible": "Андрей",
                 "status": "New",
                 "priority": 2,
@@ -1906,6 +1906,21 @@
                     "responsible": "Андрей",
                     "status": "Done",
                     "priority": 2,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  },
+                  {
+                    "id": "635e79aa-bf19-45a5-8925-82271f51fcb1",
+                    "name": "Агент для управления проектами",
+                    "description": "Прочитать еще раз статью на сайте Пименова и осознать",
+                    "responsible": null,
+                    "status": "New",
+                    "priority": null,
                     "deadline": null,
                     "calendarUid": null,
                     "calendarStartAt": null,
@@ -2805,7 +2820,23 @@
                 "calendarEndAt": null,
                 "calendarSyncedAt": null,
                 "calendarSyncStopped": false,
-                "children": []
+                "children": [
+                  {
+                    "id": "604dbbe8-ed38-4ed7-9dd5-dbdeca4a5c0c",
+                    "name": "Тестировать черные/белые списик",
+                    "description": null,
+                    "responsible": "Дима Ли",
+                    "status": "New",
+                    "priority": null,
+                    "deadline": null,
+                    "calendarUid": null,
+                    "calendarStartAt": null,
+                    "calendarEndAt": null,
+                    "calendarSyncedAt": null,
+                    "calendarSyncStopped": false,
+                    "children": []
+                  }
+                ]
               },
               {
                 "id": "bd77b480-56c3-41b3-b0fa-a22dc8d03602",
