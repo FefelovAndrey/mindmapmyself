@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updatedAt": "2026-11-18T06:55:37.731Z",
+  "updatedAt": "2026-11-18T06:57:08.624Z",
   "root": {
     "id": "7077cb4a-adf9-408c-a768-9cd94aa253bf",
     "name": "задачи RULI",
@@ -2148,9 +2148,24 @@
                 "id": "e4848363-1451-447a-813a-418c5e211f3f",
                 "name": "(INI-116) Отчеты складов",
                 "description": "https://tracker.yandex.ru/INI-116",
-                "responsible": null,
+                "responsible": "Андрей",
                 "status": "New",
-                "priority": null,
+                "priority": 1,
+                "deadline": null,
+                "calendarUid": null,
+                "calendarStartAt": null,
+                "calendarEndAt": null,
+                "calendarSyncedAt": null,
+                "calendarSyncStopped": false,
+                "children": []
+              },
+              {
+                "id": "cc5dedcf-17d7-4867-9ca2-e474bd6fb2d6",
+                "name": "INI-158 Отчеты по разработке",
+                "description": null,
+                "responsible": "Андрей",
+                "status": "New",
+                "priority": 1,
                 "deadline": null,
                 "calendarUid": null,
                 "calendarStartAt": null,
@@ -3880,7 +3895,7 @@
                   {
                     "id": "2ad836a8-42d7-4ddc-b4ea-23aa00d5f07f",
                     "name": "Составить кейсы, с описанием мест, где есть капча, и что она защищает",
-                    "description": null,
+                    "description": "Отдели Дане - Дима должен контролить",
                     "responsible": "Дима",
                     "status": "New",
                     "priority": null,
